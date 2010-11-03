@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: pylonshq-
+Version: 0.0
+Summary: pylonshq/
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: pylonshq/ README
+        
+        
+        
+        
+        
+        0.0
+        ---
+        
+        -  Initial version
+        
+Keywords: web pylons
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pylons
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
