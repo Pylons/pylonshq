@@ -2,7 +2,7 @@ import unittest
 
 class MyHandlerTests(unittest.TestCase):
     def setUp(self):
-        from pylons.configuration import Configurator
+        from pyramid.configuration import Configurator
         from pylonshq.models import initialize_sql
         self.session = initialize_sql('sqlite://')
         self.config = Configurator()
