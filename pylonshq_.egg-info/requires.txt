@@ -1,4 +1,4 @@
-Pylons
+Pyramid
 SQLAlchemy
 transaction
 repoze.tm2
