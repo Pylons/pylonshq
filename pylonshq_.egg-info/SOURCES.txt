@@ -1,4 +1,3 @@
-README.txt
 setup.cfg
 setup.py
 pylonshq/__init__.py
