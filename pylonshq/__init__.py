@@ -1,32 +1,18 @@
+from pyramid.config import Configurator
+from repoze.zodbconn.finder import PersistentApplicationFinder
+from pylonshq.models import appmaker
+
 def main(global_config, **settings):
-    """ This function returns a Pylons WSGI application.
+    """ This function returns a Pyramid WSGI application.
     """
-    from paste.deploy.converters import asbool
-    from pylons.configuration import Configurator
-    from pylonshq.models import initialize_sql
-    db_string = settings.get('db_string')
-    if db_string is None:
-        raise ValueError("No 'db_string' value in application "
-                         "configuration.")
-    initialize_sql(db_string, asbool(settings.get('db_echo')))
-    config = Configurator(settings=settings)
-    config.begin()
-    config.add_cache()
-    config.add_sessions()
-    config.add_static_view(
-        'static',
-        'pylonshq:static/'
-        )
-    config.add_handler(
-        'main',
-        '/{action}',
-        'pylonshq.handlers:MyHandler',
-        )
-    config.add_handler(
-        'home',
-        '/',
-        'pylonshq.handlers:MyHandler',
-        action='index'
-        )
-    config.end()
+    zodb_uri = settings.get('zodb_uri')
+    if zodb_uri is None:
+        raise ValueError("No 'zodb_uri' in application configuration.")
+
+    finder = PersistentApplicationFinder(zodb_uri, appmaker)
+    def get_root(request):
+        return finder(request.environ)
+    config = Configurator(root_factory=get_root, settings=settings)
+    config.add_static_view('static', 'pylonshq:static')
+    config.scan('pylonshq')
     return config.make_wsgi_app()
