@@ -4,5 +4,5 @@ css_dir = "../static/css"
 sass_dir = "src"
 images_dir = "../static/images"
 javascripts_dir = "../static/js"
-output_style = :compact
+output_style = :compressed
 relative_assets = true

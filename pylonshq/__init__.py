@@ -1,6 +1,8 @@
 from pyramid.config import Configurator
+
 from repoze.zodbconn.finder import PersistentApplicationFinder
 from pylonshq.models import appmaker
+
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.

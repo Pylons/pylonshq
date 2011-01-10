@@ -20,10 +20,10 @@
 	<link rel="apple-touch-icon" href="${request.static_url('pylonshq:static/apple-touch-icon.png')}">
 
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton|Nobile:i,b,bi&subset=latin" media="screen">
-	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/screen.css')}" media="screen, projection">
-	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/print.css')}" media="print">
-	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}" media="screen, projection">
-	<!--[if IE]><link rel="stylesheet" href="${request.static_url('pylonshq:static/css/ie.css')}" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/screen.css')}?v=${rid}" media="screen, projection">
+	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/print.css')}?v=${rid}" media="print">
+	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}?v=${rid}" media="screen, projection">
+	<!--[if IE]><link rel="stylesheet" href="${request.static_url('pylonshq:static/css/ie.css')}?v=${rid}" media="screen, projection"><![endif]-->
 	<script src="${request.static_url('pylonshq:static/js/libs/modernizr-1.6.min.js')}"></script>
 
 </head>
@@ -49,8 +49,8 @@
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="${request.static_url('pylonshq:static/js/libs/jquery-1.4.4.min.js')}"%3E%3C/script%3E'))</script>
   
 	<!-- scripts concatenated and minified via ant build script-->
-	<script src="${request.static_url('pylonshq:static/js/plugins.js')}"></script>
-	<script src="${request.static_url('pylonshq:static/js/script.js')}"></script>
+	<script src="${request.static_url('pylonshq:static/js/plugins.js')}?v=${rid}"></script>
+	<script src="${request.static_url('pylonshq:static/js/script.js')}?v=${rid}"></script>
 	<!-- end concatenated and minified scripts-->
   
 	<!--[if lt IE 7 ]>
@@ -76,3 +76,7 @@
 <%namespace name="nav" file="/nav.mako"/>
 <%namespace name="funcs" file="/funcs.mako"/>
 <%def name="pagename()">${ctx.pagename}</%def>
+<%!
+    from time import time
+    rid = int(time())
+%>

@@ -1,6 +1,7 @@
 from pyramid.threadlocal import get_current_request
 from pyramid.exceptions import ConfigurationError
 from pyramid.url import resource_url
+
 from pylonshq import helpers
 
 def add_renderer_globals(event):
@@ -19,5 +20,3 @@ def add_renderer_globals(event):
         except ConfigurationError:
             pass
     event.update(globs)
-
-
