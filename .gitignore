@@ -4,5 +4,8 @@
 .DS_Store
 .sass-cache
 data
-Data.*
+Data.fs
+Data.fs.lock
+Data.fs.tmp
+Data.fs.index
 

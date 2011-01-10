@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/page.mako"/>
 
+<%def name="pagename()">About Pylons Project</%def>
+
 <h1>About Pylons Project</h1>
 <p>
 	We are a group of project leaders with experience going back to the start of Python web frameworks. We aim to bring fresh ideas to classic problems. We hope to combine a lot of hard-earned maturity into the development of a secure choice that developers and companies can bet on. Couple this with the humility and irreverence gained by surviving every stupid decision that could be imagined, and you’ve got a good basis for a team of developers.

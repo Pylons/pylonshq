@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
 	
-	<title></title>
+	<title>Pylons Project : ${self.pagename()}</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -20,7 +20,6 @@
 	<link rel="apple-touch-icon" href="${request.static_url('pylonshq:static/apple-touch-icon.png')}">
 
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton|Nobile:i,b,bi&subset=latin" media="screen">
-	##<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/style.css')}">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/screen.css')}" media="screen, projection">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/print.css')}" media="print">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}" media="screen, projection">
@@ -33,7 +32,6 @@
 
 	<header class="header">
 		<div id="header">
-			##<div id="project-logo"></div>
 			${nav.header_nav(ctx.active_header_nav)}
 		</div>
     </header>
@@ -76,3 +74,5 @@
 </body>
 </html>
 <%namespace name="nav" file="/nav.mako"/>
+<%namespace name="funcs" file="/funcs.mako"/>
+<%def name="pagename()">${ctx.pagename}</%def>

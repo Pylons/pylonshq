@@ -19,7 +19,7 @@ class AppView(object):
         self.ctx.active_header_nav = self.request.view_name or 'home'
         self.ctx.active_footer_nav = ''
         self.ctx.masthead_logo = 'pylons'
-        self.ctx.pagename = 'Pylons Project'
+        self.ctx.pagename = ''
     
     def render_page(self, section, redir_elems):
         subpath = self.request.subpath
@@ -34,6 +34,7 @@ class AppView(object):
     
     @view_config(name='', context=AppRoot, renderer='pylonshq:templates/home/home.mako')
     def home(self):
+        self.ctx.pagename = 'Home'
         return {}
     
     @view_config(name='pylons', context=AppRoot)
