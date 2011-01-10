@@ -15,4 +15,6 @@ def main(global_config, **settings):
     config = Configurator(root_factory=get_root, settings=settings)
     config.add_static_view('static', 'pylonshq:static')
     config.scan('pylonshq')
+    config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
+                          'pyramid.events.BeforeRender')
     return config.make_wsgi_app()
