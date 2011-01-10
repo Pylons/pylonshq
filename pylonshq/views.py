@@ -30,7 +30,11 @@ class AppView(object):
             self.ctx.active_footer_nav = '-'.join([self.request.view_name]+list(subpath))
             values = {}
             return render_to_response('pylonshq:%s' % tmpl_path, values, self.request)
-        return NotFound()
+        raise NotFound()
+    
+    @view_config(context='pyramid.exceptions.NotFound', renderer='pylonshq:templates/404.mako')
+    def notfound(self):
+        return {}
     
     @view_config(name='', context=AppRoot, renderer='pylonshq:templates/home/home.mako')
     def home(self):
@@ -65,6 +69,4 @@ class AppView(object):
     def test(self):
         self.ctx.pagename = 'Test'
         return {}
-
-
 

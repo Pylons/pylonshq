@@ -9,7 +9,6 @@
 		
 <div id="main" class="page">
 	<div id="container">
-		##<h1>${ctx.pagename}</h1>
 		${next.body()}
 	</div>
 </div>

@@ -127,7 +127,7 @@ footer {
     background-color: #ffffff;
 }
 
-.page {
+.page, .exception {
     background-color: #eeeeee;
 }
 
@@ -207,4 +207,28 @@ footer {
 #feature {
     height: 150px;
     @include structure-block;
+}
+
+.exception {
+    .error-404 {
+        font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+        text-align: center;
+        color: #f98131;
+        font-size: 180px;
+        line-height: 200px;
+        margin: 100px 0 100px 0;
+    }
+
+    .error-404-message {
+        height: 200px;
+        vertical-align: middle;
+        font-size: 24px;
+        text-align: left;
+        margin: 100px 0 100px 0;
+        h2 {
+            margin-top: 25px;
+            line-height: 48px;
+            margin-bottom: 25px;
+        }
+    }
 }
