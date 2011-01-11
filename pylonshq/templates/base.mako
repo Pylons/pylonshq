@@ -19,7 +19,7 @@
 	<link rel="shortcut icon" href="${request.static_url('pylonshq:static/favicon.ico')}">
 	<link rel="apple-touch-icon" href="${request.static_url('pylonshq:static/apple-touch-icon.png')}">
 
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton|Nobile:i,b,bi&subset=latin" media="screen">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton|Nobile:regular,i,b,bi&subset=latin" media="screen">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/screen.css')}?v=${rid}" media="screen, projection">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/print.css')}?v=${rid}" media="print">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}?v=${rid}" media="screen, projection">
