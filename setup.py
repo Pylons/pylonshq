@@ -10,6 +10,7 @@ CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 requires = [
     'pyramid',
     'pyramid_beaker',
+    'pyramid_sqla',
     'SQLAlchemy',
     'transaction',
     'repoze.tm2',
