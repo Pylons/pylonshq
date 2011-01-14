@@ -33,9 +33,6 @@ class MainHandler(object):
             return render_to_response('pylonshq:%s' % tmpl_path, values, self.request)
         raise NotFound()
     
-    def notfound(self):
-        return {}
-    
     @action(renderer='pylonshq:templates/home/home.mako')
     def index(self):
         self.c.pagename = 'Home'
