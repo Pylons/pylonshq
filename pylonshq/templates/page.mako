@@ -3,7 +3,7 @@
 
 <section class="masthead">
 	<div id="masthead" class="masthead-page">
-		<div id="${ctx.masthead_logo or 'pylons'}-small-logo" class="png_bg" alt="logo"></div>
+		<div id="${c.masthead_logo or 'pylons'}-small-logo" class="png_bg" alt="logo"></div>
 	</div>
 </section>
 		

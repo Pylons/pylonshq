@@ -1,18 +1,18 @@
-from persistent import Persistent
-from persistent.mapping import PersistentMapping
+import logging
 
-from pyramid.security import Allow
-from pyramid.security import Everyone
+import pyramid_sqla as psa
+import sqlalchemy as sa
+import sqlalchemy.orm as orm
+import transaction
 
-class AppRoot(PersistentMapping):
-    __parent__ = __name__ = None
-    __acl__ = [(Allow, Everyone, 'view')]
+log = logging.getLogger(__name__)
+
+Base = psa.get_base()
+Session = psa.get_session()
 
 
-def appmaker(zodb_root):
-    if not 'app_root' in zodb_root:
-        app_root = AppRoot()
-        zodb_root['app_root'] = app_root
-        import transaction
-        transaction.commit()
-    return zodb_root['app_root']
+#class MyModel(Base):
+#    __tablename__ = 'models'
+#
+#    id = sa.Column(sa.Integer, primary_key=True)
+#    name = sa.Column(sa.Unicode(255), nullable=False)

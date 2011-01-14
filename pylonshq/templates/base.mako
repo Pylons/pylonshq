@@ -32,7 +32,7 @@
 
 	<header class="header">
 		<div id="header">
-			${nav.header_nav(ctx.active_header_nav)}
+			${nav.header_nav(c.active_header_nav)}
 		</div>
     </header>
     
@@ -40,7 +40,7 @@
     
 	<footer class="footer">
 		<div id="footer">
-			${nav.footer_nav(ctx.active_footer_nav)}
+			${nav.footer_nav(c.active_footer_nav)}
 		</div>
     </footer>
 
@@ -75,7 +75,7 @@
 </html>
 <%namespace name="nav" file="/nav.mako"/>
 <%namespace name="funcs" file="/funcs.mako"/>
-<%def name="pagename()">${ctx.pagename}</%def>
+<%def name="pagename()">${c.pagename}</%def>
 <%!
     from time import time
     rid = int(time())
