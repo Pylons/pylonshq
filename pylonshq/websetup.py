@@ -3,8 +3,8 @@ import logging
 import pyramid_sqla as psa
 import transaction
 
-import sqla
-import sqla.models as models
+import pylonshq
+import pylonshq.models as models
 
 def setup_app(command, conf, vars):
     # Initialize logging
@@ -12,7 +12,7 @@ def setup_app(command, conf, vars):
     log = logging.getLogger(__name__)
 
     # Load the application
-    app = sqla.main(conf.global_conf, **conf.local_conf)
+    app = pylonshq.main(conf.global_conf, **conf.local_conf)
     #settings = app.registry.settings
 
     # Abort if any table exists
