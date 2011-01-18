@@ -1,6 +1,10 @@
 from pyramid.threadlocal import get_current_request
 from pyramid.exceptions import ConfigurationError
 from pyramid.url import route_url
+from pyramid.url import current_route_url
+from pyramid.i18n import TranslationStringFactory
+
+_ = TranslationStringFactory('pyramid')
 
 from pylonshq import helpers
 
@@ -14,6 +18,8 @@ def add_renderer_globals(event):
     globs = {
         'url': route_url,
         'h': helpers,
+        'current_url': current_route_url,
+        '_': _
         }
     if request is not None:
         tmpl_context = request.tmpl_context
