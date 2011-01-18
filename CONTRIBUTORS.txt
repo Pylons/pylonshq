@@ -108,3 +108,5 @@ Contributors
 - Blaise Laflamme, 2010/11/09
 
 - Ben Bangert, 2010/11/09
+
+- Marcin Lulek, 2011/01/19
