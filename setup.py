@@ -11,6 +11,7 @@ requires = [
     'pyramid',
     'pyramid_beaker',
     'pyramid_sqla',
+    'pyramid_handlers',
     'SQLAlchemy',
     'transaction',
     'repoze.tm2',

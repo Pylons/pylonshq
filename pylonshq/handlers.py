@@ -6,7 +6,7 @@ import pkg_resources
 from pyramid.httpexceptions import HTTPFound
 from pyramid.exceptions import NotFound
 from pyramid.url import route_url
-from pyramid.view import action
+from pyramid_handlers import action
 from pyramid.renderers import render_to_response
 
 #from sqla.models import MyModel

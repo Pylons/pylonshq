@@ -1,20 +1,24 @@
 from pyramid.config import Configurator
 import pyramid_beaker
 import pyramid_sqla
-from pyramid_sqla.static import add_static_route
+import pyramid_handlers
+#from pyramid_sqla.static import add_static_route
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
     config = Configurator(settings=settings)
-
+    
     # Initialize database
     pyramid_sqla.add_engine(settings, prefix='sqlalchemy.')
 
     # Configure Beaker sessions
     session_factory = pyramid_beaker.session_factory_from_settings(settings)
     config.set_session_factory(session_factory)
-
+    
+    # Initialize handlers
+    config.include(pyramid_handlers.includeme)
+    
     # Configure renderers
     #config.add_renderer('.html', 'pyramid.mako_templating.renderer_factory')
     config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
