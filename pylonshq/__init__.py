@@ -2,12 +2,15 @@ from pyramid.config import Configurator
 import pyramid_beaker
 import pyramid_sqla
 import pyramid_handlers
+import pylonshq.lib.request as request
 #from pyramid_sqla.static import add_static_route
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
-    config = Configurator(settings=settings)
+    config = Configurator(settings=settings,
+                          request_factory=request.PylonsHQRequest
+                          )
     
     # Initialize database
     pyramid_sqla.add_engine(settings, prefix='sqlalchemy.')
