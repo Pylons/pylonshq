@@ -67,5 +67,7 @@ class MainHandler(object):
     @action(renderer='pylonshq:templates/home/test.mako')
     def test(self):
         self.c.pagename = 'Test'
+        hello = self.request.translate('Hello')
+        print hello
         return {}
     

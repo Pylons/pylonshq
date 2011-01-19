@@ -18,8 +18,12 @@ def main(global_config, **settings):
     # Configure Beaker sessions
     session_factory = pyramid_beaker.session_factory_from_settings(settings)
     config.set_session_factory(session_factory)
+    
     # Configure Beaker cache regions
     pyramid_beaker.set_cache_regions_from_settings(settings)
+    
+    # Add i18n dirs
+    config.add_translation_dirs('pylonshq:locale/')
     
     # Initialize handlers
     config.include(pyramid_handlers.includeme)
@@ -28,6 +32,8 @@ def main(global_config, **settings):
     #config.add_renderer('.html', 'pyramid.mako_templating.renderer_factory')
     config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
                           'pyramid.events.BeforeRender')
+    config.add_subscriber('pylonshq.subscribers.add_localizer',
+                          'pyramid.events.NewRequest')
     config.add_static_view('static', 'pylonshq:static')
     # Set up routes and views
     config.add_handler('home', '/', 'pylonshq.handlers:MainHandler',

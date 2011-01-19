@@ -17,7 +17,8 @@ requires = [
     'repoze.tm2',
     'zope.sqlalchemy',
     'WebError',
-    'webhelpers'
+    'webhelpers',
+    'babel'
     ]
 
 if sys.version_info[:3] < (2,5,0):
@@ -51,6 +52,11 @@ setup(name='pylonshq',
       install_requires = requires,
       tests_require= requires,
       test_suite="pylonshq",
+      message_extractors = {'pylonshq': [
+            ('**.py', 'python', None),
+            ('templates/**.html', 'mako', None),
+            ('templates/**.mako', 'mako', None),
+            ('static/**', 'ignore', None)]},
       entry_points = entry_points,
       paster_plugins=['pyramid'],
       )
