@@ -17,6 +17,7 @@ requires = [
     'repoze.tm2',
     'zope.sqlalchemy',
     'WebError',
+    'webhelpers'
     ]
 
 if sys.version_info[:3] < (2,5,0):
