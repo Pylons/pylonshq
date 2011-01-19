@@ -169,12 +169,6 @@ class Group(Base, BaseModel):
                         passive_updates=True
                         )
 
-    resource_permissions = sa.orm.relationship('GroupResourcePermission',
-                        backref='groups',
-                        cascade="all, delete-orphan",
-                        passive_deletes=True,
-                        passive_updates=True
-                        )
     
     def __repr__(self):
         return '<Group: %s>' % self.group_name
