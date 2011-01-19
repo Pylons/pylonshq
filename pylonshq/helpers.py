@@ -14,3 +14,6 @@ The template globals (``h`` et al) are set in
 
 #from webhelpers.html import *
 #from webhelpers.html.tags import *
+
+from webhelpers.date import distance_of_time_in_words
+from webhelpers.html import HTML, escape, literal
