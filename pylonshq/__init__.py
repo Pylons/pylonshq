@@ -18,6 +18,8 @@ def main(global_config, **settings):
     # Configure Beaker sessions
     session_factory = pyramid_beaker.session_factory_from_settings(settings)
     config.set_session_factory(session_factory)
+    # Configure Beaker cache regions
+    pyramid_beaker.set_cache_regions_from_settings(settings)
     
     # Initialize handlers
     config.include(pyramid_handlers.includeme)
