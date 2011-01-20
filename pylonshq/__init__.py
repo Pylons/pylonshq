@@ -26,7 +26,7 @@ def main(global_config, **settings):
     config.add_translation_dirs('pylonshq:locale/')
     
     # Initialize handlers
-    config.include(pyramid_handlers.includeme)
+    config.include('pyramid_handlers')
     
     # Configure renderers
     #config.add_renderer('.html', 'pyramid.mako_templating.renderer_factory')
