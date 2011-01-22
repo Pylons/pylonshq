@@ -1,15 +1,13 @@
 import logging
-
-import logging
 import pkg_resources
 
 from pyramid.httpexceptions import HTTPFound
 from pyramid.exceptions import NotFound
 from pyramid.url import route_url
-from pyramid_handlers import action
+from pyramid.view import view_config
 from pyramid.renderers import render_to_response
 
-#from sqla.models import MyModel
+from pyramid_handlers import action
 
 log = logging.getLogger(__name__)
         
@@ -25,13 +23,24 @@ class MainHandler(object):
     def render_page(self, section, redir_elems):
         endpath = self.request.matchdict.get('endpath', None)
         if not endpath:
-            return HTTPFound(location=route_url('subsections', self.request, action=section, endpath='/'.join(redir_elems)))
+            return HTTPFound(location=route_url('subsections',
+                                                self.request,
+                                                action=section,
+                                                endpath='/'.join(redir_elems)))
         tmpl_path = 'templates/pages/%s/%s.mako' % (section, '/'.join(endpath))
         if pkg_resources.resource_exists('pylonshq', tmpl_path):
-            self.c.active_footer_nav = '-'.join([self.request.matchdict.get('action')]+list(endpath))
+            self.c.active_footer_nav = '-'.join([self.request.matchdict.get('action')]
+                                                +list(endpath))
             values = {}
-            return render_to_response('pylonshq:%s' % tmpl_path, values, self.request)
+            return render_to_response('pylonshq:%s' % tmpl_path,
+                                      values,
+                                      self.request)
         raise NotFound()
+    
+    @view_config(context='pyramid.exceptions.NotFound',
+                 renderer='pylonshq:templates/404.mako')
+    def notfound(self):
+        return {}
     
     @action(renderer='pylonshq:templates/home/home.mako')
     def index(self):

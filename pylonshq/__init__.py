@@ -9,8 +9,7 @@ def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
     config = Configurator(settings=settings,
-                          request_factory=request.PylonsHQRequest
-                          )
+                          request_factory=request.PylonsHQRequest)
     
     # Initialize database
     pyramid_sqla.add_engine(settings, prefix='sqlalchemy.')
