@@ -43,7 +43,7 @@
 		${h.tags.end_form()}
 		%else:
 		Hello ${request.user.user_name},
-		<a href="${url('sections',request,action='sign_out')}">Sign out</> 
+		<a href="${url('sections',request,action='sign_out')}">Sign out</a> 
 		%endif
 		</div>
     </header>
