@@ -13,10 +13,12 @@ def main(global_config, **settings):
     """
     
     # add policies
-    authentication_policy = AuthTktAuthenticationPolicy('seekrit',
+    authentication_policy = AuthTktAuthenticationPolicy('pyramidhq_seekrit',
                                                         callback=groupfinder)
     authorization_policy = ACLAuthorizationPolicy()
     config = Configurator(settings=settings,
+                          authentication_policy=authentication_policy,
+                          authorization_policy=authorization_policy,
                           request_factory=request.PylonsHQRequest)
     
     # Initialize database

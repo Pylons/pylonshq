@@ -34,6 +34,18 @@
 		<div id="header">
 			${nav.header_nav(c.active_header_nav)}
 		</div>
+		<div id="user_panel">
+		%if not request.user:
+		${h.tags.form(url('sections',request,action='sign_in'),id='sign_in')}
+		<label for="user_name">Username</label>${h.tags.text('user_name')}
+		<label for="password">Password</label>${h.tags.password('password')}
+		${h.tags.submit('submit','Sign In')}
+		${h.tags.end_form()}
+		%else:
+		Hello ${request.user.user_name},
+		<a href="${url('sections',request,action='sign_out')}">Sign out</> 
+		%endif
+		</div>
     </header>
     
 	${next.body()}

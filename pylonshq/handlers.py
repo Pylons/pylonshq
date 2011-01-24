@@ -1,6 +1,9 @@
 import logging
 import pkg_resources
 
+import sqlalchemy as sa
+import pyramid.security
+
 from pylonshq.models import User
 from pyramid.httpexceptions import HTTPFound
 from pyramid.exceptions import NotFound
@@ -83,15 +86,16 @@ class MainHandler(object):
     
     def sign_in(self):
         #clear the cache for user
-        User.by_user_name(self.request.params.get('sign_in_user_name'), invalidate=True)
-        user = User.by_user_name(self.request.params.get('sign_in_user_name'), cache=None)
-        print user
+        User.by_user_name(self.request.params.get('user_name'), invalidate=True)
+        user = User.by_user_name(self.request.params.get('user_name'), cache=None)
         if user:
-            if user.user_password == User.pass_crypt(self.request.params.get('sign_in_user_password'))\
+            password = self.request.params.get('password')
+            if user.user_password == User.pass_crypt(password)\
             and user.status == 1:
                 user.last_login_date = sa.func.now()
                 self.request.session.flash(u'Signed in successfully')
-                headers = security.remember(self.request, 'admin')
+                headers = pyramid.security.remember(self.request,
+                                                    user.user_name)
                 return HTTPFound(location=self.request.route_url('home'),
                                  headers=headers)
 
@@ -99,5 +103,6 @@ class MainHandler(object):
         return HTTPFound(location=self.request.route_url('home'))
     
     def sign_out(self):
-        headers = security.forget(self.request)
-        return HTTPFound(location=self.request.route_url('home'), headers=headers)
+        headers = pyramid.security.forget(self.request)
+        return HTTPFound(location=self.request.route_url('home'),
+                         headers=headers)

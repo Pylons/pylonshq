@@ -24,9 +24,14 @@ def setup_app(command, conf, vars):
     # Create all tables
     models.Base.metadata.create_all()
     sess = models.Session()
-
     # Record 1
     #p = models.Page(title="FrontPage", content="Edit me.")
     #sess.add(p)
 
+    admin = models.User()
+    admin.user_name = 'admin'
+    admin.email = 'admin@localhost'
+    admin.user_password = models.User.pass_crypt('admin')
+    admin.status = 1
+    sess.add(admin)
     transaction.commit()
