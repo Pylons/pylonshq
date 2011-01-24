@@ -7,13 +7,14 @@ import transaction
 import hashlib
 import urllib
 
-from pylonshq.lib.sqlalchemy_ext import FromCache, RelationshipCache, query_callable
+from pylonshq.lib.sqlalchemy_ext import FromCache, RelationshipCache, CachingQuery
 from beaker.cache import cache_region
 
 log = logging.getLogger(__name__)
 
 Base = psa.get_base()
 Session = psa.get_session()
+Session.configure(extension=[psa._zte], query_cls=CachingQuery)
 
 class BaseModel(object):
     
