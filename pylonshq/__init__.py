@@ -1,13 +1,21 @@
+from pyramid.authentication import AuthTktAuthenticationPolicy
+from pyramid.authorization import ACLAuthorizationPolicy
 from pyramid.config import Configurator
 import pyramid_beaker
 import pyramid_sqla
 import pyramid_handlers
 import pylonshq.lib.request as request
+from pylonshq.security import groupfinder
 #from pyramid_sqla.static import add_static_route
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
+    
+    # add policies
+    authentication_policy = AuthTktAuthenticationPolicy('seekrit',
+                                                        callback=groupfinder)
+    authorization_policy = ACLAuthorizationPolicy()
     config = Configurator(settings=settings,
                           request_factory=request.PylonsHQRequest)
     
