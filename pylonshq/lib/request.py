@@ -7,4 +7,8 @@ class PylonsHQRequest(Request):
     @reify
     def user(self):
         if not self.path_info.startswith('/static'):
-            return User.by_user_name(unauthenticated_userid(self))
+            username = unauthenticated_userid(self)
+            if username: 
+                return User.by_user_name(username)
+            else:
+                return None
