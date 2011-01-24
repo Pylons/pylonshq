@@ -1,6 +1,7 @@
 import logging
 import pkg_resources
 
+from pylonshq.models import User
 from pyramid.httpexceptions import HTTPFound
 from pyramid.exceptions import NotFound
 from pyramid.url import route_url
@@ -80,3 +81,23 @@ class MainHandler(object):
         print hello
         return {}
     
+    def sign_in(self):
+        #clear the cache for user
+        User.by_user_name(self.request.params.get('sign_in_user_name'), invalidate=True)
+        user = User.by_user_name(self.request.params.get('sign_in_user_name'), cache=None)
+        print user
+        if user:
+            if user.user_password == User.pass_crypt(self.request.params.get('sign_in_user_password'))\
+            and user.status == 1:
+                user.last_login_date = sa.func.now()
+                self.request.session.flash(u'Signed in successfully')
+                headers = security.remember(self.request, 'admin')
+                return HTTPFound(location=self.request.route_url('home'),
+                                 headers=headers)
+
+        self.request.session.flash(u'Wrong username or password', 'warning')
+        return HTTPFound(location=self.request.route_url('home'))
+    
+    def sign_out(self):
+        headers = security.forget(self.request)
+        return HTTPFound(location=self.request.route_url('home'), headers=headers)
