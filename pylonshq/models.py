@@ -202,54 +202,6 @@ class Group(Base, BaseModel):
                                      sqlalchemy_Session=Session,
                                      **GET_params
                                      )
-
-    users = sa.orm.relationship('User',
-                        secondary='users_groups',
-                        order_by='User.user_name',
-                        passive_deletes=True,
-                        passive_updates=True,
-                        backref='groups'
-                        )
-    
-    # dynamic property because we may want to cache users relation at later point 
-    users_dynamic = sa.orm.relationship('User',
-                        secondary='users_groups',
-                        order_by='User.user_name',
-                        lazy="dynamic"
-                        )
-    
-    permissions = sa.orm.relationship('GroupPermission',
-                        backref='groups',
-                        cascade="all, delete-orphan",
-                        passive_deletes=True,
-                        passive_updates=True
-                        )
-    
-    def __repr__(self):
-        return '<Group: %s>' % self.group_name
-    
-    @classmethod
-    def all(cls):
-        q = Session.query(Group)
-        return q
-    
-    @classmethod
-    def by_group_name(cls, group_name):
-        q = Session.query(cls).filter(cls.group_name == group_name)
-        return q.first()
-    
-    def get_user_paginator(self, page=1, item_count=None, items_per_page=50,
-                           user_names=None, GET_params={}):
-        GET_params.pop('page', None)
-        q = self.users_dynamic
-        if user_names:
-            q = q.filter(UserGroup.user_name.in_(user_names))
-        return webhelpers.paginate.Page(q, page=page,
-                                     item_count=item_count,
-                                     items_per_page=items_per_page,
-                                     sqlalchemy_Session=Session,
-                                     **GET_params
-                                     )
         
         
 class GroupPermission(Base, BaseModel):
