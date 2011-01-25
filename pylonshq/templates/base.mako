@@ -35,7 +35,7 @@
 			${nav.header_nav(c.active_header_nav)}
 		</div>
     </header>
-    
+	
 	${next.body()}
     
 	<footer class="footer">

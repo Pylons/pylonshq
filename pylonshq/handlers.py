@@ -105,12 +105,16 @@ class MainHandler(object):
                 if user.password == User.pass_crypt(password)\
                 and user.status == 1:
                     user.last_login_date = sa.func.now()
-                    self.request.session.flash(u'Signed in successfully')
+                    self.request.session.flash(u'Welcome back %s !' % user.username, queue='success')
                     headers = security.remember(self.request,
                                                 user.username)
                     return HTTPFound(location=self.request.route_url('home'),
                                      headers=headers)
-        return dict(item=params, form=FormRenderer(form))
+            self.request.session.flash(u'Invalid username or password!', queue='notice')
+        return {
+            'item': params,
+            'form': FormRenderer(form)
+        }
     
     def logout(self):
         headers = security.forget(self.request)

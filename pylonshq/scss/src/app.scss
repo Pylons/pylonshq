@@ -280,8 +280,47 @@ form {
         padding: 5px 10px 5px 10px;
         background-color: #eeeeee;
         border: 1px solid #bbbbbb;
+        border-right-style: none;
+	    border-left-style: none;
     }
     .button:hover {
         background-color: #bbbbbb;
     }
 }
+
+@mixin flash-box {
+    width: 60%;
+    margin: 0 auto 10px auto;
+    border-right-style: none;
+	border-left-style: none;
+	padding: 12px 20px 12px 60px;
+}
+
+#main .error {
+    background: #fbe3e4 url(../images/dialog-warning.png) no-repeat 10px 5px;
+    @include flash-box
+}
+
+#main .notice {
+    background: #fff6bf url(../images/dialog-note.png) no-repeat 10px 8px;
+    @include flash-box
+}
+
+#main .success {
+    background: #e6efc2 url(../images/dialog-note.png) no-repeat 10px 8px;
+    @include flash-box
+}
+
+#main .info {
+    background: #fafafa url(../images/dialog-topic.png) no-repeat 10px 8px;
+    color:#373839;
+    border-color:#c6c9cb;
+    border-width: 2px;
+	border-style: solid;
+    @include flash-box
+}
+
+.info a {
+    color:#e88f00;
+}
+
