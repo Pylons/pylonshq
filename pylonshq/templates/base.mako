@@ -22,8 +22,8 @@
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Neuton|Nobile:regular,i,b,bi&subset=latin" media="screen">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/screen.css')}?v=${rid}" media="screen, projection">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/print.css')}?v=${rid}" media="print">
-	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}?v=${rid}" media="screen, projection">
 	<!--[if IE]><link rel="stylesheet" href="${request.static_url('pylonshq:static/css/ie.css')}?v=${rid}" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}?v=${rid}" media="screen, projection">
 	<script src="${request.static_url('pylonshq:static/js/libs/modernizr-1.6.min.js')}"></script>
 
 </head>
@@ -33,18 +33,6 @@
 	<header class="header">
 		<div id="header">
 			${nav.header_nav(c.active_header_nav)}
-		</div>
-		<div id="user_panel">
-		%if not request.user:
-		${h.tags.form(url('sections',request,action='sign_in'),id='sign_in')}
-		<label for="user_name">Username</label>${h.tags.text('user_name')}
-		<label for="password">Password</label>${h.tags.password('password')}
-		${h.tags.submit('submit','Sign In')}
-		${h.tags.end_form()}
-		%else:
-		Hello ${request.user.user_name},
-		<a href="${url('sections',request,action='sign_out')}">Sign out</a> 
-		%endif
 		</div>
     </header>
     

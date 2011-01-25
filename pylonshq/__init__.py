@@ -47,6 +47,7 @@ def main(global_config, **settings):
     # Set up routes and views
     config.add_handler('home', '/', 'pylonshq.handlers:MainHandler',
                        action='index')
+    config.add_handler('login', '/login', handler='pylonshq.handlers:MainHandler', action='login')
     config.add_handler('sections', '/{action}', handler='pylonshq.handlers:MainHandler')
     config.add_handler('subsections', '/{action}/*endpath', handler='pylonshq.handlers:MainHandler')
     #config.add_handler('main', '/{action}', 'pylonshq.handlers:MainHandler',

@@ -232,3 +232,56 @@ footer {
         }
     }
 }
+
+form {
+    width: 565px;
+    margin-left: auto;
+    margin-right: auto;
+    .form-block {
+        clear: both;
+        display: block;
+    }
+    ul.form-error {
+        font-size: 14px;
+        line-height: 14px;
+        color: #8a1f11;
+        padding: 0;
+        margin: 0 0 0 250px;
+        clear: both;
+    }
+    ul.form-error li {
+        list-style-type: none;
+        padding: 2px;
+        margin: 0;
+    }
+    label {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 15px 0 15px 0;
+        float: left;
+        width: 250px;
+    }
+    input {
+        font-size: 14px;
+        line-height: 14px;
+        float: left;
+        width: 300px;
+        margin: 0;
+    }
+    .form-buttons {
+        clear: both;
+        float: right;
+        padding-top: 10px;
+    }
+    .button {
+        font-size: 14px;
+        color: #373839;
+        width: auto;
+        padding: 5px 10px 5px 10px;
+        background-color: #eeeeee;
+        border: 1px solid #bbbbbb;
+    }
+    .button:hover {
+        background-color: #bbbbbb;
+    }
+}

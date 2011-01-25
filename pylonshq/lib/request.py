@@ -9,6 +9,6 @@ class PylonsHQRequest(Request):
         if not self.path_info.startswith('/static'):
             username = unauthenticated_userid(self)
             if username: 
-                return User.by_user_name(username)
+                return User.by_username(username)
             else:
                 return None

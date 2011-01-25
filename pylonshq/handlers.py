@@ -2,16 +2,20 @@ import logging
 import pkg_resources
 
 import sqlalchemy as sa
-import pyramid.security
 
-from pylonshq.models import User
 from pyramid.httpexceptions import HTTPFound
 from pyramid.exceptions import NotFound
 from pyramid.url import route_url
 from pyramid.view import view_config
 from pyramid.renderers import render_to_response
+from pyramid import security
 
 from pyramid_handlers import action
+from pyramid_simpleform import Form
+from pyramid_simpleform.renderers import FormRenderer
+
+from pylonshq.models import User
+from pylonshq.forms import LoginForm
 
 log = logging.getLogger(__name__)
         
@@ -84,25 +88,32 @@ class MainHandler(object):
         print hello
         return {}
     
-    def sign_in(self):
-        #clear the cache for user
-        User.by_user_name(self.request.params.get('user_name'), invalidate=True)
-        user = User.by_user_name(self.request.params.get('user_name'), cache=None)
-        if user:
-            password = self.request.params.get('password')
-            if user.user_password == User.pass_crypt(password)\
-            and user.status == 1:
-                user.last_login_date = sa.func.now()
-                self.request.session.flash(u'Signed in successfully')
-                headers = pyramid.security.remember(self.request,
-                                                    user.user_name)
-                return HTTPFound(location=self.request.route_url('home'),
-                                 headers=headers)
-
-        self.request.session.flash(u'Wrong username or password', 'warning')
-        return HTTPFound(location=self.request.route_url('home'))
+    @action(renderer='pylonshq:templates/home/login.mako')
+    def login(self):
+        self.c.pagename = 'Login'
+        self.c.active_header_nav = 'tools'
+        self.c.active_footer_nav = 'tools-login'
+        params = self.request.params
+        form = Form(self.request, schema=LoginForm, obj=params)
+        if form.validate():
+            form.bind(params)
+            #clear the cache for user
+            User.by_username(params.get('username'), invalidate=True)
+            user = User.by_username(params.get('username'), cache=None)
+            print user
+            if user:
+                password = params.get('password')
+                if user.password == User.pass_crypt(password)\
+                and user.status == 1:
+                    user.last_login_date = sa.func.now()
+                    self.request.session.flash(u'Signed in successfully')
+                    headers = security.remember(self.request,
+                                                user.username)
+                    return HTTPFound(location=self.request.route_url('home'),
+                                     headers=headers)
+        return dict(item=params, form=FormRenderer(form))
     
-    def sign_out(self):
-        headers = pyramid.security.forget(self.request)
+    def logout(self):
+        headers = security.forget(self.request)
         return HTTPFound(location=self.request.route_url('home'),
                          headers=headers)

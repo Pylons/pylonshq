@@ -46,21 +46,21 @@ class BaseModel(object):
 class UserMapperExtension(sa.orm.interfaces.MapperExtension):
     
     def after_update(self, mapper, connection, instance):
-        User.by_user_name(instance.user_name, invalidate=True)
+        User.by_username(instance.username, invalidate=True)
         
     def after_delete(self, mapper, connection, instance):
-        User.by_user_name(instance.user_name, invalidate=True)
+        User.by_username(instance.username, invalidate=True)
 
 
 class User(Base, BaseModel):
     __tablename__ = 'users'
     __mapper_args__ = {'extension': UserMapperExtension()}
-    user_name = sa.Column(sa.Unicode(30), primary_key=True)
-    user_password = sa.Column(sa.String(40))
+    username = sa.Column(sa.Unicode(30), primary_key=True)
+    password = sa.Column(sa.String(40))
     email = sa.Column(sa.Unicode(100), nullable=False, unique=True)
     status = sa.Column(sa.SmallInteger(), nullable=False)
-    first_name = sa.Column(sa.Unicode(25))
-    last_name = sa.Column(sa.Unicode(25))
+    firstname = sa.Column(sa.Unicode(25))
+    lastname = sa.Column(sa.Unicode(25))
     company_name = sa.Column(sa.Unicode(255), default='')         
     last_login_date = sa.Column(sa.TIMESTAMP(timezone=True),
                                 default=sa.sql.func.now(),
@@ -68,7 +68,7 @@ class User(Base, BaseModel):
                                 )    
     
     def __repr__(self):
-        return '<User: %s>' % self.user_name
+        return '<User: %s>' % self.username
     
     groups_dynamic = sa.orm.relationship('Group', secondary='users_groups',
                         lazy='dynamic',
@@ -86,10 +86,10 @@ class User(Base, BaseModel):
     def permissions(self):
         q = Session.query(GroupPermission.perm_name.label('perm_name'))
         q = q.filter(GroupPermission.group_name == UserGroup.group_name)
-        q = q.filter(User.user_name == UserGroup.user_name)
-        q = q.filter(User.user_name == self.user_name)
+        q = q.filter(User.username == UserGroup.username)
+        q = q.filter(User.username == self.username)
         q2 = Session.query(UserPermission.perm_name.label('perm_name'))
-        q2 = q2.filter(User.user_name == self.user_name)
+        q2 = q2.filter(User.username == self.username)
         q = q.union(q2)
         return [row.perm_name for row in q]
     
@@ -106,9 +106,9 @@ class User(Base, BaseModel):
         return crypt.hexdigest()
     
     @classmethod
-    def by_user_name(cls, user_name, cache=FromCache("default_term", "by_id"),
+    def by_username(cls, username, cache=FromCache("default_term", "by_id"),
                     invalidate=False):
-        q = Session.query(cls).filter(cls.user_name == user_name)
+        q = Session.query(cls).filter(cls.username == username)
         if cache:
             q = q.options(sa.orm.eagerload(User.groups))
             q = q.options(cache)
@@ -118,9 +118,9 @@ class User(Base, BaseModel):
         return q.first()
     
     @classmethod
-    def by_user_names(cls, user_names, cache=FromCache("default_term", "by_id"),
+    def by_usernames(cls, usernames, cache=FromCache("default_term", "by_id"),
                     invalidate=False):
-        q = Session.query(cls).filter(cls.user_name.in_(user_names))
+        q = Session.query(cls).filter(cls.username.in_(usernames))
 #        if cache:
 #            q = q.options(sa.orm.eagerload(User.groups))
 #            q = q.options(cache)
@@ -150,7 +150,7 @@ class Group(Base, BaseModel):
     
     users = sa.orm.relationship('User',
                         secondary='users_groups',
-                        order_by='User.user_name',
+                        order_by='User.username',
                         passive_deletes=True,
                         passive_updates=True,
                         backref='groups'
@@ -159,7 +159,7 @@ class Group(Base, BaseModel):
     # dynamic property because we may want to cache users relation at later point 
     users_dynamic = sa.orm.relationship('User',
                         secondary='users_groups',
-                        order_by='User.user_name',
+                        order_by='User.username',
                         lazy="dynamic"
                         )
     
@@ -191,11 +191,11 @@ class Group(Base, BaseModel):
 
 
     def get_user_paginator(self, page=1, item_count=None, items_per_page=50,
-                           user_names=None, GET_params={}):
+                           usernames=None, GET_params={}):
         GET_params.pop('page', None)
         q = self.users_dynamic
-        if user_names:
-            q = q.filter(UserGroup.user_name.in_(user_names))
+        if usernames:
+            q = q.filter(UserGroup.username.in_(usernames))
         return webhelpers.paginate.Page(q, page=page,
                                      item_count=item_count,
                                      items_per_page=items_per_page,
@@ -223,8 +223,8 @@ class GroupPermission(Base, BaseModel):
 
 class UserPermission(Base, BaseModel):
     __tablename__ = 'users_permissions'
-    user_name = sa.Column(sa.Unicode(50),
-                         sa.ForeignKey('users.user_name', onupdate='CASCADE',
+    username = sa.Column(sa.Unicode(50),
+                         sa.ForeignKey('users.username', onupdate='CASCADE',
                                        ondelete='CASCADE'), primary_key=True)
     perm_name = sa.Column(sa.Unicode(30), primary_key=True)
     
@@ -232,8 +232,8 @@ class UserPermission(Base, BaseModel):
         return '<UserPermission: %s>' % self.perm_name
     
     @classmethod
-    def by_user_and_perm(cls, user_name, perm_name):
-        q = Session.query(cls).filter(cls.user_name == user_name)
+    def by_user_and_perm(cls, username, perm_name):
+        q = Session.query(cls).filter(cls.username == username)
         q = q.filter(cls.perm_name == perm_name)
         return q.first()
     
@@ -244,9 +244,9 @@ class UserGroup(Base, BaseModel):
                          sa.ForeignKey('groups.group_name', onupdate='CASCADE',
                                        ondelete='CASCADE'), primary_key=True)
 
-    user_name = sa.Column(sa.Unicode(30),
-                        sa.ForeignKey('users.user_name', onupdate='CASCADE',
+    username = sa.Column(sa.Unicode(30),
+                        sa.ForeignKey('users.username', onupdate='CASCADE',
                                       ondelete='CASCADE'), primary_key=True)
 
     def __repr__(self):
-        return '<UserGroup: %s, %s>' % (self.group_name, self.user_name,)
+        return '<UserGroup: %s, %s>' % (self.group_name, self.username,)
