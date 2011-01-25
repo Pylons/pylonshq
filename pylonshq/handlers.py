@@ -100,7 +100,6 @@ class MainHandler(object):
             #clear the cache for user
             User.by_username(params.get('username'), invalidate=True)
             user = User.by_username(params.get('username'), cache=None)
-            print user
             if user:
                 password = params.get('password')
                 if user.password == User.pass_crypt(password)\

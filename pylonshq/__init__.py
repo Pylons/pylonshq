@@ -38,7 +38,6 @@ def main(global_config, **settings):
     config.include('pyramid_handlers')
     
     # Configure renderers
-    #config.add_renderer('.html', 'pyramid.mako_templating.renderer_factory')
     config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
                           'pyramid.events.BeforeRender')
     config.add_subscriber('pylonshq.subscribers.add_localizer',
@@ -50,8 +49,5 @@ def main(global_config, **settings):
     config.add_handler('login', '/login', handler='pylonshq.handlers:MainHandler', action='login')
     config.add_handler('sections', '/{action}', handler='pylonshq.handlers:MainHandler')
     config.add_handler('subsections', '/{action}/*endpath', handler='pylonshq.handlers:MainHandler')
-    #config.add_handler('main', '/{action}', 'pylonshq.handlers:MainHandler',
-    #    path_info=r'/(?!favicon\.ico|robots\.txt|w3c)')
-    #add_static_route(config, 'pylonshq', 'static', cache_max_age=3600)
     config.scan('pylonshq')
     return config.make_wsgi_app()
