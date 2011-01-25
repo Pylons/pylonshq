@@ -110,7 +110,7 @@ class MainHandler(object):
                                                 user.username)
                     return HTTPFound(location=self.request.route_url('home'),
                                      headers=headers)
-            self.request.session.flash(u'Invalid username or password!', queue='notice')
+            self.request.session.flash(u'Wrong username or password!', queue='notice')
         return {
             'item': params,
             'form': FormRenderer(form)
