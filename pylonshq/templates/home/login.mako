@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/page.mako"/>
 
-<h2>Login</h2>
+<h1>Login</h1>
 ${form.begin(current_url(request))}
 ${form.csrf()}
 <div class="form-block">
