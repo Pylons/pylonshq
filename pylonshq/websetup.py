@@ -29,8 +29,8 @@ def setup_app(command, conf, vars):
     #sess.add(p)
 
     admin = models.User()
-    admin.username = 'admin'
-    admin.email = 'admin@localhost'
+    admin.username = u'admin'
+    admin.email = u'admin@localhost'
     admin.password = models.User.pass_crypt('admin')
     admin.status = 1
     sess.add(admin)

@@ -55,13 +55,14 @@ class UserMapperExtension(sa.orm.interfaces.MapperExtension):
 class User(Base, BaseModel):
     __tablename__ = 'users'
     __mapper_args__ = {'extension': UserMapperExtension()}
-    username = sa.Column(sa.Unicode(30), primary_key=True)
+    id = sa.Column(sa.Integer(), primary_key=True)
+    username = sa.Column(sa.Unicode(30), unique=True)
     password = sa.Column(sa.String(40))
     email = sa.Column(sa.Unicode(100), nullable=False, unique=True)
     status = sa.Column(sa.SmallInteger(), nullable=False)
     firstname = sa.Column(sa.Unicode(25))
     lastname = sa.Column(sa.Unicode(25))
-    company_name = sa.Column(sa.Unicode(255), default='')         
+    company_name = sa.Column(sa.Unicode(255), default=u'')         
     last_login_date = sa.Column(sa.TIMESTAMP(timezone=True),
                                 default=sa.sql.func.now(),
                                 server_default=sa.func.now()
