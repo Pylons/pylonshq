@@ -1,0 +1,21 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Project lead: Blaise Laflamme
+  Twitter: @blaiselaflamme
+  Location: Drummondville, Quebec, Canada
+  
+  Contributor: Marcin Lulek
+  Twitter:
+  Location:
+
+/* THANKS */
+  Names (& URL): 
+
+/* SITE */
+  Language:English
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Tools: Python, Pyramid, SQLAlchemy
