@@ -44,10 +44,17 @@ def main(global_config, **settings):
                           'pyramid.events.NewRequest')
     config.add_static_view('static', 'pylonshq:static')
     # Set up routes and views
-    config.add_handler('home', '/', 'pylonshq.handlers:MainHandler',
+    config.add_handler('home', '/', 'pylonshq.handlers.base:BaseHandler',
                        action='index')
-    config.add_handler('login', '/login', handler='pylonshq.handlers:MainHandler', action='login')
-    config.add_handler('sections', '/{action}', handler='pylonshq.handlers:MainHandler')
-    config.add_handler('subsections', '/{action}/*endpath', handler='pylonshq.handlers:MainHandler')
+    config.add_handler('login', '/login', 
+                        handler='pylonshq.handlers.accounts:AccountHandler',
+                        action='login')
+    config.add_handler('logout', '/logout',
+                        handler='pylonshq.handlers.accounts:AccountHandler',
+                        action='logout')
+    config.add_handler('sections', '/{action}',
+                        handler='pylonshq.handlers.pages:PageHandler')
+    config.add_handler('subsections', '/{action}/*endpath',
+                        handler='pylonshq.handlers.pages:PageHandler')
     config.scan('pylonshq')
     return config.make_wsgi_app()
