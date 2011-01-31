@@ -30,24 +30,30 @@
 
 <body class="bp">
 
-	<header class="header">
-		<div id="header">
-			${nav.header_nav(c.active_header_nav)}
+	<header>
+		<div class="header">
+			<div id="header">
+				${nav.header_nav(c.active_header_nav)}
+			</div>
 		</div>
     </header>
 	
 	${next.body()}
     
-	<footer class="footer">
-		<div id="footer">
-			${nav.footer_nav(c.active_footer_nav)}
+	<footer>
+		<div class="footer">
+			<div id="footer">
+				${nav.footer_nav(c.active_footer_nav)}
+			</div>
 		</div>
     </footer>
 
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="${request.static_url('pylonshq:static/js/libs/jquery-1.4.4.min.js')}"%3E%3C/script%3E'))</script>
-  
+	
+	<script src="${request.static_url('pylonshq:static/js/libs/jquery.cycle.min.js')}"></script>
+	
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="${request.static_url('pylonshq:static/js/plugins.js')}?v=${rid}"></script>
 	<script src="${request.static_url('pylonshq:static/js/script.js')}?v=${rid}"></script>
@@ -59,8 +65,8 @@
 	<![endif]-->
 
 	<!-- yui profiler and profileviewer - remove for production -->
-	<script src="${request.static_url('pylonshq:static/js/profiling/yahoo-profiling.min.js')}"></script>
-	<script src="${request.static_url('pylonshq:static/js/profiling/config.js')}"></script>
+	##<script src="${request.static_url('pylonshq:static/js/profiling/yahoo-profiling.min.js')}"></script>
+	##<script src="${request.static_url('pylonshq:static/js/profiling/config.js')}"></script>
 	<!-- end profiling code -->
 
 	<!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->

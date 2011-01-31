@@ -2,30 +2,88 @@
 <%inherit file="/base.mako"/>
 <%namespace name="funcs" file="/funcs.mako"/>
 
-<section class="masthead">
-	<div id="masthead" class="masthead-home">
-		<div id="pyramid-logo" class="png_bg"></div>
+<section>
+	<div class="masthead">
+		<div id="masthead" class="masthead-home">
+			<div id="pyramid-medium-logo" class="png_bg">
+				<div id="home-highlights">
+					<div id="highlight-content">
+						<h2>Web Development<br>done right, your way !</h2>
+						<ul>
+							<li class="png_bg">Simple</li>
+							<li class="png_bg">Fun</li>
+							<li class="png_bg">Fast</li>
+							<li class="png_bg">Tested</li>
+						</ul>
+					</div>
+					<div id="highlight-download" class="auto-height">
+						<div class="download png_bg">
+							<h3>Download</h3>
+							version 1.0
+						</div>
+						<div class="options">
+							Download packages
+							<ul>
+								<li class="package">
+									<a href="https://github.com/Pylons/pyramid/tarball/1.0">1.0.tar.gz</a>
+								</li>
+								<li class="package last">
+									<a href="https://github.com/Pylons/pyramid/zipball/1.0">1.0.zip</a>
+								</li>
+							</ul>
+							or $ easy_install pyramid
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
-	
-<section class="feature">
-	<div id="feature">
-		FEATURE
+
+<section>
+	<div class="feature">
+		<div id="feature">
+			<div class="leftcol">
+				<h4>The Pylons Project</h4>
+				<div class="about-pylons png_bg">The Pylons Project was founded by the people behind the Pylons web framework to develop web application framework technology in Python. Rather than focusing on a single web framework, the Pylons Project will develop a collection of related technologies.</div>
+			</div>
+			<div class="rightcol">
+				<h4>Some companies or projects using Pylons Project</h4>
+				<div id="company-slideshow">
+    	        	<ul>
+    	        	    <li><a href="http://www.adroll.com/"><img src="${request.static_url('pylonshq:static/images/logos/adroll.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.bittorrent.com/"><img src="${request.static_url('pylonshq:static/images/logos/bittorrent.jpg')}" /></a></li>
+						<li><a href="http://digg.com/"><img src="${request.static_url('pylonshq:static/images/logos/digg.jpg')}" /></a></li>
+    	        	</ul>
+    	        	<ul>
+    	        	    <li><a href="https://www.dropbox.com/"><img src="${request.static_url('pylonshq:static/images/logos/dropbox.jpg')}" /></a></li>
+						<li><a href="http://www.freshbooks.com/"><img src="${request.static_url('pylonshq:static/images/logos/freshbooks.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.imagemoversdigital.com/"><img src="${request.static_url('pylonshq:static/images/logos/imagemoversdigital.jpg')}" /></a></li>
+    	        	</ul>
+    	        	<ul>
+						<li><a href="http://www.lolapps.com/"><img src="${request.static_url('pylonshq:static/images/logos/lolapps.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.mochimedia.com/"><img src="${request.static_url('pylonshq:static/images/logos/mochimedia.jpg')}" /></a></li>
+						<li><a href="http://www.opera.com/"><img src="${request.static_url('pylonshq:static/images/logos/opera.jpg')}" /></a></li>
+    	        	</ul>
+    	        	<ul>
+    	        	    <li><a href="http://oreilly.com/"><img src="${request.static_url('pylonshq:static/images/logos/oreilly.jpg')}" /></a></li>
+    	        	    <li><a href="http://saucelabs.com/"><img src="${request.static_url('pylonshq:static/images/logos/saucelabs.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.reddit.com/"><img src="${request.static_url('pylonshq:static/images/logos/reddit.jpg')}" /></a></li>
+					</ul>
+    	        	<ul>
+    	        	    <li><a href="http://sourceforge.net/"><img src="${request.static_url('pylonshq:static/images/logos/sourceforge.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.tineye.com/"><img src="${request.static_url('pylonshq:static/images/logos/tineye.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.wetafx.co.nz/"><img src="${request.static_url('pylonshq:static/images/logos/wetadigital.jpg')}" /></a></li>
+    	        	</ul>
+    	    	</div>
+			</div>
+		</div>
 	</div>
 </section>
 		
 <div id="main" class="home">
 	<div id="container">
 		${funcs.flash()}
-		<h1>HOME</h1>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+		<h2>CONTENT COMING....</h2>
 	</div>
 </div>

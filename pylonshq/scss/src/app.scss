@@ -75,13 +75,10 @@ header, footer, section, #main {
     }
 }
 
-footer {
+.footer {
     height: 260px;
     background: #151515 url(../images/footerbg.png) repeat-x 0 top;
     clear: both;
-}
-
-.footer {
     background-color: #151515;
 }
 
@@ -119,7 +116,6 @@ footer {
 }
 
 #main {
-    //@include min-height(500px);
     border-bottom: 2px solid #ffffff;
 }
 
@@ -128,7 +124,7 @@ footer {
 }
 
 .page, .exception {
-    background-color: #eeeeee;
+    background-color: #ffffff;
 }
 
 #container {
@@ -145,17 +141,12 @@ footer {
 
 .masthead {
     width: 100%;
-    background:#f98131 url(../images/headerbg.png) repeat-x 0 top;
+    background: #f98131 url(../images/headerbg.png) repeat-x 0 top;
     border-bottom: 2px solid #ffffff;
 }
 
 #masthead {
     @include structure-block;
-    #pylons-legacy-logo {
-        height: 250px;
-        width: 100%;
-        background: url(../images/pylons-legacy.png) no-repeat center center;
-    }
     #pylons-logo {
         height: 250px;
         width: 100%;
@@ -165,6 +156,16 @@ footer {
         height: 250px;
         width: 100%;
         background: url(../images/pyramid.png) no-repeat center center;
+    }
+    #pylons-medium-logo {
+        height: 250px;
+        width: 100%;
+        background: url(../images/pylons-medium.png) no-repeat left center;
+    }
+    #pyramid-medium-logo {
+        height: 250px;
+        width: 100%;
+        background: url(../images/pyramid-medium.png) no-repeat left center;
     }
     #pylonsfw-small-logo {
         height: 60px;
@@ -188,6 +189,89 @@ footer {
         padding: 0;
         margin: 0;
     }
+    #home-highlights {
+        width: 380px;
+        height: 250px;
+        text-align: center;
+        padding: 10px;
+        float: right;
+        overflow: hidden;
+        #highlight-content {
+            overflow: auto;
+            padding-bottom: 10px;
+            h2 {
+                margin-bottom: 10px;
+            }
+            ul {
+                margin: 20px 0 10px 0;
+                padding: 0;
+                list-style-type: none;
+                overflow: auto;
+            }
+            li {
+                width: 60px;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: left;
+                padding: 0 10px 0 25px;
+                background: url(../icons/Check_16x16.png) no-repeat left center;
+                float: left;
+            }
+        }
+        #highlight-download {
+            cursor: pointer;
+            width: 245px;
+            //height: 70px;
+            text-align: left;
+            background: #cacaca url(../images/middlebg.png) repeat-x 0 top;
+            border-top: 2px solid #b2b2b2;
+            border-bottom: 2px solid #b2b2b2;
+	        margin: 5px 70px 5px 70px;
+	        clear: both;
+	        z-index: 1000;
+	        display: block;
+	        position: absolute;
+	        .download {
+	            background: url(../icons/Download_48x48.png) no-repeat 25px center;
+                padding: 15px 0 10px 100px;
+	            h3 {
+                    margin: 0;
+                    padding: 0; 
+                }
+	        }
+	        .options {
+	            //color: #666666;
+	            font-size: 12px;
+	            line-height: 16px;
+	            display: none;
+	            padding: 0 15px 10px 10px;
+	            ul {
+	                padding: 10px 0 10px 0;
+	                margin: 0;
+	                list-style-type: none;
+	            }
+	            li {
+	                height: 20px;
+	                line-height: 20px;
+	                padding-left: 25px;
+	                border-top: 1px dotted #aaaaaa;
+	            }
+	            li.package {
+	                background: url(../icons/Archive_16x16.png) no-repeat left center;
+	            }
+	            li.command {
+	                background: url(../icons/Settings_16x16.png) no-repeat left center;
+	            }
+	            li.last {
+	                border-bottom: 1px dotted #aaaaaa;
+	            }
+	            a {
+	                color: #1b61d6;
+                    text-decoration: none;
+	            }
+	        }
+        }
+    }
 }
 
 .masthead-home {
@@ -207,6 +291,42 @@ footer {
 #feature {
     height: 150px;
     @include structure-block;
+    .leftcol {
+        font-size: 12px;
+        line-height: 16px;
+        width: 460px;
+        padding: 10px 10px 10px 0;
+        float: left;
+        overflow: hidden;
+    }
+    .rightcol {
+        font-size: 12px;
+        line-height: 16px;
+        width: 460px;
+        padding: 10px 0 10px 10px;
+        float: right;
+        overflow: hidden;
+    }
+    .about-pylons {
+        text-align: justify;
+        background: url(../images/about-pylons.png) no-repeat left top;
+        padding-left: 70px;
+    }
+    #company-slideshow {
+        width: 100%;
+        height: 80px;
+        background: #ffffff;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        li {
+            width: 100px;
+            padding: 0 20px 0 20px;
+            float: left;
+        }
+    }
 }
 
 .exception {
@@ -324,3 +444,6 @@ form {
     color:#e88f00;
 }
 
+//.auto-height {
+//    height: auto//
+//}
