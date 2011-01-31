@@ -190,7 +190,7 @@ header, footer, section, #main {
         margin: 0;
     }
     #home-highlights {
-        width: 380px;
+        width: 420px;
         height: 250px;
         text-align: center;
         padding: 10px;
@@ -209,11 +209,11 @@ header, footer, section, #main {
                 overflow: auto;
             }
             li {
-                width: 60px;
+                width: auto;
                 font-size: 16px;
                 line-height: 24px;
                 text-align: left;
-                padding: 0 10px 0 25px;
+                padding: 0 15px 0 25px;
                 background: url(../icons/Check_16x16.png) no-repeat left center;
                 float: left;
             }
@@ -226,7 +226,7 @@ header, footer, section, #main {
             background: #c7c7c7 url(../images/middlebg.png) repeat-x 0 top;
             border-top: 2px solid #b2b2b2;
             border-bottom: 2px solid #b2b2b2;
-	        margin: 5px 70px 5px 70px;
+	        margin: 5px 90px 5px 90px;
 	        clear: both;
 	        z-index: 1000;
 	        display: block;

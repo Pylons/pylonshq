@@ -11,8 +11,8 @@
 						<h2>Web Development<br>done right, your way !</h2>
 						<ul>
 							<li class="png_bg">Simple</li>
-							<li class="png_bg">Fun</li>
 							<li class="png_bg">Fast</li>
+							<li class="png_bg">Documented</li>
 							<li class="png_bg">Tested</li>
 						</ul>
 					</div>
@@ -84,6 +84,14 @@
 <div id="main" class="home">
 	<div id="container">
 		${funcs.flash()}
-		<h2>CONTENT COMING....</h2>
+		<div class="span-8">
+			<h3>Latest news</h3>
+		</div>
+		<div class="span-8">
+			<h3>Latest ...</h3>
+		</div>
+		<div class="span-8 last">
+			<h3>Latest project activities</h3>
+		</div>
 	</div>
 </div>
