@@ -8,7 +8,7 @@
 			<div id="pyramid-medium-logo" class="png_bg">
 				<div id="home-highlights">
 					<div id="highlight-content">
-						<h2>Web Development<br>done right, your way !</h2>
+						<h2>Web development<br>done right, your way !</h2>
 						<ul>
 							<li class="png_bg">Simple</li>
 							<li class="png_bg">Fast</li>
@@ -45,7 +45,7 @@
 		<div id="feature">
 			<div class="leftcol">
 				<h4>The Pylons Project</h4>
-				<div class="about-pylons png_bg">The Pylons Project was founded by the people behind the Pylons web framework to develop web application framework technology in Python. Rather than focusing on a single web framework, the Pylons Project will develop a collection of related technologies.</div>
+				<div class="about-pylons png_bg">The Pylons Project was founded by the people behind the Pylons web framework to develop web application framework technology in Python. Rather than focusing on a single web framework, the Pylons Project will develop a collection of related technologies. The first package is the Pyramid web framework.</div>
 			</div>
 			<div class="rightcol">
 				<h4>Some companies or projects using Pylons Project</h4>
@@ -84,11 +84,15 @@
 <div id="main" class="home">
 	<div id="container">
 		${funcs.flash()}
+		<div id="latest-info" class="span-8">
+			<h3>From the inside</h3>
+			<h4>Pyramid 1.0 released</h4>
+			<p>Pyramid 1.0 was released on January 30, 2011. Thanks to everyone who contributed to making this release possible. Read the <a href="http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f">announcement</a>.</p>
+			<h4>What's up with Pylons 1.x ?</h4>
+			<p>Since Pyramid has reached non-alpha release, Pylons the web framework was shifted into legacy status. Read more about <a href="http://docs.pylonsproject.org/faq/pylonsproject.html#what-does-the-pylons-project-mean-for-pylons-the-web-framework">what the Pylons Project mean for Pylons the web framework</a>.</p>
+		</div>
 		<div id="latest-news" class="span-8">
 			<h3>Latest news</h3>
-		</div>
-		<div id="latest-something" class="span-8">
-			<h3>Latest ...</h3>
 		</div>
 		<div id="latest-projects" class="span-8 last">
 			<h3>Latest project activities</h3>
