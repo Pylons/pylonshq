@@ -14,11 +14,6 @@ class BaseHandler(object):
         self.c.active_footer_nav = ''
         self.c.masthead_logo = 'pylons'
         self.c.pagename = ''
-    
-    @action(renderer='pylonshq:templates/home/home.mako')
-    def index(self):
-        self.c.pagename = 'Home'
-        return {}
 
 
 class ExceptionViews(BaseHandler):

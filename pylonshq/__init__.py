@@ -4,9 +4,10 @@ from pyramid.config import Configurator
 import pyramid_beaker
 import pyramid_sqla
 import pyramid_handlers
+
 import pylonshq.lib.request as request
 from pylonshq.security import groupfinder
-#from pyramid_sqla.static import add_static_route
+from pylonshq.lib.github import init_github
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
@@ -37,6 +38,9 @@ def main(global_config, **settings):
     # Initialize handlers
     config.include('pyramid_handlers')
     
+    # Initialize github client
+    config.registry['github'] = init_github(settings)
+    
     # Configure renderers
     config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
                           'pyramid.events.BeforeRender')
@@ -44,7 +48,7 @@ def main(global_config, **settings):
                           'pyramid.events.NewRequest')
     config.add_static_view('static', 'pylonshq:static')
     # Set up routes and views
-    config.add_handler('home', '/', 'pylonshq.handlers.base:BaseHandler',
+    config.add_handler('home', '/', 'pylonshq.handlers.pages:PageHandler',
                        action='index')
     config.add_handler('login', '/login', 
                         handler='pylonshq.handlers.accounts:AccountHandler',

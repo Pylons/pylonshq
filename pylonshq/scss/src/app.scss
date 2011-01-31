@@ -445,6 +445,26 @@ form {
     color:#e88f00;
 }
 
-//.auto-height {
-//    height: auto//
-//}
+#latest-projects {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    li {
+	    padding: 2px 0 2px 25px;
+	    border-top: 1px dotted #aaaaaa;
+	    background: url(../icons/Settings_16x16.png) no-repeat left 6px;
+	}
+	div.project {
+	    span.downloads {
+	        font-size: 10px;
+	        line-height: 21px;
+	        width: 40px;
+	        float: right;
+	    }
+	}
+	div.description {
+	    font-size: 11px;
+	}
+}

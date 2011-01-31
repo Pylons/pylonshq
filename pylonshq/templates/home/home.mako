@@ -25,10 +25,10 @@
 							Download packages
 							<ul>
 								<li class="package">
-									<a href="https://github.com/Pylons/pyramid/tarball/1.0">1.0.tar.gz</a>
+									<a href="https://github.com/Pylons/pyramid/zipball/1.0">1.0.zip</a>
 								</li>
 								<li class="package last">
-									<a href="https://github.com/Pylons/pyramid/zipball/1.0">1.0.zip</a>
+									<a href="https://github.com/Pylons/pyramid/tarball/1.0">1.0.tar.gz</a>
 								</li>
 							</ul>
 							or $ easy_install pyramid
@@ -84,14 +84,28 @@
 <div id="main" class="home">
 	<div id="container">
 		${funcs.flash()}
-		<div class="span-8">
+		<div id="latest-news" class="span-8">
 			<h3>Latest news</h3>
 		</div>
-		<div class="span-8">
+		<div id="latest-something" class="span-8">
 			<h3>Latest ...</h3>
 		</div>
-		<div class="span-8 last">
+		<div id="latest-projects" class="span-8 last">
 			<h3>Latest project activities</h3>
+			<ul>
+				% for project in projects:
+				<li>
+					<div class="project">
+						<a class="name" href="${project.url}">${project.name}</a>
+						<span class="downloads">
+							<a href="${project.url}/zipball/master">ZIP</a> <a href="${project.url}/tarball/master">TGZ</a>
+						</span>
+					</div>
+					<div class="description">${project.description}</div>
+				</li>
+				% endfor
+			</ul>
 		</div>
+		<div class="clear">&nbsp;</div>
 	</div>
 </div>

@@ -9,6 +9,8 @@ from pyramid.renderers import render_to_response
 from pyramid_handlers import action
 from pylonshq.handlers.base import BaseHandler as base
 
+from beaker.cache import cache_region
+
 log = logging.getLogger(__name__)
 
         
@@ -30,6 +32,20 @@ class PageHandler(base):
                                       values,
                                       self.request)
         raise NotFound()
+    
+    @action(renderer='pylonshq:templates/home/home.mako')
+    def index(self):
+        self.c.pagename = 'Home'
+        @cache_region('default_term')
+        def latest_projects():
+            from operator import attrgetter
+            github = self.request.registry.get('github')
+            all_projects = github.repos.list(
+                self.request.registry.settings.get('github.username'))
+            ordered = sorted((project for project in all_projects),
+                              key=attrgetter('pushed_at'), reverse=True)
+            return [ordered[i] for i in xrange(10)]
+        return {'projects': latest_projects()}
     
     @action()
     def pylons(self):

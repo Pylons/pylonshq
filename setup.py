@@ -19,7 +19,8 @@ requires = [
     'zope.sqlalchemy',
     'WebError',
     'webhelpers',
-    'babel'
+    'babel',
+    'github2'
     ]
 
 if sys.version_info[:3] < (2,5,0):
