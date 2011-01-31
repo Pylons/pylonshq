@@ -223,7 +223,7 @@ header, footer, section, #main {
             width: 245px;
             //height: 70px;
             text-align: left;
-            background: #cacaca url(../images/middlebg.png) repeat-x 0 top;
+            background: #c7c7c7 url(../images/middlebg.png) repeat-x 0 top;
             border-top: 2px solid #b2b2b2;
             border-bottom: 2px solid #b2b2b2;
 	        margin: 5px 70px 5px 70px;
@@ -240,7 +240,6 @@ header, footer, section, #main {
                 }
 	        }
 	        .options {
-	            //color: #666666;
 	            font-size: 12px;
 	            line-height: 16px;
 	            display: none;
@@ -284,12 +283,13 @@ header, footer, section, #main {
 
 .feature {
     width: 100%;
-    background:#d9d9d9 url(../images/middlebg.png) repeat-x 0 top;
+    background:#c7c7c7 url(../images/middlebg.png) repeat-x 0 top;
     border-bottom: 2px solid #b2b2b2;
 }
 
 #feature {
     height: 150px;
+    padding: 20px 0 20px 0;
     @include structure-block;
     .leftcol {
         font-size: 12px;
