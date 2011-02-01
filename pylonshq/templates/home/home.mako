@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/base.mako"/>
 <%namespace name="funcs" file="/funcs.mako"/>
+<%!
+    from datetime import datetime
+%>
 
 <section>
 	<div class="masthead">
@@ -87,12 +90,25 @@
 		<div id="latest-info" class="span-8">
 			<h3>From the inside</h3>
 			<h4>Pyramid 1.0 released</h4>
-			<p>Pyramid 1.0 was released on January 30, 2011. Thanks to everyone who contributed to making this release possible. Read the official announcement on <a href="http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f">Google groups</a>.</p>
+			<p>Pyramid 1.0 was released on January 30, 2011. Thanks to everyone who contributed to making this release possible. Read the official announcement on <a href="http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f">Google Groups</a>.</p>
 			<h4>What's up with Pylons 1.x ?</h4>
 			<p>Since Pyramid has reached non-alpha release, Pylons the web framework was shifted into legacy status. Read more about <a href="http://docs.pylonsproject.org/faq/pylonsproject.html#what-does-the-pylons-project-mean-for-pylons-the-web-framework">what the Pylons Project mean for Pylons the web framework</a>.</p>
 		</div>
-		<div id="latest-news" class="span-8">
-			<h3>Latest news</h3>
+		<div id="latest-discussions" class="span-8">
+			<h3>Latest discussions</h3>
+			<ul>
+				% for message in discussions:
+				<li>
+					<div class="title">
+						<a href="${message['link']}">${message['title']}</a>
+					</div>
+					<div class="author">
+						${message['author']}
+						<span class="updated">${message['updated']}</span>
+					</div>
+				</li>
+				% endfor
+			</ul>
 		</div>
 		<div id="latest-projects" class="span-8 last">
 			<h3>Latest project activities</h3>

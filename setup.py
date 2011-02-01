@@ -20,7 +20,8 @@ requires = [
     'WebError',
     'webhelpers',
     'babel',
-    'github2'
+    'github2',
+    'feedparser'
     ]
 
 if sys.version_info[:3] < (2,5,0):
