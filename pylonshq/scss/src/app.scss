@@ -501,6 +501,25 @@ form {
 	}
 }
 
+#downloads {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    li {
+	    padding: 2px 0 2px 25px;
+	    border-top: 1px dotted #aaaaaa;
+	    background: url(../icons/Archive_16x16.png) no-repeat left 6px;
+	}
+	span.downloads {
+	    font-size: 10px;
+	    line-height: 21px;
+	    width: 40px;
+	    float: right;
+	}
+}
+
 #main ul.links {
     padding: 0;
     margin: 0;

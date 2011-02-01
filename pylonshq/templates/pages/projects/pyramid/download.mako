@@ -5,8 +5,23 @@
 
 <h1>Download Pyramid</h1>
 
-<ul>
-	% for archive in downloads:
-	<li>pyramid-${archive}</li>
-	% endfor
-</ul>
+<div id="downloads">
+	<ul>
+		<li>
+			pyramid-master
+			<span class="downloads">
+				<a href="https://github.com/Pylons/pyramid/zipball/master">ZIP</a>
+				<a href="https://github.com/Pylons/pyramid/tarball/master">TGZ</a>
+			</span>
+		</li>
+		% for archive in downloads:
+		<li>
+			pyramid-${archive}
+			<span class="downloads">
+				<a href="https://github.com/Pylons/pyramid/zipball/${archive}">ZIP</a>
+				<a href="https://github.com/Pylons/pyramid/tarball/${archive}">TGZ</a>
+			</span>
+		</li>
+		% endfor
+	</ul>
+</div>
