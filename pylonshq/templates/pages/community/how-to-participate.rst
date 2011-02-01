@@ -1,25 +1,23 @@
 How to Participate
 ==================
 
-Unfortunately no code is perfect, sometimes bugs will occur, or a feature is
-desired. When reporting bugs, being as thorough as possible, and including
-additional details makes a huge improvement. No one should feel discouraged in
-attempting to fix a bug or suggest a feature that might be missing.
-
 Most interaction with the Pylons Project is done via `The Pylons GitHub
-organization <https://github.com/organizations/Pylons>`_.
+organization <https://github.com/organizations/Pylons>`_, via the
+`Pylons-devel mailing list <http://groups.google.com/group/pylons-devel>`_,
+or via the ``#pylons`` channel on `FreeNode <http://freenode.net/>`._
 
 Reporting a Bug
 ---------------
 
-Bugs with a Pylons Project package should be reported to the individual issue
-tracker on GitHub_. First, some general guidelines on reporting a bug.
+When reporting a bug, be as thorough as possible.  Including additional
+detail is encouraged.  Bugs with a Pylons Project package should be reported
+to the individual issue tracker on GitHub_.
 
 1) Create a GitHub account
 !!!!!!!!!!!!!!!!!!!!!!!!!!
 
-You will need to  `create a GitHub account <https://github.com/signup/free>`_
-account to report and correspond regarding the bug you are reporting.
+You will need to `create a GitHub account <https://github.com/signup/free>`_
+account to report the bug.
 
 2) Determine if your bug is really a bug
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -38,39 +36,40 @@ You should not file a bug if you are:
 3) Make sure your bug hasn't already been reported
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-Search through the appropriate Issue tracker on GitHub_. If a bug like yours
-was found, check to see if you have new information that could be reported to
-help the developers fix it.
+Before creating an issue, search through the appropriate Issue tracker on
+GitHub_. If you find a bug like yours, and it hasn't yet been fixed, check to
+see if you have new information that could be reported to help the developers
+fix it.
 
 4) Collect information about the bug
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-To have the best chance of having a bug fixed, we need to be able to easily
-replicate the conditions that caused it. Most of the time this information
-will be from a Python traceback message, though some bugs might be in design,
-spelling, or other errors on the website/docs/code.
+To provide the developers with enough information to fix a bug, they'll need
+to be able to easily repeat the conditions and observe it themselves.  The
+the likelihood that a bug will be fixed is directly correlated to the
+developer's ability to create the conditions under which the bug may be
+observed.
 
-If the error is from a Python traceback (`see a Python traceback 
-<http://pastebin.com/TyaPKpt9>`_), include it in the bug report being filed.
-We will also need to know what platform you're running (Windows, OSX, Linux),
-and which Python interpreter you're running if its not CPython (e.g. Jython, 
-Google App Engine).
+Often a bug report should include a Python traceback (`see a Python traceback
+<http://pastebin.com/TyaPKpt9>`_).  We will also need to know what platform
+you're running (Windows, OSX, Linux), and which Python interpreter you're
+running if its not CPython (e.g. Jython, Google App Engine).
 
 5) Submit the bug
 !!!!!!!!!!!!!!!!!
 
 By default GitHub_ will email you to let you know when new comments have been
-made on your bug. In the event you've turned this feature off, you should
-check back on occasion to ensure you don't miss any questions a developer
-trying to fix the bug might ask.
+made on your bug report. In the event you've turned this feature off, you
+should check back on occasion to ensure you don't miss any questions a
+developer trying to fix the bug might ask.
 
 .. _issue_trackers:
 
 Issue Trackers
 --------------
 
-Bugs are reported and tracked on GitHub_'s issue trackers. Each Pylons Project
-has their own:
+Bugs are reported and tracked via GitHub_'s issue trackers. Each Pylons Project
+has its own issue tracker:
 
 * `pyramid issue tracker <https://github.com/Pylons/pyramid/issues>`_
 * `pyramid_beaker issue tracker <https://github.com/Pylons/pyramid_beaker/issues>`_
@@ -90,9 +89,10 @@ account on GitHub_ is required. All Pylons Project packages are under the
 `Pylons organization on github <http://github.com/Pylons>`_.
 
 The general practice for contributing new features and bug fixes is to `fork
-the package <http://help.github.com/forking/>`_ in question and make changes
-there. Then send a `pull request <http://help.github.com/pull-requests/>`_.
-This allows the developers to review the patches and accept them, or comment
-on what needs to be addressed before the change sets can be accepted.
+the package <http://help.github.com/forking/>`_ and make changes within a
+checkout of the forked repository. Then send a `pull request
+<http://help.github.com/pull-requests/>`_.  This allows the developers to
+review the patches and accept them, or comment on what needs to be addressed
+before the change sets can be accepted.
 
 .. _GitHub: http://github.com/
