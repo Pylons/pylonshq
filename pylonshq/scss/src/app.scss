@@ -363,7 +363,7 @@ form {
         display: block;
     }
     ul.form-error {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 14px;
         color: #8a1f11;
         padding: 0;
@@ -499,4 +499,17 @@ form {
 	div.description {
 	    font-size: 11px;
 	}
+}
+
+#main ul.links {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#main ul.links li {
+    line-height: 20px;
+	padding: 2px 0 2px 25px;
+	margin: 0;
+	background: url(../icons/Next_16x16.png) no-repeat left 6px;
 }
