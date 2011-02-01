@@ -21,7 +21,8 @@ requires = [
     'webhelpers',
     'babel',
     'github2',
-    'feedparser'
+    'feedparser',
+    'docutils',
     ]
 
 if sys.version_info[:3] < (2,5,0):

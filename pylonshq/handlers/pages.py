@@ -13,6 +13,8 @@ from pylonshq.handlers.base import BaseHandler as base
 
 from beaker.cache import cache_region
 
+from docutils.core import publish_parts
+
 log = logging.getLogger(__name__)
 
         
@@ -106,11 +108,18 @@ class PageHandler(base):
                 self.c.masthead_logo = 'pylonsfw'
                 values['downloads'] = _downloads('pylons')
         return self.render_page('projects', ('pyramid','about',), values)
+
+    def rst_to_html(self, path):
+        content = pkg_resources.resource_string('pylonshq', path)
+        body = publish_parts(content, writer_name='html')['html_body']
+        return body
     
     @action()
     def community(self):
         self.c.pagename = 'Community'
-        return self.render_page('community', ('how-to-participate',))
+        body = self.rst_to_html('rst/how-to-contribute.rst')
+        return self.render_page('community', ('how-to-contribute',),
+                                values={'body':body})
     
     @action()
     def tools(self):
