@@ -30,7 +30,7 @@
 		<div class="span-6">
 			<h4>About</h4>
 			<ul>
-				<li><a href="${request.application_url}/about/about"${active_nav.get('about-pylons', '') | n}>Pylons Project</a></li>
+				<li><a href="${request.application_url}/about/pylons"${active_nav.get('about-pylons', '') | n}>Pylons Project</a></li>
 				<li><a href="${request.application_url}/about/history"${active_nav.get('about-history', '') | n}>History</a></li>
 				<li><a href="${request.application_url}/about/licence"${active_nav.get('about-licence', '') | n}>Licence</a></li>
 			</ul>
