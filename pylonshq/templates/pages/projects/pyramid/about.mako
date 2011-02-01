@@ -58,5 +58,5 @@
 </p>
 <h2>Openness</h2>
 <p>
-	Like Python, the Pyramid software is distributed under a <a href="${request.application_url}/pylons/licence">permissive open source license</a>.
+	Like Python, the Pyramid software is distributed under a <a href="${request.application_url}/about/license">permissive open source license</a>.
 </p>
