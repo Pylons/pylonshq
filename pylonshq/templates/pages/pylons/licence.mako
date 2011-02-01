@@ -4,7 +4,7 @@
 <%def name="pagename()">Licence</%def>
 
 <h1>Licence</h1>
-<h2>License</h2>
+<h2>Licence</h2>
 <p>
 	A copyright notice accompanies this license document that identifies the copyright holders.
 </p>
