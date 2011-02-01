@@ -18,7 +18,7 @@ log = logging.getLogger(__name__)
         
 class PageHandler(base):
     
-    def render_page(self, section, redir_elems):
+    def render_page(self, section, redir_elems, values=None):
         endpath = self.request.matchdict.get('endpath', None)
         if not endpath:
             return HTTPFound(
@@ -38,7 +38,7 @@ class PageHandler(base):
                 [self.request.matchdict.get('action')]
                 +list(endpath)
             )
-            values = {}
+            values = values or {}
             return render_to_response(
                 'pylonshq:%s' % tmpl_path, values, self.request)
         raise NotFound()
@@ -87,13 +87,24 @@ class PageHandler(base):
     @action()
     def projects(self):
         self.c.pagename = 'Projects'
+        values = {}
         endpath = self.request.matchdict.get('endpath')
         if endpath is not None:
             if 'pyramid' in endpath:
                 self.c.masthead_logo = 'pyramid'
+                @cache_region('default_term')
+                def pyramid_downloads():
+                    from pylonshq.lib.utils import natural
+                    github = self.request.registry.get('github')
+                    all_downloads = github.repos.tags('Pylons/pyramid')
+                    return [
+                        d for d in sorted(all_downloads, key=natural)
+                        if not d.startswith('0') and d.find('a') == -1
+                    ]
+                values['downloads'] = pyramid_downloads()
             elif 'pylons-framework' in endpath:
                 self.c.masthead_logo = 'pylonsfw'
-        return self.render_page('projects', ('pyramid','about',))
+        return self.render_page('projects', ('pyramid','about',), values)
     
     @action()
     def community(self):
