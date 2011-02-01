@@ -12,5 +12,9 @@ Complete major text sections
     - How to participate
     - How to contribute
     - Get support
-
+- Projects
+    - Pyramid
+        - About
+    - Pylons Framework
+        - About
 
