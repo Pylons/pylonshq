@@ -10,7 +10,7 @@
 	<div class="header-nav">
 		<ul>
 			<li><a href="${request.application_url}"${active_nav.get('home', '') | n}>Home</a></li>
-			<li><a href="${request.application_url}/pylons"${active_nav.get('pylons', '') | n}>About</a></li>
+			<li><a href="${request.application_url}/about"${active_nav.get('about', '') | n}>About</a></li>
 			<li><a href="${request.application_url}/projects"${active_nav.get('projects', '') | n}>Projects</a></li>
 			<li><a href="${request.application_url}/community"${active_nav.get('community', '') | n}>Community</a></li>
 			<li class="last"><a href="${request.application_url}/tools"${active_nav.get('tools', '') | n}>Tools</a></li>
@@ -28,12 +28,12 @@
 <nav>
 	<div class="footer-nav">
 		<div class="span-6">
-			<h4>Pylons Project</h4>
+			<h4>About</h4>
 			<ul>
-				<li><a href="${request.application_url}/pylons/about"${active_nav.get('pylons-about', '') | n}>About</a></li>
-				<li><a href="${request.application_url}/pylons/history"${active_nav.get('pylons-history', '') | n}>History</a></li>
-				<li><a href="${request.application_url}/pylons/open-source"${active_nav.get('pylons-open-source', '') | n}>Open Source</a></li>
-				<li><a href="${request.application_url}/pylons/licence"${active_nav.get('pylons-licence', '') | n}>Licence</a></li>
+				<li><a href="${request.application_url}/about/about"${active_nav.get('about-pylons', '') | n}>Pylons Project</a></li>
+				<li><a href="${request.application_url}/about/history"${active_nav.get('about-history', '') | n}>History</a></li>
+				<li><a href="${request.application_url}/about/open-source"${active_nav.get('about-open-source', '') | n}>Open Source</a></li>
+				<li><a href="${request.application_url}/about/licence"${active_nav.get('about-licence', '') | n}>Licence</a></li>
 				##<li><a href="${request.application_url}/news">News</a></li>
 			</ul>
 		</div>
@@ -59,6 +59,7 @@
 			<ul>
 				<li><a href="${request.application_url}/community/how-to-participate"${active_nav.get('community-how-to-participate', '') | n}>How to participate</a></li>
 				<li><a href="${request.application_url}/community/how-to-contribute"${active_nav.get('community-how-to-contribute', '') | n}>How to contribute</a></li>
+				<li><a href="${request.application_url}/community/code-of-conduct"${active_nav.get('community-code-of-conduct', '') | n}>Code of conduct</a></li>
 				<li><a href="${request.application_url}/community/get-support"${active_nav.get('community-get-support', '') | n}>Get support</a></li>
 				<li><a href="${request.application_url}/community/blogs"${active_nav.get('community-blogs', '') | n}>Blogs</a></li>
 				##<li><a href="#">Jobs</a></li>

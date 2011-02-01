@@ -1,7 +1,7 @@
 .. _contributing:
 
-Contributing Source Code and Documentation
-==========================================
+How to Contribute
+=================
 
 Pylons Project subprojects follow a coding style, with minimum standards:
 http://docs.pylonsproject.org/community/codestyle.html .  All substantive

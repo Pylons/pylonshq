@@ -92,9 +92,9 @@ class PageHandler(base):
         }
     
     @action()
-    def pylons(self):
-        self.c.pagename = 'Pylons Project'
-        return self.render_page('pylons', ('about',))
+    def about(self):
+        self.c.pagename = 'About'
+        return self.render_page('about', ('pylons',))
     
     @action()
     def projects(self):

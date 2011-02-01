@@ -1,5 +1,5 @@
-Support
-=======
+Get Support
+===========
 
 Development questions related to Pylons projects can be discussed on the 
 `pylons-devel mail list <http://groups.google.com/group/pylons-devel/>`_.
