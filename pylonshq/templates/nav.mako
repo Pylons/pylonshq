@@ -10,6 +10,7 @@
 	<div class="header-nav">
 		<ul>
 			<li><a href="${request.application_url}"${active_nav.get('home', '') | n}>Home</a></li>
+			<li><a href="http://docs.pylonsproject.org/">Documentation</a></li>
 			<li><a href="${request.application_url}/about"${active_nav.get('about', '') | n}>About</a></li>
 			<li><a href="${request.application_url}/projects"${active_nav.get('projects', '') | n}>Projects</a></li>
 			<li><a href="${request.application_url}/community"${active_nav.get('community', '') | n}>Community</a></li>
