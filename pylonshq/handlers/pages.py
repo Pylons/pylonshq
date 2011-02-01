@@ -89,21 +89,22 @@ class PageHandler(base):
         self.c.pagename = 'Projects'
         values = {}
         endpath = self.request.matchdict.get('endpath')
+        @cache_region('long_term')
+        def _downloads(repo):
+            from pylonshq.lib.utils import natural
+            github = self.request.registry.get('github')
+            all_downloads = github.repos.tags('Pylons/%s' % repo)
+            return [
+                d for d in sorted(all_downloads, key=natural)
+                if not d.startswith('0') and d.find('a') == -1
+            ]
         if endpath is not None:
             if 'pyramid' in endpath:
                 self.c.masthead_logo = 'pyramid'
-                @cache_region('default_term')
-                def pyramid_downloads():
-                    from pylonshq.lib.utils import natural
-                    github = self.request.registry.get('github')
-                    all_downloads = github.repos.tags('Pylons/pyramid')
-                    return [
-                        d for d in sorted(all_downloads, key=natural)
-                        if not d.startswith('0') and d.find('a') == -1
-                    ]
-                values['downloads'] = pyramid_downloads()
+                values['downloads'] = _downloads('pyramid')
             elif 'pylons-framework' in endpath:
                 self.c.masthead_logo = 'pylonsfw'
+                values['downloads'] = _downloads('pylons')
         return self.render_page('projects', ('pyramid','about',), values)
     
     @action()
