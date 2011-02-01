@@ -32,9 +32,7 @@
 			<ul>
 				<li><a href="${request.application_url}/about/about"${active_nav.get('about-pylons', '') | n}>Pylons Project</a></li>
 				<li><a href="${request.application_url}/about/history"${active_nav.get('about-history', '') | n}>History</a></li>
-				<li><a href="${request.application_url}/about/open-source"${active_nav.get('about-open-source', '') | n}>Open Source</a></li>
 				<li><a href="${request.application_url}/about/licence"${active_nav.get('about-licence', '') | n}>Licence</a></li>
-				##<li><a href="${request.application_url}/news">News</a></li>
 			</ul>
 		</div>
 		<div class="span-6">
@@ -62,7 +60,6 @@
 				<li><a href="${request.application_url}/community/code-of-conduct"${active_nav.get('community-code-of-conduct', '') | n}>Code of conduct</a></li>
 				<li><a href="${request.application_url}/community/get-support"${active_nav.get('community-get-support', '') | n}>Get support</a></li>
 				<li><a href="${request.application_url}/community/blogs"${active_nav.get('community-blogs', '') | n}>Blogs</a></li>
-				##<li><a href="#">Jobs</a></li>
 			</ul>
 		</div>
 		<div class="span-6 last">
@@ -75,7 +72,6 @@
 				<li><a href="${request.application_url}/logout"${active_nav.get('tools-logout', '') | n}>Logout</a></li>
 				% endif
 				<li><a href="${request.application_url}/tools/pastebins"${active_nav.get('tools-pastebins', '') | n}>Pastebins</a></li>
-				##<li><a href="${request.application_url}/tools/tracebacks"${active_nav.get('tools-tracebacks', '') | n}>Tracebacks</a></li>
 				<li>&nbsp;</li>
 				<li>
 					<a href="#"><img src="${request.static_url('pylonshq:static/images/social/feed.png')}"></a>
