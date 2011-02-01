@@ -18,3 +18,12 @@ Complete major text sections
     - Pylons Framework
         - About
 
+Company and project logos
+-------------------------
+
+Find a PNG+transparency version of each logo and save them as 100x80. When
+completed switch them on front page.
+
+
+
+
