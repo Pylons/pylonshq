@@ -1,0 +1,16 @@
+PylonsHQ TODOS
+==============
+
+Complete major text sections
+----------------------------
+
+- Pylons Project
+    - About
+    - History (Mainly Pylons oriented, should include bfg and pyramid)
+    - Open source
+- Community
+    - How to participate
+    - How to contribute
+    - Get support
+
+
