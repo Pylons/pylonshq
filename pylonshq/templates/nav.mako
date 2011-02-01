@@ -43,16 +43,15 @@
 			<ul>
 				<li><a href="${request.application_url}/projects/pyramid/about"${active_nav.get('projects-pyramid-about', '') | n}>About</a></li>
 				<li><a href="${request.application_url}/projects/pyramid/download"${active_nav.get('projects-pyramid-download', '') | n}>Download</a></li>
-				<li><a href="http://docs.pylonsproject.org/projects/pyramid/dev/">Documentation</a></li>
-				##<li><a href="#">Tutorials</a></li>
-				##<li><a href="#">Guides</a></li>
-				##<li><a href="#">Cookbook</a></li>
+				<li><a href="http://docs.pylonsproject.org/projects/pyramid/1.0/">Documentation</a></li>
+				<li><a href="http://docs.pylonsproject.org/projects/pyramid_cookbook/dev/">Cookbook</a></li>
+				<li><a href="http://docs.pylonsproject.org/projects/pyramid_tutorials/dev/">Tutorials</a></li>
 			</ul>
 			Pylons Framework
 			<ul>
 				<li><a href="${request.application_url}/projects/pylons-framework/about"${active_nav.get('projects-pylons-framework-about', '') | n}>About</a></li>
 				<li><a href="${request.application_url}/projects/pylons-framework/download"${active_nav.get('projects-pylons-framework-download', '') | n}>Download</a></li>
-				<li><a href="http://docs.pylonsproject.org/projects/pylons/dev/">Documentation</a></li>
+				<li><a href="http://docs.pylonsproject.org/projects/pylons_framework/dev/">Documentation</a></li>
 			</ul>
 		</div>
 		<div class="span-6">
