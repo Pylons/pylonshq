@@ -10,7 +10,7 @@
 	<div class="header-nav">
 		<ul>
 			<li><a href="${request.application_url}"${active_nav.get('home', '') | n}>Home</a></li>
-			<li><a href="${request.application_url}/pylons"${active_nav.get('pylons', '') | n}>Pylons Project</a></li>
+			<li><a href="${request.application_url}/pylons"${active_nav.get('pylons', '') | n}>About</a></li>
 			<li><a href="${request.application_url}/projects"${active_nav.get('projects', '') | n}>Projects</a></li>
 			<li><a href="${request.application_url}/community"${active_nav.get('community', '') | n}>Community</a></li>
 			<li class="last"><a href="${request.application_url}/tools"${active_nav.get('tools', '') | n}>Tools</a></li>
