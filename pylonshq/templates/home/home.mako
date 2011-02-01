@@ -11,7 +11,7 @@
 			<div id="pyramid-medium-logo" class="png_bg">
 				<div id="home-highlights">
 					<div id="highlight-content">
-						<h2>Web development<br>done right, your way !</h2>
+						<h2>Web development<br>done right, your way!</h2>
 						<ul>
 							<li class="png_bg">Simple</li>
 							<li class="png_bg">Fast</li>
