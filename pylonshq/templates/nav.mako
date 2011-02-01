@@ -33,7 +33,7 @@
 				<li><a href="${request.application_url}/about/about"${active_nav.get('about-pylons', '') | n}>Pylons Project</a></li>
 				<li><a href="${request.application_url}/about/history"${active_nav.get('about-history', '') | n}>History</a></li>
 				<li><a href="${request.application_url}/about/open-source"${active_nav.get('about-open-source', '') | n}>Open Source</a></li>
-				<li><a href="${request.application_url}/about/licence"${active_nav.get('about-licence', '') | n}>Licence</a></li>
+				<li><a href="${request.application_url}/about/license"${active_nav.get('about-license', '') | n}>License</a></li>
 				##<li><a href="${request.application_url}/news">News</a></li>
 			</ul>
 		</div>

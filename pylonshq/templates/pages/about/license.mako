@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/page.mako"/>
 
-<%def name="pagename()">Licence</%def>
+<%def name="pagename()">License</%def>
 
-<h1>Licence</h1>
-<h2>Licence</h2>
+<h1>License</h1>
 <p>
 	A copyright notice accompanies this license document that identifies the copyright holders.
 </p>
