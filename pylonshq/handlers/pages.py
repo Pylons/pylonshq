@@ -123,7 +123,7 @@ class PageHandler(base):
     @action()
     def community(self):
         self.c.pagename = 'Community'
-        return self.render_page('community', ('how-to-contribute',),)
+        return self.render_page('community', ('how-to-participate',),)
     
     @action()
     def tools(self):
