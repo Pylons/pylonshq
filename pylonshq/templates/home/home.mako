@@ -87,7 +87,7 @@
 		<div id="latest-info" class="span-8">
 			<h3>From the inside</h3>
 			<h4>Pyramid 1.0 released</h4>
-			<p>Pyramid 1.0 was released on January 30, 2011. Thanks to everyone who contributed to making this release possible. Read the <a href="http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f">announcement</a>.</p>
+			<p>Pyramid 1.0 was released on January 30, 2011. Thanks to everyone who contributed to making this release possible. Read the official announcement on <a href="http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f">Google groups</a>.</p>
 			<h4>What's up with Pylons 1.x ?</h4>
 			<p>Since Pyramid has reached non-alpha release, Pylons the web framework was shifted into legacy status. Read more about <a href="http://docs.pylonsproject.org/faq/pylonsproject.html#what-does-the-pylons-project-mean-for-pylons-the-web-framework">what the Pylons Project mean for Pylons the web framework</a>.</p>
 		</div>
