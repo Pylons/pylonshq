@@ -31,18 +31,29 @@ class PageHandler(base):
                     endpath='/'.join(redir_elems)
                 )
             )
-        tmpl_path = 'templates/pages/%s/%s.mako' % (
-            section,
-            '/'.join(endpath)
-        )
-        if pkg_resources.resource_exists('pylonshq', tmpl_path):
-            self.c.active_footer_nav = '-'.join(
-                [self.request.matchdict.get('action')]
-                +list(endpath)
+        self.c.active_footer_nav = '-'.join(
+            [self.request.matchdict.get('action')]
+            +list(endpath)
             )
+        for ext in ('.mako', '.rst'):
+            tmpl_path = ('templates/pages/%s/%s%s' % (
+                section,
+                '/'.join(endpath),
+                ext))
             values = values or {}
-            return render_to_response(
-                'pylonshq:%s' % tmpl_path, values, self.request)
+            if pkg_resources.resource_exists('pylonshq', tmpl_path):
+                if ext == '.mako':
+                    return render_to_response(
+                        'pylonshq:%s' % tmpl_path, values, self.request)
+                else:
+                    content = pkg_resources.resource_string('pylonshq',
+                                                            tmpl_path)
+                    body = publish_parts(content,
+                                         writer_name='html')['html_body']
+                    values={'body':body}
+                    return render_to_response(
+                        'pylonshq:templates/rst.mako', values, self.request)
+                        
         raise NotFound()
     
     @action(renderer='pylonshq:templates/home/home.mako')
@@ -109,17 +120,10 @@ class PageHandler(base):
                 values['downloads'] = _downloads('pylons')
         return self.render_page('projects', ('pyramid','about',), values)
 
-    def rst_to_html(self, path):
-        content = pkg_resources.resource_string('pylonshq', path)
-        body = publish_parts(content, writer_name='html')['html_body']
-        return body
-    
     @action()
     def community(self):
         self.c.pagename = 'Community'
-        body = self.rst_to_html('rst/how-to-contribute.rst')
-        return self.render_page('community', ('how-to-contribute',),
-                                values={'body':body})
+        return self.render_page('community', ('how-to-contribute',),)
     
     @action()
     def tools(self):
