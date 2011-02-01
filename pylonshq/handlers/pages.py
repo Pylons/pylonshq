@@ -53,7 +53,6 @@ class PageHandler(base):
                     values={'body':body}
                     return render_to_response(
                         'pylonshq:templates/rst.mako', values, self.request)
-                        
         raise NotFound()
     
     @action(renderer='pylonshq:templates/home/home.mako')
