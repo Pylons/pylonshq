@@ -7,6 +7,24 @@
 <p>
 	Pyramid is a very general open source Python web framework. As a framework, its primary job is to make it easier for a developer to create an arbitrary web application. The type of application being created isn’t really important; it could be a spreadsheet, a corporate intranet, or an “oh-so-Web-2.0” social networking platform. Pyramid is general enough that it can be used in a wide variety of circumstances.
 </p>
+<div id="inline-code" class="highlight-python">
+	<div class="highlight">
+<pre>
+<span class="kn">from</span> <span class="nn">paste.httpserver</span> <span class="kn">import</span> <span class="n">serve</span>
+<span class="kn">from</span> <span class="nn">pyramid.config</span> <span class="kn">import</span> <span class="n">Configurator</span>
+<span class="kn">from</span> <span class="nn">pyramid.response</span> <span class="kn">import</span> <span class="n">Response</span>
+
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+	<span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s">'Hello world!'</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+	<span class="n">config</span> <span class="o">=</span> <span class="n">Configurator</span><span class="p">()</span>
+	<span class="n">config</span><span class="o">.</span><span class="n">add_view</span><span class="p">(</span><span class="n">hello_world</span><span class="p">)</span>
+	<span class="n">app</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">make_wsgi_app</span><span class="p">()</span>
+	<span class="n">serve</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s">'0.0.0.0'</span><span class="p">)</span>
+</pre>
+	</div>
+</div>
 <p>
 	Since its first release, we’ve tried to ensure that it maintains the following attributes:
 </p>
