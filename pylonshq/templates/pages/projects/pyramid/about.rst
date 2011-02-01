@@ -1,10 +1,18 @@
 About Pyramid
 =============
 
-Pyramid is a very general open source Python web framework. As a framework, its primary job is to make it easier for a developer to create an arbitrary web application. The type of application being created isn’t really important; it could be a spreadsheet, a corporate intranet, or an “oh-so-Web-2.0” social networking platform. Pyramid is general enough that it can be used in a wide variety of circumstances.
+Pyramid is a very general open source Python web framework. As a framework,
+its primary job is to make it easier for a developer to create an arbitrary
+web application. The type of application being created isn’t really
+important; it could be a spreadsheet, a corporate intranet, or an
+“oh-so-Web-2.0” social networking platform. Pyramid is general enough that it
+can be used in a wide variety of circumstances.
+
+Pyramid is developed using the following tenets.
 
 Simplicity
 ----------
+
 Pyramid takes a *"pay only for what you eat"* approach.  This means
 that you can get results even if you have only a partial understanding of
 Pyramid.  It doesn’t force you to use any particular technology to
@@ -48,3 +56,16 @@ Openness
 
 As with Python, the Pyramid software is distributed under a `permissive
 open source license </about/license>`_.
+
+History
+=======
+
+The code which exists today in Pyramid is not new.  Between June, 2008 and
+November of 2010, it was known as ``repoze.bfg`` (see the `BFG website
+<http://bfg.repoze.org>`_ for historical purposes).
+
+When Pyramid was created in early December of 2010, a mass rename of code
+from ``repoze.bfg`` was performed and features were added to (and removed
+from) the resulting codebase to make it more useful for Pylons Framework 1.X
+users.
+
