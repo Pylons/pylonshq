@@ -66,31 +66,21 @@
 		<div class="span-6 last">
 			<h4>Tools</h4>
 			<ul>
-				%if not request.user:
-				<li><a href="${request.application_url}/login"${active_nav.get('tools-login', '') | n}>Login</a></li>
-				% else:
-				<li><a href="#">${request.user.username}</a></li>
-				<li><a href="${request.application_url}/logout"${active_nav.get('tools-logout', '') | n}>Logout</a></li>
-				% endif
+				##%if not request.user:
+				##<li><a href="${request.application_url}/login"${active_nav.get('tools-login', '') | n}>Login</a></li>
+				##% else:
+				##<li><a href="#">${request.user.username}</a></li>
+				##<li><a href="${request.application_url}/logout"${active_nav.get('tools-logout', '') | n}>Logout</a></li>
+				##% endif
 				<li><a href="${request.application_url}/tools/pastebins"${active_nav.get('tools-pastebins', '') | n}>Pastebins</a></li>
 				<li>&nbsp;</li>
-				<li>
-					<a href="#"><img src="${request.static_url('pylonshq:static/images/social/feed.png')}"></a>
-					<a href="#"><img src="${request.static_url('pylonshq:static/images/social/twitter.png')}"></a>
-					<a href="#"><img src="${request.static_url('pylonshq:static/images/social/facebook.png')}"></a>
-				</li>
+				##<li>
+				##	<a href="#"><img src="${request.static_url('pylonshq:static/images/social/feed.png')}"></a>
+				##	<a href="#"><img src="${request.static_url('pylonshq:static/images/social/twitter.png')}"></a>
+				##	<a href="#"><img src="${request.static_url('pylonshq:static/images/social/facebook.png')}"></a>
+				##</li>
 			</ul>
 		</div>
-		##<div class="span-4 last">
-		##	<h4>Follow Us</h4>
-		##	<ul>
-		##		<li>
-		##			<a href="#"><img src="${request.static_url('pylonshq:static/images/social/feed.png')}"></a>
-		##			<a href="#"><img src="${request.static_url('pylonshq:static/images/social/twitter.png')}"></a>
-		##			<a href="#"><img src="${request.static_url('pylonshq:static/images/social/facebook.png')}"></a>
-		##		</li>
-		##	</ul>
-		##</div>
 	</div>
 </nav>
 </%def>
