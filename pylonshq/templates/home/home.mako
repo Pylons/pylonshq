@@ -88,7 +88,7 @@
 	<div id="container">
 		${funcs.flash()}
 		<div id="latest-info" class="span-8">
-			<h3>From the inside</h3>
+			<h2>From the inside</h2>
 			<h4>Pyramid 1.0 released</h4>
 			<p>Pyramid 1.0 was released on January 30, 2011. Thanks to everyone who contributed to making this release possible. Read the official announcement on <a href="http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f">Google Groups</a>.</p>
 			<h4>What's up with Pylons 1.x?</h4>
@@ -131,7 +131,7 @@ new TWTR.Widget({
 </script>
 		</div>
 		<div id="latest-discussions" class="span-8">
-			<h3>Latest discussions</h3>
+			<h2>Latest discussions</h2>
 			<ul>
 				% for message in discussions:
 				<li>
@@ -147,7 +147,7 @@ new TWTR.Widget({
 			</ul>
 		</div>
 		<div id="latest-projects" class="span-8 last">
-			<h3>Latest project activities</h3>
+			<h2>Latest project activities</h2>
 			<ul>
 				% for project in projects:
 				<li>
