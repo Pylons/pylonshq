@@ -29,12 +29,10 @@ class PageHandler(base):
                     self.request,
                     action=section,
                     endpath='/'.join(redir_elems)
-                )
-            )
+                ))
         self.c.active_footer_nav = '-'.join(
             [self.request.matchdict.get('action')]
-            +list(endpath)
-            )
+            +list(endpath))
         for ext in ('.mako', '.rst'):
             tmpl_path = ('templates/pages/%s/%s%s' % (
                 section,
@@ -46,10 +44,14 @@ class PageHandler(base):
                     return render_to_response(
                         'pylonshq:%s' % tmpl_path, values, self.request)
                 else:
-                    content = pkg_resources.resource_string('pylonshq',
-                                                            tmpl_path)
-                    body = publish_parts(content,
-                                         writer_name='html')['html_body']
+                    self.c.pagename = ' : '.join(
+                        [item.replace('-', ' ').title() for item in endpath])
+                    content = pkg_resources.resource_string(
+                        'pylonshq',
+                        tmpl_path)
+                    body = publish_parts(
+                        content,
+                        writer_name='html')['html_body']
                     values={'body':body}
                     return render_to_response(
                         'pylonshq:templates/rst.mako', values, self.request)

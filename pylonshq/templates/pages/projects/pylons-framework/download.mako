@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/page.mako"/>
 
-<%def name="pagename()">Download Pylons Framework</%def>
+<%def name="pagename()">Pylons Framework : Download Pylons Framework</%def>
 
 <h1 class="title">Download Pylons Framework</h1>
 

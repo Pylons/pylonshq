@@ -13,7 +13,7 @@
 	
 	<title>Pylons Project : ${self.pagename()}</title>
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="The Pylons Project and contributors">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="${request.static_url('pylonshq:static/favicon.ico')}">

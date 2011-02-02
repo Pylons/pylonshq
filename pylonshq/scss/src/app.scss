@@ -301,11 +301,11 @@ header, footer, section, #main {
 	        margin: 5px 90px 5px 90px;
 	        clear: both;
 	        z-index: 1000;
-	        display: block;
 	        position: absolute;
 	        .download {
 	            background: url(../icons/Download_48x48.png) no-repeat 25px center;
                 padding: 15px 0 10px 100px;
+                margin: 0;
 	            h3 {
 	                font-size: 24px;
                     margin: 0;
@@ -571,7 +571,6 @@ form {
 	    span.downloads {
 	        font-size: 10px;
 	        line-height: 21px;
-	        width: 40px;
 	        float: right;
 	    }
 	}
@@ -595,7 +594,6 @@ form {
 	span.downloads {
 	    font-size: 10px;
 	    line-height: 21px;
-	    width: 40px;
 	    float: right;
 	}
 }
