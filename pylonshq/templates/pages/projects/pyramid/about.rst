@@ -28,10 +28,13 @@ can be used in a wide variety of circumstances.
        serve(app, host='0.0.0.0')
 
 
+Tenets
+------
+
 Pyramid is developed using the following tenets.
 
 Simplicity
-----------
+~~~~~~~~~~
 
 Pyramid takes a *"pay only for what you eat"* approach.  This means
 that you can get results even if you have only a partial understanding of
@@ -40,7 +43,7 @@ produce an application, and we try to keep the core set of concepts that
 you need to understand to a minimum.
 
 Minimalism
-----------
+~~~~~~~~~~
 
 Pyramid concentrates on providing fast, high-quality solutions to
 the fundamental problems of creating a web application: the mapping of URLs
@@ -48,14 +51,14 @@ to code, templating, security and serving static assets. We consider these
 to be the core activities that are common to nearly all web applications.
 
 Documentation
--------------
+~~~~~~~~~~~~~
 
 Pyramid's minimalism means that it is relatively easy for us to maintain
 extensive and up-to-date documentation. It is our goal that no aspect of
 Pyramid remains undocumented.
 
 Speed
------
+~~~~~
 
 Pyramid is designed to provide noticeably fast execution for common
 tasks such as templating and simple response generation. Although the
@@ -64,7 +67,7 @@ problems, the limits of this approach become painfully evident when one
 finds him or herself responsible for managing a great many machines.
 
 Reliability
------------
+~~~~~~~~~~~
 
 Pyramid is developed conservatively and tested exhaustively. Where
 Pyramid source code is concerned, our motto is: "If it ain’t tested, it’s
@@ -72,13 +75,13 @@ broke". Every release of Pyramid has 100% statement coverage via unit
 tests.
 
 Openness
---------
+~~~~~~~~
 
 As with Python, the Pyramid software is distributed under a `permissive
 open source license </about/license>`_.
 
 History
-=======
+-------
 
 The code which exists today in Pyramid is not new.  Between June, 2008 and
 November of 2010, it was known as ``repoze.bfg`` (see the `BFG website
