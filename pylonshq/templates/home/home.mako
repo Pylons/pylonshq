@@ -13,14 +13,14 @@
 					<div id="highlight-content">
 						<h2>Web development<br>done right, your way!</h2>
 						<ul>
-							<li>Simple</li>
-							<li>Fast</li>
-							<li>Documented</li>
-							<li>Tested</li>
+							<li class="png_bg">Simple</li>
+							<li class="png_bg">Fast</li>
+							<li class="png_bg">Documented</li>
+							<li class="png_bg">Tested</li>
 						</ul>
 					</div>
 					<div id="highlight-download" class="auto-height">
-						<div class="download">
+						<div class="download png_bg">
 							<h3>Download</h3>
 							version 1.0
 						</div>
@@ -48,7 +48,7 @@
 		<div id="feature">
 			<div class="leftcol">
 				<h2>The Pylons Project</h2>
-				<div class="about-pylons">The Pylons Project was founded by the people behind the Pylons web framework to develop web application framework technology in Python. Rather than focusing on a single web framework, the Pylons Project will develop a collection of related technologies. The first package is the Pyramid web framework.</div>
+				<div class="about-pylons png_bg">The Pylons Project was founded by the people behind the Pylons web framework to develop web application framework technology in Python. Rather than focusing on a single web framework, the Pylons Project will develop a collection of related technologies. The first package is the Pyramid web framework.</div>
 			</div>
 			<div class="rightcol">
 				<h2>Companies and projects using Pylons Project software</h2>
