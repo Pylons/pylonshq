@@ -19,7 +19,7 @@
 							<li class="png_bg">Tested</li>
 						</ul>
 					</div>
-					<div id="highlight-download" class="auto-height">
+					<div id="highlight-download">
 						<div class="download png_bg">
 							<h3>Download</h3>
 							version 1.0

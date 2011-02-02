@@ -11,6 +11,7 @@
 body {
     background-color: #151515;
     text-align: left;
+    position: relative;
     h1, h2, h3, h4, h5, h6 {
         font-family: "Neuton", "Lucida Grande", Lucida, Verdana, sans-serif;
         font-weight: normal;
@@ -72,7 +73,7 @@ body.bp {
 
 header, footer, section, #main {
     width: 100%;
-    position:relative;
+    //position: relative;
 }
 
 .header {
@@ -95,14 +96,22 @@ header, footer, section, #main {
         li {
             letter-spacing: 2px;
             float: left;
-            ul.header-nav-submenu {
+            .header-nav-submenu {
                 display: none;
                 background-color: #151515;
                 position: absolute;
                 z-index: 10000;
-                list-style-type: none;
                 padding: 5px 0 10px 0;
                 margin: 0;
+                width: 150px;
+                ul {
+                    list-style-type: none;
+                    float: left;
+	                margin: 0;
+	                padding: 0;
+	                text-align: left;
+	                position: relative;
+                }
                 li {
                     color: #999999;
                     font-size: 11px;
@@ -217,6 +226,7 @@ header, footer, section, #main {
 
 #masthead {
     @include structure-block;
+    //position: relative;
     #pylons-logo {
         height: 250px;
         width: 100%;
@@ -265,7 +275,7 @@ header, footer, section, #main {
         text-align: center;
         padding: 10px;
         float: right;
-        overflow: hidden;
+        //overflow: hidden;
         #highlight-content {
             overflow: auto;
             padding-bottom: 10px;
@@ -299,7 +309,8 @@ header, footer, section, #main {
             border-top: 2px solid #b2b2b2;
             border-bottom: 2px solid #b2b2b2;
 	        margin: 5px 90px 5px 90px;
-	        clear: both;
+	        //clear: both;
+	        display: block;
 	        z-index: 1000;
 	        position: absolute;
 	        .download {
@@ -371,7 +382,7 @@ header, footer, section, #main {
         width: 460px;
         padding: 10px 10px 10px 0;
         float: left;
-        overflow: hidden;
+        overflow: visible;
     }
     .rightcol {
         text-align: left;

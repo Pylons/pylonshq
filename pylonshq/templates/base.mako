@@ -8,7 +8,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,chrome=1">
 	<!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
 	
 	<title>Pylons Project : ${self.pagename()}</title>
