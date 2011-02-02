@@ -3,7 +3,7 @@
 
 <%def name="pagename()">Download Pylons Framework</%def>
 
-<h1>Download Pylons Framework</h1>
+<h1 class="title">Download Pylons Framework</h1>
 
 <div id="downloads">
 	<ul>

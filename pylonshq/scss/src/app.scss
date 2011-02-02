@@ -10,28 +10,60 @@
 
 body {
     background-color: #151515;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Neuton", "Lucida Grande", Lucida, Verdana, sans-serif;
+        font-weight: normal;
+        color: #373839;
+        font-style:normal;
+    }
+    a{
+        color: #1b61d6;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #e88f00;
+        text-decoration: underline;
+    }
 }
 
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
-    font-family: "Neuton", "Lucida Grande", Lucida, Verdana, sans-serif;
-    font-weight: normal;
-    color: #373839;
-    font-style:normal;
-}
-
-body a{
-    color: #1b61d6;
-    text-decoration: none;
-}
-
-body a:hover{
-    color: #e88f00;
-    text-decoration: underline;
+body.bp {
+    background-color: #151515;
+    h1.title {
+        font-size: 3em;
+        line-height: 1;
+        margin-bottom: 0.50em;
+    }
+    h1 {
+        font-size: 2em;
+        line-height: 1;
+        margin-bottom: 0.75em;
+    }
+    h2 {
+        font-size: 1.5em;
+        line-height: 1;
+        margin-bottom: 1.00em;
+    }
+    h3 {
+        font-size: 1.2em;
+        line-height: 1;
+        margin-bottom: 1.25em;
+    }
+    h4 {
+        font-size: 1em;
+        line-height: 1.25;
+        margin-bottom: 1.50em;
+    }
+    h5 {
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: 1.75em;
+    }
+    h6 {
+        font-size: 0.75em;
+        font-weight: bold;
+        margin-bottom: 2.00em;
+    }
 }
 
 header, footer, section, #main {
@@ -533,3 +565,4 @@ form {
 	margin: 0;
 	background: url(../icons/Next_16x16.png) no-repeat left 6px;
 }
+

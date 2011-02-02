@@ -27,6 +27,7 @@ can be used in a wide variety of circumstances.
        app = config.make_wsgi_app()
        serve(app, host='0.0.0.0')
 
+
 Pyramid is developed using the following tenets.
 
 Simplicity

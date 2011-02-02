@@ -3,7 +3,7 @@
 
 <%def name="pagename()">History of Pylons</%def>
 
-<h1>History of Pylons</h1>
+<h1 class="title">History of Pylons</h1>
 <h2>Pylons 0.8 (2005 - 2006)</h2>
 <p>
 	Developed at a time when many Python frameworks (30+ of them) were vying for users, Ben Bangert, noticed that another Python framework, Bricks had a similar goal and merged development efforts with James Gardner to work on the web development framework that became Pylons.
