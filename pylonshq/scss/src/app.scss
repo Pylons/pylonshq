@@ -235,7 +235,8 @@ header, footer, section, #main {
             overflow: auto;
             padding-bottom: 10px;
             h2 {
-                line-height: 28px;
+                font-size: 32px;
+                line-height: 38px;
                 margin-bottom: 10px;
             }
             ul {
@@ -271,6 +272,7 @@ header, footer, section, #main {
 	            background: url(../icons/Download_48x48.png) no-repeat 25px center;
                 padding: 15px 0 10px 100px;
 	            h3 {
+	                font-size: 24px;
                     margin: 0;
                     padding: 0; 
                 }
