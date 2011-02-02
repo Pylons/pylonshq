@@ -47,11 +47,11 @@
 	<div class="feature">
 		<div id="feature">
 			<div class="leftcol">
-				<h3>The Pylons Project</h3>
+				<h2>The Pylons Project</h2>
 				<div class="about-pylons png_bg">The Pylons Project was founded by the people behind the Pylons web framework to develop web application framework technology in Python. Rather than focusing on a single web framework, the Pylons Project will develop a collection of related technologies. The first package is the Pyramid web framework.</div>
 			</div>
 			<div class="rightcol">
-				<h3>Companies and projects using Pylons Project software</h3>
+				<h2>Companies and projects using Pylons Project software</h2>
 				<div id="company-slideshow">
     	        	<ul>
     	        	    <li><a href="http://www.adroll.com/"><img src="${request.static_url('pylonshq:static/images/logos/adroll.jpg')}" /></a></li>
