@@ -3,7 +3,7 @@
 
 <%def name="pagename()">Download Pyramid</%def>
 
-<h1>Download Pyramid</h1>
+<h1 class="title">Download Pyramid</h1>
 
 <div id="downloads">
 	<ul>

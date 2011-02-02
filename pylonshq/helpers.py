@@ -17,3 +17,15 @@ The template globals (``h`` et al) are set in
 
 from webhelpers.date import distance_of_time_in_words
 from webhelpers.html import HTML, escape, literal, tags
+
+from pylonshq.lib.highlight import code_highlight, langdict
+
+def rst_render(content):
+    defaults = {
+        'file_insertion_enabled': 0,
+        'raw_enabled': 0,
+        'input_encoding': 'unicode',
+        'halt_level': 7,
+    }
+    return publish_parts(content, writer_name='html',
+                         settings_overrides=defaults)['html_body']

@@ -3,10 +3,10 @@
 
 <%def name="pagename()">History of Pylons</%def>
 
-<h1>History of Pylons</h1>
+<h1 class="title">History of Pylons</h1>
 
 <p>Pylons initially started and referred just the Pylons Framework before the merger that resulted in the Pylons Project. The below timeline starts with the Pylons Framework to provide the background for how the Pylons Project came to be, how the developers ended up merging their efforts, and the origin projects. Some background is also provided on the other frameworks that merged to form the Pylons Project.</p>
-    
+
 <h2>Pylons 0.8 (2005 - 2006)</h2>
 <p>
 	Pylons was developed at a time when many Python frameworks (30+ of them) were vying for users. Ben Bangert noticed that another Python framework, Bricks, had a similar goal and merged development efforts with James Gardner to work on the web development framework that became Pylons.
