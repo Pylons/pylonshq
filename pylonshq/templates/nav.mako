@@ -11,10 +11,46 @@
 		<ul>
 			<li><a href="${request.application_url}"${active_nav.get('home', '') | n}>Home</a></li>
 			<li><a href="http://docs.pylonsproject.org/">Documentation</a></li>
-			<li><a href="${request.application_url}/about"${active_nav.get('about', '') | n}>About</a></li>
-			<li><a href="${request.application_url}/projects"${active_nav.get('projects', '') | n}>Projects</a></li>
-			<li><a href="${request.application_url}/community"${active_nav.get('community', '') | n}>Community</a></li>
-			<li class="last"><a href="${request.application_url}/tools"${active_nav.get('tools', '') | n}>Tools</a></li>
+			<li>
+				<a href="${request.application_url}/about"${active_nav.get('about', '') | n}>About</a>
+				<ul class="header-nav-submenu">
+					<li><a href="${request.application_url}/about/pylons">Pylons Project</a></li>
+					<li><a href="${request.application_url}/about/history">History</a></li>
+					<li><a href="${request.application_url}/about/license">License</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="${request.application_url}/projects"${active_nav.get('projects', '') | n}>Projects</a>
+				<ul class="header-nav-submenu">
+					<li><span class="title">Pyramid</span></li>
+					<li><a href="${request.application_url}/projects/pyramid/about">About</a></li>
+					<li><a href="${request.application_url}/projects/pyramid/download">Download</a></li>
+					<li><a href="http://docs.pylonsproject.org/projects/pyramid/1.0/">Documentation</a></li>
+					<li><a href="http://docs.pylonsproject.org/projects/pyramid_cookbook/dev/">Cookbook</a></li>
+					<li><a href="http://docs.pylonsproject.org/projects/pyramid_tutorials/dev/">Tutorials</a></li>
+					<li>&nbsp;</li>
+					<li><span class="title">Pylons Framework</span></li>
+					<li><a href="${request.application_url}/projects/pylons-framework/about">About</a></li>
+					<li><a href="${request.application_url}/projects/pylons-framework/download">Download</a></li>
+					<li><a href="http://docs.pylonsproject.org/projects/pylons_framework/dev/">Documentation</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="${request.application_url}/community"${active_nav.get('community', '') | n}>Community</a>
+				<ul class="header-nav-submenu">
+					<li><a href="${request.application_url}/community/how-to-participate">How to participate</a></li>
+					<li><a href="${request.application_url}/community/how-to-contribute">How to contribute</a></li>
+					<li><a href="${request.application_url}/community/code-of-conduct">Code of conduct</a></li>
+					<li><a href="${request.application_url}/community/get-support">Get support</a></li>
+					<li><a href="${request.application_url}/community/blogs">Blogs</a></li>
+					</ul>
+			</li>
+			<li class="last">
+				<a href="${request.application_url}/tools"${active_nav.get('tools', '') | n}>Tools</a>
+				<ul class="header-nav-submenu">
+					<li><a href="${request.application_url}/tools/pastebins">Pastebins</a></li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </nav>

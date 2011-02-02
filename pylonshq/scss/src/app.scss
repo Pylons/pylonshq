@@ -93,14 +93,46 @@ header, footer, section, #main {
         }
         li {
             letter-spacing: 2px;
-            padding-left: 15px;
-            padding-right: 15px;
             float: left;
+            ul.header-nav-submenu {
+                display: none;
+                background-color: #151515;
+                position: absolute;
+                z-index: 1000;
+                list-style-type: none;
+                padding: 5px 0 10px 0;
+                margin: 0;
+                li {
+                    color: #999999;
+                    font-size: 11px;
+                    line-height: 16px;
+                    text-align: left;
+                    letter-spacing: 0px;
+                    padding: 0;
+                    margin: 0;
+                    float: none;
+                    a {
+                        color: #999999;
+                        text-decoration: none;
+                    }
+                    a:hover, a.hover, a.selected {
+                        color: #fa8232;
+                    }
+                    span.title {
+                        font-size: 12px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        color: #ffffff;
+                    }
+                }
+            }
         }
         li.last {
             padding-right: 0;
         }
         a {
+            padding-left: 15px;
+            padding-right: 15px;
             color: #ffffff;
             text-decoration: none;
         }
