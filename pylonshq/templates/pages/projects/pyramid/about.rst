@@ -78,7 +78,7 @@ As with Python, the Pyramid software is distributed under a `permissive
 open source license </about/license>`_.
 
 History
-=======
+-------
 
 The code which exists today in Pyramid is not new.  Between June, 2008 and
 November of 2010, it was known as ``repoze.bfg`` (see the `BFG website
