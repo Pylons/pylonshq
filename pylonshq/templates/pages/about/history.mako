@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/page.mako"/>
 
-<%def name="pagename()">History of Pylons</%def>
+<%def name="pagename()">About : History of Pylons</%def>
 
 <h1 class="title">History of Pylons</h1>
 
