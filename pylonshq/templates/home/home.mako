@@ -134,7 +134,7 @@ new TWTR.Widget({
 			<h2>Latest discussions</h2>
 			<ul>
 				% for message in discussions:
-				<li>
+				<li class="png_bg">
 					<div class="title">
 						<a href="${message['link']}">${message['title']}</a>
 					</div>
@@ -150,7 +150,7 @@ new TWTR.Widget({
 			<h2>Latest project activities</h2>
 			<ul>
 				% for project in projects:
-				<li>
+				<li class="png_bg">
 					<div class="project">
 						<a class="name" href="${project.url}">${project.name}</a>
 						<span class="downloads">
