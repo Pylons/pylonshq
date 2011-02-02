@@ -29,6 +29,7 @@ body {
 
 body.bp {
     background-color: #151515;
+    text-align: left;
     h1.title {
         font-size: 3em;
         line-height: 1;
@@ -364,6 +365,7 @@ header, footer, section, #main {
     padding: 20px 0 20px 0;
     @include structure-block;
     .leftcol {
+        text-align: left;
         font-size: 12px;
         line-height: 16px;
         width: 460px;
@@ -372,6 +374,7 @@ header, footer, section, #main {
         overflow: hidden;
     }
     .rightcol {
+        text-align: left;
         font-size: 12px;
         line-height: 16px;
         width: 460px;
@@ -518,12 +521,14 @@ form {
 }
 
 #latest-info {
+    text-align: left;
     p {
         font-size: 11px;
     }
 }
 
 #latest-discussions {
+    text-align: left;
     ul {
         padding: 0;
         margin: 0;
@@ -550,6 +555,7 @@ form {
 }
 
 #latest-projects {
+    text-align: left;
     ul {
         padding: 0;
         margin: 0;
@@ -575,6 +581,7 @@ form {
 }
 
 #downloads {
+    text-align: left;
     ul {
         padding: 0;
         margin: 0;
