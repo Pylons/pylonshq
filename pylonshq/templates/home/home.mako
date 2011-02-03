@@ -85,6 +85,7 @@
 	<div id="container">
 		${funcs.flash()}
 		<div id="latest-info" class="span-8">
+			<h2>From the inside</h2>
 			<div id="inside-rst">
 				${inside|n}
 			</div>
