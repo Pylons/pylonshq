@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/base.mako"/>
 <%namespace name="funcs" file="/funcs.mako"/>
-<%!
-    from datetime import datetime
-%>
 
 <section>
 	<div class="masthead">
