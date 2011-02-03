@@ -2,7 +2,7 @@ How to Participate
 ==================
 
 Most interaction with the Pylons Project is done via `The Pylons GitHub
-organization <https://github.com/organizations/Pylons>`_, via the
+organization <https://github.com/Pylons>`_, via the
 `Pylons-devel mailing list <http://groups.google.com/group/pylons-devel>`_,
 or via the ``#pylons`` channel on `FreeNode <http://freenode.net/>`_.
 
