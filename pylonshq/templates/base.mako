@@ -8,12 +8,12 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,chrome=1">
 	<!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
 	
 	<title>Pylons Project : ${self.pagename()}</title>
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="The Pylons Project and contributors">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="${request.static_url('pylonshq:static/favicon.ico')}">
@@ -72,12 +72,18 @@
 
 	<!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
 	<script>
-		var_gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=true;
-			g.src=('https:'==location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)})(document,'script');
-	</script>
-  
+     var _gaq = _gaq || [];
+     _gaq.push(['_setAccount', 'UA-21146943-1']);
+     _gaq.push(['_trackPageview']);
+     (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+     })();
+    </script>  
 </body>
 </html>
 <%namespace name="nav" file="/nav.mako"/>

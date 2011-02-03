@@ -7,3 +7,5 @@ data
 Data.fs*
 sqlite.db
 db.sqlite
+/.project
+/.pydevproject

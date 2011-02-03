@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 <%inherit file="/page.mako"/>
 
-<%def name="pagename()">Download Pyramid</%def>
+<%def name="pagename()">Pyramid : Download Pyramid</%def>
 
 <h1 class="title">Download Pyramid</h1>
 
