@@ -61,6 +61,14 @@ class PageHandler(base):
     def index(self):
         self.c.pagename = 'Home'
         @cache_region('moderate_term')
+        def _inside():
+            content = pkg_resources.resource_string(
+                'pylonshq', 'templates/home/inside.rst')
+            body = publish_parts(
+                content,
+                writer_name='html')['html_body']
+            return body
+        @cache_region('moderate_term')
         def _discussions():
             import feedparser
             d = feedparser.parse(
@@ -89,6 +97,7 @@ class PageHandler(base):
             )
             return [ordered[i] for i in xrange(20)]
         return {
+            'inside': _inside(),
             'discussions': _discussions(),
             'projects': _projects()
         }
