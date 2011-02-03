@@ -13,6 +13,8 @@ from pylonshq.handlers.base import BaseHandler as base
 
 from beaker.cache import cache_region
 
+from operator import attrgetter
+import feedparser
 from docutils.core import publish_parts
 
 log = logging.getLogger(__name__)
@@ -60,6 +62,7 @@ class PageHandler(base):
     @action(renderer='pylonshq:templates/home/home.mako')
     def index(self):
         self.c.pagename = 'Home'
+        
         @cache_region('moderate_term')
         def _inside():
             content = pkg_resources.resource_string(
@@ -68,11 +71,21 @@ class PageHandler(base):
                 content,
                 writer_name='html')['html_body']
             return body
+            
         @cache_region('moderate_term')
         def _discussions():
-            import feedparser
-            d = feedparser.parse(
-                'http://groups.google.com/group/pylons-discuss/feed/atom_v1_0_msgs.xml'
+            rss_urls = (
+                'http://groups.google.com/group/pylons-discuss/feed/atom_v1_0_msgs.xml',
+                'http://groups.google.com/group/pylons-devel/feed/atom_v1_0_msgs.xml'
+            )
+            feeds = [feedparser.parse(rss_url) for rss_url in rss_urls]
+            _entries = []
+            for feed in feeds:
+                _entries.extend(feed[ "items" ])
+            _ordered = sorted(
+                (_entry for _entry in _entries),
+                key=attrgetter('date_parsed'),
+                reverse=True
             )
             entries = [dict(
                 title = entry.title,
@@ -81,11 +94,11 @@ class PageHandler(base):
                 updated = (
                     datetime(*entry.updated_parsed[:6])-timedelta(hours=5)
                 ).strftime('%b %d, %H:%M')
-            ) for pos, entry in enumerate(d['entries']) if pos < 10]
+            ) for pos, entry in enumerate(_ordered) if pos < 10]
             return entries
+            
         @cache_region('moderate_term')
         def _projects():
-            from operator import attrgetter
             github = self.request.registry.get('github')
             all_projects = github.repos.list(
                 self.request.registry.settings.get('github.username')
@@ -96,6 +109,7 @@ class PageHandler(base):
                 reverse=True
             )
             return [ordered[i] for i in xrange(20)]
+            
         return {
             'inside': _inside(),
             'discussions': _discussions(),
@@ -112,6 +126,7 @@ class PageHandler(base):
         self.c.pagename = 'Projects'
         values = {}
         endpath = self.request.matchdict.get('endpath')
+        
         @cache_region('long_term')
         def _downloads(repo):
             from pylonshq.lib.utils import natural
@@ -121,6 +136,7 @@ class PageHandler(base):
                 d for d in sorted(all_downloads, key=natural)
                 if not d.startswith('0') and d.find('a') == -1
             ]
+            
         if endpath is not None:
             if 'pyramid' in endpath:
                 self.c.masthead_logo = 'pyramid'
