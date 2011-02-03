@@ -61,7 +61,7 @@ class PageHandler(base):
     def index(self):
         self.c.pagename = 'Home'
         @cache_region('moderate_term')
-        def latest_discussions():
+        def _discussions():
             import feedparser
             d = feedparser.parse(
                 'http://groups.google.com/group/pylons-discuss/feed/atom_v1_0_msgs.xml'
@@ -73,10 +73,10 @@ class PageHandler(base):
                 updated = (
                     datetime(*entry.updated_parsed[:6])-timedelta(hours=5)
                 ).strftime('%b %d, %H:%M')
-            ) for entry in d['entries']]
+            ) for pos, entry in enumerate(d['entries']) if pos < 10]
             return entries
-        @cache_region('default_term')
-        def latest_projects():
+        @cache_region('moderate_term')
+        def _projects():
             from operator import attrgetter
             github = self.request.registry.get('github')
             all_projects = github.repos.list(
@@ -87,10 +87,10 @@ class PageHandler(base):
                 key=attrgetter('pushed_at'),
                 reverse=True
             )
-            return [ordered[i] for i in xrange(15)]
+            return [ordered[i] for i in xrange(20)]
         return {
-            'discussions': latest_discussions(),
-            'projects': latest_projects()
+            'discussions': _discussions(),
+            'projects': _projects()
         }
     
     @action()

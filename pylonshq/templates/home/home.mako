@@ -94,40 +94,6 @@
 			<p>Since Pyramid has reached non-alpha release, Pylons the web framework was shifted into legacy status. Read more about <a href="http://docs.pylonsproject.org/faq/pylonsproject.html#what-does-the-pylons-project-mean-for-pylons-the-web-framework">what the Pylons Project mean for Pylons the web framework</a>.</p>
 			<h4>Pylons merges with repoze.bfg</h4>
 			<p>The Pylons framework developers have merged efforts with the <a href="http://bfg.repoze.org/">repoze.bfg</a> framework under the <a href="https://github.com/Pylons">Pylons Project</a> banner. Read about the <a href="http://docs.pylonsproject.org/">Pylons Project</a> and the joint effort, the <a href="http://docs.pylonsproject.org/projects/pyramid/dev/">Pyramid web framework</a>, and <a href="http://be.groovie.org/post/1558848023/notes-on-the-pylons-repoze-bfg-merger">notes on the merger</a>.</p>
-<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: '#pyramid #pylons',
-  interval: 6000,
-  title: '',
-  subject: '',
-  width: 310,
-  height: 310,
-  theme: {
-    shell: {
-      background: '#dddddd',
-      color: '#222222'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#333333',
-      links: '#1b5fd6'
-    }
-  },
-  features: {
-    scrollbar: true,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    toptweets: true,
-    behavior: 'default'
-  }
-}).render().start();
-</script>
 		</div>
 		<div id="latest-discussions" class="span-8">
 			<h2>Latest discussions</h2>
@@ -144,6 +110,42 @@ new TWTR.Widget({
 				</li>
 				% endfor
 			</ul>
+			<br>
+			<h2>Latest tweets</h2>
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+			new TWTR.Widget({
+			  version: 2,
+			  type: 'search',
+			  search: '#pyramid #pylons',
+			  interval: 6000,
+			  title: '',
+			  subject: '',
+			  width: 310,
+			  height: 310,
+			  theme: {
+			    shell: {
+			      background: '#dddddd',
+			      color: '#222222'
+			    },
+			    tweets: {
+			      background: '#ffffff',
+			      color: '#333333',
+			      links: '#1b5fd6'
+			    }
+			  },
+			  features: {
+			    scrollbar: true,
+			    loop: true,
+			    live: true,
+			    hashtags: true,
+			    timestamp: true,
+			    avatars: true,
+			    toptweets: true,
+			    behavior: 'default'
+			  }
+			}).render().start();
+			</script>
 		</div>
 		<div id="latest-projects" class="span-8 last">
 			<h2>Latest project activities</h2>
