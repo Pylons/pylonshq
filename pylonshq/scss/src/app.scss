@@ -292,7 +292,7 @@ header, footer, section, #main {
                 margin-bottom: 10px;
             }
             ul {
-                margin: 20px 0 10px 0;
+                margin: 20px 0 5px 0;
                 padding: 0;
                 list-style-type: none;
                 overflow: auto;
@@ -309,25 +309,35 @@ header, footer, section, #main {
         }
         #highlight-download {
             cursor: pointer;
-            width: 245px;
+            width: 285px;
             //height: 70px;
             text-align: left;
             background: #c7c7c7 url(../images/middlebg.png) repeat-x 0 top;
             border-top: 2px solid #b2b2b2;
             border-bottom: 2px solid #b2b2b2;
-	        margin: 5px 90px 5px 90px;
+	        margin: 5px 70px 5px 70px;
 	        //clear: both;
 	        display: block;
 	        z-index: 1000;
 	        position: absolute;
+	        a {
+	            color: #1b61d6;
+                text-decoration: none;
+	        }
 	        .download {
 	            background: url(../icons/Download_48x48.png) no-repeat 25px center;
-                padding: 15px 0 10px 100px;
+                padding: 10px 0 10px 100px;
                 margin: 0;
 	            h3 {
 	                font-size: 24px;
                     margin: 0;
                     padding: 0; 
+                }
+                .version {
+                    font-size: 14px;
+                }
+                .license {
+                    font-size: 11px;
                 }
 	        }
 	        .options {
@@ -354,10 +364,6 @@ header, footer, section, #main {
 	            }
 	            li.last {
 	                border-bottom: 1px dotted #aaaaaa;
-	            }
-	            a {
-	                color: #1b61d6;
-                    text-decoration: none;
 	            }
 	        }
         }

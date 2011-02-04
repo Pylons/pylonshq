@@ -19,7 +19,10 @@
 					<div id="highlight-download">
 						<div class="download png_bg">
 							<h3>Download</h3>
-							version 1.0
+							<div class="version">version 1.0</div>
+							<div class="license">
+								Open source, <a href="${request.application_url}/about/license">BSD-like license</a>
+							</div>
 						</div>
 						<div class="options">
 							Download packages
