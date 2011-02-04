@@ -1,4 +1,4 @@
-.syntax{font-family:monospace;font-size:14px;line-height:16px;background:#f8f8f8;padding:10px 20px 10px 20px;margin:10px 0 10px 0;}
+.syntax{padding:10px 0 10px 0;margin:0;}
 /* Comment */
 .syntax .err{color:#a40000;background-color:#fbe3e4}
 /* Error */

@@ -66,8 +66,15 @@ body.bp {
         font-weight: bold;
         margin-bottom: 2.00em;
     }
-    pre {
-        font-size: 13px;
+    pre, code {
+        font-family: monospace;
+        font-size: 14px;
+        line-height: 17px;
+        background-color: #fafafa;
+        padding: 10px;
+        margin: 0;
+        border-top: 2px solid #c6c9cb;
+        border-bottom: 2px solid #c6c9cb;
     }
 }
 
