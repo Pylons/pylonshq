@@ -8,7 +8,7 @@
 <div id="downloads">
 	<ul>
 		<li>
-			pylons-master
+			<a href="https://github.com/Pylons/pylons/tree/master">pylons-master</a>
 			<span class="downloads">
 				<a href="https://github.com/Pylons/pylons/zipball/master">ZIP</a>
 				<a href="https://github.com/Pylons/pylons/tarball/master">TGZ</a>
@@ -16,7 +16,7 @@
 		</li>
 		% for archive in downloads:
 		<li>
-			pylons-${archive}
+			<a href="https://github.com/Pylons/pylons/tree/${archive}">pylons-${archive}</a>
 			<span class="downloads">
 				<a href="https://github.com/Pylons/pylons/zipball/${archive}">ZIP</a>
 				<a href="https://github.com/Pylons/pylons/tarball/${archive}">TGZ</a>

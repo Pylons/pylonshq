@@ -25,16 +25,18 @@
 							</div>
 						</div>
 						<div class="options">
-							Download packages
+							Install Pyramid
 							<ul>
 								<li class="package">
-									<a href="https://github.com/Pylons/pyramid/zipball/1.0">1.0.zip</a>
+									<a href="http://pypi.python.org/packages/source/p/pyramid/pyramid-1.0.tar.gz#md5=811ac86625e39083f24f2b6d400a5d39">pyramid-1.0.tar.gz</a>
 								</li>
-								<li class="package last">
-									<a href="https://github.com/Pylons/pyramid/tarball/1.0">1.0.tar.gz</a>
+								<li class="command">
+									$ easy_install pyramid
+								</li>
+								<li class="command">
+									$ pip install pyramid
 								</li>
 							</ul>
-							or $ easy_install pyramid
 						</div>
 					</div>
 				</div>
@@ -152,9 +154,9 @@
 				<li>
 					<div class="project">
 						<a class="name" href="${project.url}">${project.name}</a>
-						<span class="downloads">
-							<a href="${project.url}/zipball/master">ZIP</a> <a href="${project.url}/tarball/master">TGZ</a>
-						</span>
+						##<span class="downloads">
+						##	<a href="${project.url}/zipball/master">ZIP</a> <a href="${project.url}/tarball/master">TGZ</a>
+						##</span>
 					</div>
 					<div class="description">${project.description}</div>
 				</li>
