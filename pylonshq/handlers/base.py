@@ -21,4 +21,5 @@ class ExceptionViews(BaseHandler):
     @view_config(context='pyramid.exceptions.NotFound',
                  renderer='pylonshq:templates/404.mako')
     def notfound(self):
+        self.request.response_status = '404 Not Found'
         return {}
