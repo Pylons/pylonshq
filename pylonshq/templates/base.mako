@@ -25,7 +25,7 @@
 	<!--[if IE]><link rel="stylesheet" href="${request.static_url('pylonshq:static/css/ie.css')}?v=${rid}" media="screen, projection"><![endif]-->
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}?v=${rid}" media="screen, projection">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/pygments.css')}?v=${rid}" media="screen, projection">
-	<script src="${request.static_url('pylonshq:static/js/libs/modernizr-1.6.min.js')}"></script>
+	<script src="${request.static_url('pylonshq:static/js/libs/modernizr-1.7pre.js')}"></script>
 
 </head>
 
