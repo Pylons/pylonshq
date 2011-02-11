@@ -13,7 +13,7 @@ body {
     text-align: left;
     position: relative;
     h1, h2, h3, h4, h5, h6 {
-        font-family: "Neuton", "Lucida Grande", Lucida, Verdana, sans-serif;
+        font-family: "NeutonRegular", "Lucida Grande", Lucida, Verdana, sans-serif;
         font-weight: normal;
         color: #373839;
         font-style:normal;
@@ -67,7 +67,7 @@ body.bp {
         margin-bottom: 2.00em;
     }
     pre, code {
-        font-family: monospace;
+        font-family: Consolas, "andale mono", "lucida console", monospace;
         font-size: 14px;
         line-height: 17px;
         background-color: #fafafa;
@@ -431,7 +431,7 @@ header, footer, section, #main {
 
 .exception {
     .error-404 {
-        font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+        font-family: "NeutonRegular", Lucida, Verdana, sans-serif;
         text-align: center;
         color: #f98131;
         font-size: 180px;
@@ -644,4 +644,8 @@ form {
 
 .small-caps {
     font-variant: small-caps;
+}
+
+.twtr-widget, .twtr-tweet-text {
+    font-family: "Nobile", "Lucida Grande", Lucida, Verdana, sans-serif;
 }
