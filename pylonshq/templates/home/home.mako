@@ -77,7 +77,10 @@
 					</ul>
     	        	<ul>
     	        	    <li><a href="http://sourceforge.net/"><img src="${request.static_url('pylonshq:static/images/logos/sourceforge.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.surveymonkey.com/"><img src="${request.static_url('pylonshq:static/images/logos/surveymonkey.jpg')}" /></a></li>
     	        	    <li><a href="http://www.tineye.com/"><img src="${request.static_url('pylonshq:static/images/logos/tineye.jpg')}" /></a></li>
+       	        	</ul>
+					<ul>
     	        	    <li><a href="http://www.wetafx.co.nz/"><img src="${request.static_url('pylonshq:static/images/logos/wetadigital.jpg')}" /></a></li>
     	        	</ul>
     	    	</div>
