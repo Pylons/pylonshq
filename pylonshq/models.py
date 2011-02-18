@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 import logging
 
 import pyramid_sqla as psa

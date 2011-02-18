@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from docutils.parsers import rst
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name, get_all_lexers

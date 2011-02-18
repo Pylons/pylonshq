@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 import logging
 from formencode import Schema, validators
 from pyramid.i18n import TranslationStringFactory

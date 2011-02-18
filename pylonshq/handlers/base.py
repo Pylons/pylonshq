@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 import logging
 
 from pyramid.view import view_config
@@ -19,7 +20,12 @@ class BaseHandler(object):
 class ExceptionViews(BaseHandler):
 
     @view_config(context='pyramid.exceptions.NotFound',
-                 renderer='pylonshq:templates/404.mako')
+                 renderer='pylonshq:templates/error.mako')
     def notfound(self):
         self.request.response_status = '404 Not Found'
-        return {}
+        return {
+            'number': '404',
+            'error': 'PAGE NOT FOUND',
+            'message': 'The page you\'re looking for isn\'t here.'
+        }
+

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from pyramid.decorator import reify
 from pyramid.request import Request
 from pyramid.security import unauthenticated_userid

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from pyramid.threadlocal import get_current_request
 from pyramid.exceptions import ConfigurationError
 from pyramid.url import route_url
