@@ -46,7 +46,7 @@ def main(global_config, **settings):
     config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
                           'pyramid.events.BeforeRender')
     config.add_subscriber('pylonshq.subscribers.add_localizer',
-                          'pyramid.events.NewRequest')
+                          'pyramid.events.ContextFound')
     config.add_static_view('static', 'pylonshq:static')
     
     # set up handlers
