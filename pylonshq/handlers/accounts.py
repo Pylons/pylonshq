@@ -4,6 +4,7 @@ import sqlalchemy as sa
 
 from pyramid.httpexceptions import HTTPFound
 from pyramid.url import route_url
+from pyramid.view import view_config
 from pyramid import security
 
 from pyramid_handlers import action
@@ -19,6 +20,8 @@ log = logging.getLogger(__name__)
       
 class AccountHandler(base):
     
+    @view_config(renderer='pylonshq:templates/home/login.mako',
+        context='pyramid.exceptions.Forbidden')
     @action(renderer='pylonshq:templates/home/login.mako')
     def login(self):
         self.c.pagename = 'Login'

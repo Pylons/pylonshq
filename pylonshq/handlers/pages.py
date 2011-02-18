@@ -156,7 +156,7 @@ class PageHandler(base):
         self.c.pagename = 'Tools'
         return self.render_page('tools', ('pastebins',))
         
-    @action(renderer='pylonshq:templates/home/test.mako')
+    @action(renderer='pylonshq:templates/home/test.mako', permission='edit')
     def test(self):
         self.c.pagename = 'Test'
         hello = self.request.translate('Hello')
