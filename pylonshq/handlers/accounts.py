@@ -25,6 +25,11 @@ class AccountHandler(base):
         context='pyramid.exceptions.Forbidden')
     @action(renderer='pylonshq:templates/home/login.mako')
     def login(self):
+        if self.logged_in:
+            self.request.session.flash('You are already connected!', queue='notice')
+            return HTTPFound(
+                location=self.request.route_url('home')
+            )
         self.c.pagename = 'Login'
         self.c.active_header_nav = 'tools'
         self.c.active_footer_nav = 'tools-login'
@@ -52,6 +57,12 @@ class AccountHandler(base):
         }
     
     def logout(self):
+        if not self.logged_in:
+            self.request.session.flash('You are not connected!', queue='notice')
+            return HTTPFound(
+                location=self.request.route_url('home')
+            )
         headers = security.forget(self.request)
+        self.request.session.flash('You have been logged out!', queue='success')
         return HTTPFound(location=self.request.route_url('home'),
                          headers=headers)

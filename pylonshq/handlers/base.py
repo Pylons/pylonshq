@@ -2,6 +2,7 @@
 import logging
 
 from pyramid.view import view_config
+from pyramid.security import authenticated_userid
 from pyramid_handlers import action
 
 log = logging.getLogger(__name__)
@@ -10,6 +11,7 @@ log = logging.getLogger(__name__)
 class BaseHandler(object):
     def __init__(self, request):
         self.request = request
+        self.logged_in = authenticated_userid(request)
         self.c = self.request.tmpl_context
         self.c.active_header_nav = self.request.matchdict.get('action') or 'home'
         self.c.active_footer_nav = ''
