@@ -9,10 +9,10 @@
 		
 <div id="main" class="exception">
 	<div id="container">
-		<div class="error-404 span-12">404</div>
-		<div class="error-404-message span-12 last">
-			<h2>PAGE NOT FOUND</h2>
-			The page you’re looking for isn’t here.
+		<div class="error-number span-12">${number}</div>
+		<div class="error-message span-12 last">
+			<h2>${error}</h2>
+			${message}
 		</div>
 	</div>
 </div>

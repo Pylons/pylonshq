@@ -5,8 +5,9 @@ import pyramid_beaker
 import pyramid_sqla
 import pyramid_handlers
 
-import pylonshq.lib.request as request
 from pylonshq.security import groupfinder
+from pylonshq.handlers import add_handlers
+import pylonshq.lib.request as request
 from pylonshq.lib.github import init_github
 
 def main(global_config, **settings):
@@ -22,53 +23,36 @@ def main(global_config, **settings):
                           authorization_policy=authorization_policy,
                           request_factory=request.PylonsHQRequest)
     
-    # Initialize database
+    # initialize database
     pyramid_sqla.add_engine(settings, prefix='sqlalchemy.')
 
-    # Configure Beaker sessions
+    # configure beaker sessions
     session_factory = pyramid_beaker.session_factory_from_settings(settings)
     config.set_session_factory(session_factory)
     
-    # Configure Beaker cache regions
+    # configure beaker cache regions
     pyramid_beaker.set_cache_regions_from_settings(settings)
     
-    # Add i18n dirs
+    # add i18n dirs
     config.add_translation_dirs('pylonshq:locale/')
     
-    # Initialize handlers
+    # initialize handlers
     config.include('pyramid_handlers')
     
-    # Initialize github client
+    # initialize github client
     config.registry['github'] = init_github(settings)
     
-    # Configure renderers
+    # configure renderers
     config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
                           'pyramid.events.BeforeRender')
     config.add_subscriber('pylonshq.subscribers.add_localizer',
-                          'pyramid.events.NewRequest')
+                          'pyramid.events.ContextFound')
     config.add_static_view('static', 'pylonshq:static')
-    # Set up routes and views
-    config.add_handler('home', '/', 'pylonshq.handlers.pages:PageHandler',
-                       action='index')
-    config.add_handler('login', '/login', 
-                        handler='pylonshq.handlers.accounts:AccountHandler',
-                        action='login')
-    config.add_handler('logout', '/logout',
-                        handler='pylonshq.handlers.accounts:AccountHandler',
-                        action='logout')
-    config.add_handler('jobs', '/jobs',
-                        handler='pylonshq.handlers.jobs:JobsHandler',
-                        action='index')
-    config.add_handler('jobs_actions', '/jobs/{action}/*endpath',
-                        handler='pylonshq.handlers.jobs:JobsHandler')
-    config.add_handler('showcase', '/showcase',
-                        handler='pylonshq.handlers.showcase:ShowcaseHandler',
-                        action='index')
-    config.add_handler('showcase_actions', '/showcase/{action}/*endpath',
-                        handler='pylonshq.handlers.showcase:ShowcaseHandler')
-    config.add_handler('sections', '/{action}',
-                        handler='pylonshq.handlers.pages:PageHandler')
-    config.add_handler('subsections', '/{action}/*endpath',
-                        handler='pylonshq.handlers.pages:PageHandler')
+    
+    # set up handlers
+    config.include(add_handlers)
+    
+    # scan packages
     config.scan('pylonshq')
+    
     return config.make_wsgi_app()

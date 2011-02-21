@@ -430,7 +430,7 @@ header, footer, section, #main {
 }
 
 .exception {
-    .error-404 {
+    .error-number {
         font-family: Lucida, Verdana, sans-serif;
         text-align: center;
         color: #f98131;
@@ -439,7 +439,7 @@ header, footer, section, #main {
         margin: 100px 0 100px 0;
     }
 
-    .error-404-message {
+    .error-message {
         height: 200px;
         vertical-align: middle;
         font-size: 24px;

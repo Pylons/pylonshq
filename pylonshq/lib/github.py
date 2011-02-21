@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from github2.client import Github
 
 def init_github(settings):

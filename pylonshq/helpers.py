@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 """Helper functions
 
 This module is available as the ``h`` variable in templates, and can also be
