@@ -5,7 +5,7 @@ import pyramid_beaker
 import pyramid_sqla
 import pyramid_handlers
 
-from pylonshq.security import groupfinder
+from pylonshq.lib.security import groupfinder
 from pylonshq.handlers import add_handlers
 import pylonshq.lib.request as request
 from pylonshq.lib.github import init_github
@@ -43,9 +43,9 @@ def main(global_config, **settings):
     config.registry['github'] = init_github(settings)
     
     # configure renderers
-    config.add_subscriber('pylonshq.subscribers.add_renderer_globals',
+    config.add_subscriber('pylonshq.lib.subscribers.add_renderer_globals',
                           'pyramid.events.BeforeRender')
-    config.add_subscriber('pylonshq.subscribers.add_localizer',
+    config.add_subscriber('pylonshq.lib.subscribers.add_localizer',
                           'pyramid.events.ContextFound')
     config.add_static_view('static', 'pylonshq:static')
     
