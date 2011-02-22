@@ -100,6 +100,7 @@
 		</div>
 		<div id="latest-discussions" class="span-8">
 			<h2>Latest discussions</h2>
+			% if discussions:
 			<ul>
 				% for message in discussions:
 				<li>
@@ -113,6 +114,11 @@
 				</li>
 				% endfor
 			</ul>
+			% else:
+			<div class="title">
+				No discussions for now... Come back later.
+			</div>
+			% endif
 			<br>
 			<h2>Latest tweets</h2>
 			<script src="http://widgets.twimg.com/j/2/widget.js"></script>

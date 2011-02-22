@@ -91,11 +91,11 @@ class PageHandler(base):
             entries = [dict(
                 title = entry.title,
                 link = entry.link,
-                author = entry.author_detail.name,
+                author = entry.author_detail.get('name', '-'),
                 updated = (
                     datetime(*entry.updated_parsed[:6])-timedelta(hours=5)
                 ).strftime('%b %d, %H:%M')
-            ) for pos, entry in enumerate(_ordered) if pos < 10]
+            ) for pos, entry in enumerate(_ordered) if _ordered and pos < 10]
             return entries
             
         @cache_region('moderate_term')
