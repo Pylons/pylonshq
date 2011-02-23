@@ -158,6 +158,7 @@
 		</div>
 		<div id="latest-projects" class="span-8 last">
 			<h2>Latest project activities</h2>
+			% if projects:
 			<ul>
 				% for project in projects:
 				<li>
@@ -171,6 +172,11 @@
 				</li>
 				% endfor
 			</ul>
+			% else:
+			<div class="title">
+				No activities for now... Come back later.
+			</div>
+			% endif
 		</div>
 		<div class="clear">&nbsp;</div>
 	</div>

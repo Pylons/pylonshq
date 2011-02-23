@@ -101,15 +101,18 @@ class PageHandler(base):
         @cache_region('moderate_term')
         def _projects():
             github = self.request.registry.get('github')
-            all_projects = github.repos.list(
-                self.request.registry.settings.get('github.username')
-            )
-            ordered = sorted(
-                (project for project in all_projects),
-                key=attrgetter('pushed_at'),
-                reverse=True
-            )
-            return [ordered[i] for i in xrange(20)]
+            try:
+                all_projects = github.repos.list(
+                    self.request.registry.settings.get('github.username')
+                )
+                ordered = sorted(
+                    (project for project in all_projects),
+                    key=attrgetter('pushed_at'),
+                    reverse=True
+                )
+                return [ordered[i] for i in xrange(20)]
+            except:
+                return []
             
         return {
             'inside': _inside(),
@@ -132,11 +135,14 @@ class PageHandler(base):
         def _downloads(repo):
             from pylonshq.lib.utils import natural
             github = self.request.registry.get('github')
-            all_downloads = github.repos.tags('Pylons/%s' % repo)
-            return [
-                d for d in sorted(all_downloads, key=natural)
-                if not d.startswith('0') and d.find('a') == -1
-            ]
+            try:
+                all_downloads = github.repos.tags('Pylons/%s' % repo)
+                return [
+                    d for d in sorted(all_downloads, key=natural)
+                    if not d.startswith('0') and d.find('a') == -1
+                ]
+            except:
+                return []
             
         if endpath is not None:
             if 'pyramid' in endpath:
