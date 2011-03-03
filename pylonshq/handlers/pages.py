@@ -23,23 +23,26 @@ log = logging.getLogger(__name__)
         
 class PageHandler(base):
     
-    def render_page(self, section, redir_elems, values=None):
-        endpath = self.request.matchdict.get('endpath', None)
-        if not endpath:
+    def __init__(self, request):
+        base.__init__(self, request)
+        self.endpath = self.request.matchdict.get('endpath', None)
+    
+    def render_page(self, section, redirpath, values=None):
+        if redirpath:
             return HTTPFound(
                 location=route_url(
                     'subsections',
                     self.request,
                     action=section,
-                    endpath='/'.join(redir_elems)
+                    endpath='/'.join(redirpath)
                 ))
         self.c.active_footer_nav = '-'.join(
             [self.request.matchdict.get('action')]
-            +list(endpath))
+            +list(self.endpath))
         for ext in ('.mako', '.rst'):
             tmpl_path = ('templates/pages/%s/%s%s' % (
                 section,
-                '/'.join(endpath),
+                '/'.join(self.endpath),
                 ext))
             values = values or {}
             if pkg_resources.resource_exists('pylonshq', tmpl_path):
@@ -48,7 +51,7 @@ class PageHandler(base):
                         'pylonshq:%s' % tmpl_path, values, self.request)
                 else:
                     self.c.pagename = ' : '.join(
-                        [item.replace('-', ' ').title() for item in endpath])
+                        [item.replace('-', ' ').title() for item in self.endpath])
                     content = pkg_resources.resource_string(
                         'pylonshq',
                         tmpl_path)
@@ -128,8 +131,8 @@ class PageHandler(base):
     @action()
     def projects(self):
         self.c.pagename = 'Projects'
+        redirpath = None
         values = {}
-        endpath = self.request.matchdict.get('endpath')
         
         @cache_region('long_term')
         def _downloads(repo):
@@ -143,15 +146,24 @@ class PageHandler(base):
                 ]
             except:
                 return []
-            
-        if endpath is not None:
-            if 'pyramid' in endpath:
+        
+        pyramid_redirpath = ('pyramid','about',)  
+        if self.endpath is not None:
+            if 'pyramid' in self.endpath:
+                if len(self.endpath)==1:
+                    redirpath = pyramid_redirpath
                 self.c.masthead_logo = 'pyramid'
                 values['downloads'] = _downloads('pyramid')
-            elif 'pylons-framework' in endpath:
+            elif 'pylons-framework' in self.endpath:
+                if len(self.endpath) == 1:
+                    redirpath = ('pylons-framework','about',)
                 self.c.masthead_logo = 'pylonsfw'
                 values['downloads'] = _downloads('pylons')
-        return self.render_page('projects', ('pyramid','about',), values)
+            elif len(self.endpath) == 0:
+                redirpath = pyramid_redirpath
+        else:
+            redirpath = pyramid_redirpath
+        return self.render_page('projects', redirpath, values)
 
     @action()
     def community(self):
