@@ -28,7 +28,7 @@ class PageHandler(base):
         self.endpath = self.request.matchdict.get('endpath', None)
     
     def render_page(self, section, redirpath, values=None):
-        if redirpath:
+        if self.endpath is None:
             return HTTPFound(
                 location=route_url(
                     'subsections',
@@ -151,16 +151,16 @@ class PageHandler(base):
         if self.endpath is not None:
             if 'pyramid' in self.endpath:
                 if len(self.endpath)==1:
+                    self.endpath = None
                     redirpath = pyramid_redirpath
-                self.c.masthead_logo = 'pyramid'
+                    self.c.masthead_logo = 'pyramid'
                 values['downloads'] = _downloads('pyramid')
             elif 'pylons-framework' in self.endpath:
                 if len(self.endpath) == 1:
+                    self.endpath = None
                     redirpath = ('pylons-framework','about',)
                 self.c.masthead_logo = 'pylonsfw'
                 values['downloads'] = _downloads('pylons')
-            elif len(self.endpath) == 0:
-                redirpath = pyramid_redirpath
         else:
             redirpath = pyramid_redirpath
         return self.render_page('projects', redirpath, values)
