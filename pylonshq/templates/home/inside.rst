@@ -6,6 +6,13 @@ contributed to making this release possible. Read the official announcement
 on `Google Groups 
 <http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f>`_.
 
+Pyramid - Not Built By Aliens design
+====================================
+
+`Pyramid`_ - `Not Built By Aliens design <http://twitpic.com/46sn2d/full>`_ 
+was done by illustrator `Felix Lafamme <http://www.felixlaflamme.com/>`_. View a 
+work in progress video from `YouTube <http://www.youtube.com/watch?v=oKFBWzeHYS4>`_!
+
 FLOSS Weekly Interview
 ======================
 
