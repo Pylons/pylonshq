@@ -10,8 +10,8 @@ Pyramid - Not Built By Aliens design
 ====================================
 
 `Pyramid`_ - `Not Built By Aliens design <http://twitpic.com/46sn2d/full>`_ 
-was done by illustrator `Felix Lafamme <http://www.felixlaflamme.com/>`_. View a 
-work in progress video from `YouTube <http://www.youtube.com/watch?v=oKFBWzeHYS4>`_!
+was done by artist `Felix Lafamme <http://www.felixlaflamme.com/>`_. Watch a 
+work in progress video on `YouTube <http://www.youtube.com/watch?v=oKFBWzeHYS4>`_!
 
 FLOSS Weekly Interview
 ======================

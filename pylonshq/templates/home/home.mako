@@ -5,38 +5,62 @@
 <section>
 	<div class="masthead">
 		<div id="masthead" class="masthead-home">
-			<div id="pyramid-medium-logo" class="png_bg">
-				<div id="home-highlights">
-					<div id="highlight-content">
-						<h2>Web development<br>with style, your way!</h2>
-						<ul>
-							<li class="png_bg">Simple</li>
-							<li class="png_bg">Fast</li>
-							<li class="png_bg">Documented</li>
-							<li class="png_bg">Tested</li>
-						</ul>
-					</div>
-					<div id="highlight-download">
-						<div class="download png_bg">
-							<h3>Download</h3>
-							<div class="version">version 1.0</div>
-							<div class="license">
-								Open source, <a href="${request.application_url}/about/license">BSD-like license</a>
+			<div id="highlight-slideshow">
+				<div class="highlight-item">
+					<div id="pyramid-medium-logo" class="png_bg">
+						<div id="home-highlights">
+							<div id="highlight-content">
+								<h2>Web development<br>with style, your way!</h2>
+								##<ul>
+								##	<li class="png_bg">Simple</li>
+								##	<li class="png_bg">Fast</li>
+								##	<li class="png_bg">Documented</li>
+								##	<li class="png_bg">Tested</li>
+								##</ul>
+							</div>
+							<div id="highlight-download">
+								<div class="download png_bg">
+									<h3>Download</h3>
+									<div class="version">version 1.0</div>
+									<div class="license">
+										Open source, <a href="${request.application_url}/about/license">BSD-like license</a>
+									</div>
+								</div>
+								<div class="options">
+									##Install Pyramid
+									<ul>
+										<li class="package">
+											<a href="http://pypi.python.org/packages/source/p/pyramid/pyramid-1.0.tar.gz#md5=811ac86625e39083f24f2b6d400a5d39">pyramid-1.0.tar.gz</a>
+										</li>
+										<li class="command">
+											$ easy_install pyramid
+										</li>
+										##<li class="command">
+										##	$ pip install pyramid
+										##</li>
+									</ul>
+								</div>
+							</div>
+							<div id="highlight-features">
+								<ul>
+									<li class="png_bg">Simple</li>
+									<li class="png_bg">Fast</li>
+									<li class="png_bg">Documented</li>
+									<li class="png_bg">Tested</li>
+								</ul>
 							</div>
 						</div>
-						<div class="options">
-							Install Pyramid
-							<ul>
-								<li class="package">
-									<a href="http://pypi.python.org/packages/source/p/pyramid/pyramid-1.0.tar.gz#md5=811ac86625e39083f24f2b6d400a5d39">pyramid-1.0.tar.gz</a>
-								</li>
-								<li class="command">
-									$ easy_install pyramid
-								</li>
-								<li class="command">
-									$ pip install pyramid
-								</li>
-							</ul>
+					</div>
+				</div>
+				<div class="highlight-item">
+					<div id="pyramid-tee-banner" class="png_bg">
+						<div id="home-highlights">
+							<div id="highlight-content">
+								<h2>Not Built By Aliens<br>Pyramid T-Shirt!</h2>
+								<br>
+								<p>Design was done by artist <a href="http://www.felixlaflamme.com/">Felix Laflamme</a>,<br> watch a work in progress video on</p>
+								<h2><a href="http://www.youtube.com/watch?v=oKFBWzeHYS4">YouTube</a></h2>
+							</div>
 						</div>
 					</div>
 				</div>

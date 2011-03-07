@@ -233,7 +233,14 @@ header, footer, section, #main {
 
 #masthead {
     @include structure-block;
-    //position: relative;
+    position: relative;
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:hover, a.hover, a.selected {
+        text-decoration: underline;
+    }
     #pylons-logo {
         height: 250px;
         width: 100%;
@@ -269,6 +276,11 @@ header, footer, section, #main {
         width: 100%;
         background: url(../images/pyramid-small.png) no-repeat left 10px;
     }
+    #pyramid-tee-banner {
+        height: 250px;
+        width: 100%;
+        background: url(../images/pyramid-tee-banner.png) no-repeat left center;
+    }
     h1 {
         color: #ffffff;
         font-size: 2.5em;
@@ -276,96 +288,107 @@ header, footer, section, #main {
         padding: 0;
         margin: 0;
     }
-    #home-highlights {
-        width: 420px;
+    #highlight-slideshow {
+        width: 100%;
         height: 250px;
-        text-align: center;
-        padding: 10px;
-        float: right;
-        //overflow: hidden;
-        #highlight-content {
-            overflow: auto;
-            padding-bottom: 10px;
-            h2 {
-                font-size: 32px;
-                line-height: 38px;
-                margin-bottom: 10px;
-            }
-            ul {
-                margin: 20px 0 5px 0;
-                padding: 0;
-                list-style-type: none;
-                overflow: auto;
-            }
-            li {
-                width: auto;
-                font-size: 16px;
-                line-height: 24px;
-                text-align: left;
-                padding: 0 15px 0 25px;
-                background: url(../icons/Check_16x16.png) no-repeat left center;
-                float: left;
-            }
+        .highlight-item {
+            width: 100%;
         }
-        #highlight-download {
-            cursor: pointer;
-            width: 285px;
-            //height: 70px;
-            text-align: left;
-            background: #c7c7c7 url(../images/middlebg.png) repeat-x 0 top;
-            border-top: 2px solid #b2b2b2;
-            border-bottom: 2px solid #b2b2b2;
-	        margin: 5px 70px 5px 70px;
-	        //clear: both;
-	        display: block;
-	        z-index: 1000;
-	        position: absolute;
-	        a {
-	            color: #1b61d6;
-                text-decoration: none;
-	        }
-	        .download {
-	            background: url(../icons/Download_48x48.png) no-repeat 25px center;
-                padding: 10px 0 10px 100px;
-                margin: 0;
-	            h3 {
-	                font-size: 24px;
+        #home-highlights {
+            width: 420px;
+            height: 250px;
+            text-align: center;
+            padding: 10px;
+            float: right;
+            position: relative;
+            #highlight-content {
+                overflow: auto;
+                padding-bottom: 0;
+                h2 {
+                    font-size: 32px;
+                    line-height: 38px;
+                    margin-bottom: 10px;
+                }
+            }
+            #highlight-download {
+                cursor: pointer;
+                width: 285px;
+                //height: 70px;
+                text-align: left;
+                background: #c7c7c7 url(../images/middlebg.png) repeat-x 0 top;
+                border-top: 2px solid #b2b2b2;
+                border-bottom: 2px solid #b2b2b2;
+	            margin: 5px 70px 5px 70px;
+	            //clear: both;
+	            display: block;
+	            //z-index: 10000;
+	            //position: absolute;
+	            overflow: auto;
+	            a {
+	                color: #1b61d6;
+                    text-decoration: none;
+	            }
+	            .download {
+	                background: url(../icons/Download_48x48.png) no-repeat 25px center;
+                    padding: 10px 0 10px 100px;
                     margin: 0;
-                    padding: 0; 
+	                h3 {
+	                    font-size: 24px;
+                        margin: 0;
+                        padding: 0; 
+                    }
+                    .version {
+                        font-size: 14px;
+                    }
+                    .license {
+                        font-size: 11px;
+                    }
+	            }
+	            .options {
+	                font-size: 12px;
+	                line-height: 16px;
+	                display: none;
+	                padding: 0 15px 5px 10px;
+	                ul {
+	                    padding: 5px 0 5px 0;
+	                    margin: 0;
+	                    list-style-type: none;
+	                }
+	                li {
+	                    height: 20px;
+	                    line-height: 20px;
+	                    padding-left: 25px;
+	                    border-top: 1px dotted #aaaaaa;
+	                }
+	                li.package {
+	                    background: url(../icons/Archive_16x16.png) no-repeat left center;
+	                }
+	                li.command {
+	                    background: url(../icons/Settings_16x16.png) no-repeat left center;
+	                }
+	                li.last {
+	                    border-bottom: 1px dotted #aaaaaa;
+	                }
+	            }
+            }
+            #highlight-features {
+                text-align: center;
+                ul {
+                    margin: 20px 0 5px 0;
+                    padding: 0;
+                    list-style-type: none;
+                    overflow: auto;
                 }
-                .version {
-                    font-size: 14px;
+                li {
+                    width: auto;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: left;
+                    padding: 0 15px 0 25px;
+                    background: url(../icons/Check_16x16.png) no-repeat left center;
+                    float: left;
                 }
-                .license {
-                    font-size: 11px;
-                }
-	        }
-	        .options {
-	            font-size: 12px;
-	            line-height: 16px;
-	            display: none;
-	            padding: 0 15px 10px 10px;
-	            ul {
-	                padding: 10px 0 10px 0;
-	                margin: 0;
-	                list-style-type: none;
-	            }
-	            li {
-	                height: 20px;
-	                line-height: 20px;
-	                padding-left: 25px;
-	                border-top: 1px dotted #aaaaaa;
-	            }
-	            li.package {
-	                background: url(../icons/Archive_16x16.png) no-repeat left center;
-	            }
-	            li.command {
-	                background: url(../icons/Settings_16x16.png) no-repeat left center;
-	            }
-	            li.last {
-	                border-bottom: 1px dotted #aaaaaa;
-	            }
-	        }
+            }
         }
     }
 }

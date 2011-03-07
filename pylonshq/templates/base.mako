@@ -26,6 +26,7 @@
 	<!--[if IE]><link rel="stylesheet" href="${request.static_url('pylonshq:static/css/ie.css')}?v=${rid}" media="screen, projection"><![endif]-->
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/app.css')}?v=${rid}" media="screen, projection">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/pygments.css')}?v=${rid}" media="screen, projection">
+	${self.stylesheets()}
 	<script src="${request.static_url('pylonshq:static/js/libs/modernizr-1.7pre.js')}"></script>
 
 </head>
@@ -71,6 +72,8 @@
 	##<script src="${request.static_url('pylonshq:static/js/profiling/config.js')}"></script>
 	<!-- end profiling code -->
 
+	${self.javascripts()}
+	
 	<!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
 	<script>
      var _gaq = _gaq || [];
@@ -90,6 +93,8 @@
 <%namespace name="nav" file="/nav.mako"/>
 <%namespace name="funcs" file="/funcs.mako"/>
 <%def name="pagename()">${c.pagename}</%def>
+<%def name="stylesheets()"></%def>
+<%def name="javascripts()"></%def>
 <%!
     from time import time
     rid = int(time())

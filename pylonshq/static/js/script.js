@@ -15,7 +15,8 @@ $(document).ready(function() {
         function() { $('#highlight-download .options').show() },
         function() { $('#highlight-download .options').hide() }
     );
-    $('#company-slideshow').cycle({speed: 4000})
+    $('#company-slideshow').cycle({speed: 2000, timeout: 10000})
+    $('#highlight-slideshow').cycle({speed: 2000, timeout: 8000});
 });
 
 
