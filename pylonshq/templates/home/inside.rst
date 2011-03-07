@@ -6,6 +6,12 @@ contributed to making this release possible. Read the official announcement
 on `Google Groups 
 <http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f>`_.
 
+Pyramid - Not Built By Aliens T-Shirt
+=====================================
+
+`Pyramid`_ - Not Built By Aliens T-Shirt limited edition is now available 
+for online purchase via `the artist store <http://laflamme.storenvy.com/products/66831-pyramid-not-built-by-aliens-t-shirt>`_.
+
 Pyramid - Not Built By Aliens design
 ====================================
 
