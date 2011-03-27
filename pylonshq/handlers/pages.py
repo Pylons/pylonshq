@@ -153,7 +153,7 @@ class PageHandler(base):
                 if len(self.endpath)==1:
                     self.endpath = None
                     redirpath = pyramid_redirpath
-                    self.c.masthead_logo = 'pyramid'
+                self.c.masthead_logo = 'pyramid'
                 values['downloads'] = _downloads('pyramid')
             elif 'pylons-framework' in self.endpath:
                 if len(self.endpath) == 1:
