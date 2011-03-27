@@ -109,7 +109,7 @@ class PageHandler(base):
                     self.request.registry.settings.get('github.username')
                 )
                 ordered = sorted(
-                    (project for project in all_projects),
+                    (project for project in all_projects if project.pushed_at is not None),
                     key=attrgetter('pushed_at'),
                     reverse=True
                 )
