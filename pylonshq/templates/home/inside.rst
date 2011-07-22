@@ -3,8 +3,7 @@ Pyramid 1.1 released
 
 `Pyramid`_ 1.1 was released on July 22, 2011. Thanks to everyone who 
 contributed to making this release possible. Read the official announcement 
-on `Google Groups 
-<http://groups.google.com/group/pylons-discuss/browse_thread/thread/56fc36d7d885869d>`_.
+here `<http://groups.google.com/group/pylons-discuss/browse_thread/thread/56fc36d7d885869d>`_.
 
 Pyramid - Not Built By Aliens T-Shirt
 =====================================
