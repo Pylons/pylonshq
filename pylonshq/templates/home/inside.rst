@@ -1,10 +1,10 @@
-Pyramid 1.0 released
+Pyramid 1.1 released
 ====================
 
-`Pyramid`_ 1.0 was released on January 30, 2011. Thanks to everyone who 
+`Pyramid`_ 1.1 was released on July 22, 2011. Thanks to everyone who 
 contributed to making this release possible. Read the official announcement 
 on `Google Groups 
-<http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f>`_.
+<http://groups.google.com/group/pylons-discuss/browse_thread/thread/56fc36d7d885869d>`_.
 
 Pyramid - Not Built By Aliens T-Shirt
 =====================================
@@ -25,6 +25,14 @@ FLOSS Weekly Interview
 `FLOSS Weekly <http://twit.tv/FLOSS>`_ interviewed Chris McDonough and 
 Mark Ramm about The Python Project on Feb 2, 2011. Get the audio and video 
 from `the show page <http://www.twit.tv/floss151>`_.
+
+Pyramid 1.0 released
+====================
+
+`Pyramid`_ 1.0 was released on January 30, 2011. Thanks to everyone who 
+contributed to making this release possible. Read the official announcement 
+on `Google Groups 
+<http://groups.google.com/group/pylons-devel/browse_thread/thread/2e0c1d669924ea3f>`_.
 
 What's up with Pylons 1.x?
 ==========================
