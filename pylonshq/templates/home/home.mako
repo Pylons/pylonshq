@@ -146,7 +146,7 @@
 			% endif
 			<br>
 			<h2>Latest tweets</h2>
-			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script src="${request.static_url('pylonshq:static/js/libs/twimg -widget.js')}"></script>
 			<script>
 			new TWTR.Widget({
 			  version: 2,
