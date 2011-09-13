@@ -1,3 +1,10 @@
+Pyramid 1.2 released
+====================
+
+`Pyramid`_ 1.2 was released on September 12, 2011. Thanks to everyone who 
+contributed to making this release possible. Read the official announcement 
+`here <http://groups.google.com/group/pylons-discuss/browse_thread/thread/71d33e94c82d633d>`_.
+
 Pyramid 1.1 released
 ====================
 
