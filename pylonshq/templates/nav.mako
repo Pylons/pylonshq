@@ -28,7 +28,7 @@
 						<li><span class="title">Pyramid</span></li>
 						<li><a href="${request.application_url}/projects/pyramid/about">About</a></li>
 						<li><a href="${request.application_url}/projects/pyramid/download">Download</a></li>
-						<li><a href="https://docs.pylonsproject.org/projects/pyramid/1.1/">Documentation</a></li>
+						<li><a href="https://docs.pylonsproject.org/projects/pyramid/current/">Documentation</a></li>
 						<li><a href="https://docs.pylonsproject.org/projects/pyramid_cookbook/dev/">Cookbook</a></li>
 						<li><a href="https://docs.pylonsproject.org/projects/pyramid_tutorials/dev/">Tutorials</a></li>
 						<li>&nbsp;</li>
