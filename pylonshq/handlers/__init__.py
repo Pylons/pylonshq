@@ -2,6 +2,8 @@
 def add_handlers(config):
     config.add_handler('home', '/', 'pylonshq.handlers.pages:PageHandler',
                        action='index')
+    config.add_handler('freenode', '/freenode.ver', 'pylonshq.handlers.pages:PageHandler',
+                       action='freenode_ver')
     config.add_handler('login', '/login', 
                         handler='pylonshq.handlers.accounts:AccountHandler',
                         action='login')

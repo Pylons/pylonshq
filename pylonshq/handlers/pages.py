@@ -8,6 +8,7 @@ from pyramid.httpexceptions import HTTPFound
 from pyramid.exceptions import NotFound
 from pyramid.url import route_url
 from pyramid.renderers import render_to_response
+from pyramid.response import Response
 
 from pyramid_handlers import action
 from pylonshq.handlers.base import BaseHandler as base
@@ -62,6 +63,11 @@ class PageHandler(base):
                     return render_to_response(
                         'pylonshq:templates/rst.mako', values, self.request)
         raise NotFound()
+
+    @cache_region('long_term')
+    @action()
+    def freenode_ver(self):
+        return Response('jdf*hnm1?')
     
     @action(renderer='pylonshq:templates/home/home.mako')
     def index(self):
