@@ -31,7 +31,7 @@
 						<li><a href="${request.application_url}/projects/pyramid/download">Download</a></li>
 						<li><a href="http://docs.pylonsproject.org/en/latest/docs/pyramid.html">Documentation</a></li>
 						<li><a href="http://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/">Cookbook</a></li>
-						<li><a href="http://docs.pylonsproject.org/projects/pyramid_tutorials/en/latest/">Tutorials</a></li>
+						<li><a href="http://docs.pylonsproject.org/projects/pyramid/en/1.2-branch/#tutorials">Tutorials</a></li>
 						<li>&nbsp;</li>
 						<li><span class="title">Pylons Framework</span></li>
 						<li><a href="${request.application_url}/projects/pylons-framework/about">About</a></li>
@@ -89,7 +89,7 @@
 				<li><a href="${request.application_url}/projects/pyramid/download"${active_nav.get('projects-pyramid-download', '') | n}>Download</a></li>
 				<li><a href="http://docs.pylonsproject.org/en/latest/docs/pyramid.html">Documentation</a></li>
 				<li><a href="http://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/">Cookbook</a></li>
-				<li><a href="http://docs.pylonsproject.org/projects/pyramid_tutorials/en/latest/">Tutorials</a></li>
+				<li><a href="http://docs.pylonsproject.org/projects/pyramid/en/1.2-branch/#tutorials">Tutorials</a></li>
 			</ul>
 			Pylons Framework
 			<ul>
