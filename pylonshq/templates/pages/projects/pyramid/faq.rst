@@ -14,9 +14,9 @@ Facebook/Twitter, Mobile technologies a lot of functionality is already
 available. Check it out here:
 
 * Pyramid has plenty of add-ons, be that mailers, RPC, debugging tools. Check
-  them out `right here <http://docs.pylonsproject.org/docs/pyramid.html#pyramid-add-on-documentation>`_
+  them out `right here <http://docs.pylonsproject.org/en/latest/pyramid.html#pyramid-add-on-documentation>`_
 * Checkout `Officially Supported Pyramid Libraries
-  <http://docs.pylonsproject.org/docs/libraries.html>`_
+  <http://docs.pylonsproject.org/en/latest/libraries.html>`_
 * PyPI is full of `Pyramid related packages <http://pypi.python.org/pypi?%3Aaction=search&term=pyramid>`_
 * `OpenComparisson Project <http://pyramid.opencomparison.org/>`_ has side by
   side comparissons of many packages.
@@ -37,7 +37,7 @@ Django Users
 Are you coming from Django to Pyramid and not sure where to start. Get started
 with the set of wonderful packages below.
 
-* Default `pyramid_routesalchemy <http://docs.pylonsproject.org/projects/pyramid/current/narr/project.html#scaffolds-included-with-pyramid>`_ scaffold
+* Default `pyramid_routesalchemy <http://docs.pylonsproject.org/projects/pyramid/en/1.2-branch/narr/project.html#scaffolds-included-with-pyramid>`_ scaffold
 * `Jinja2 Templates <http://jinja.pocoo.org/docs/>`_ using `pyramid_jinja2
   <http://docs.pylonsproject.org/projects/pyramid_jinja2/dev/>`_
 * Beaker session using `pyramid_beaker
@@ -45,7 +45,7 @@ with the set of wonderful packages below.
 * `FormAlchemy <http://docs.formalchemy.org/pyramid_formalchemy/>`_ for the Admin interface.
 * For authentication read the tutorial by <http://michael.merickel.org/projects/pyramid_auth_demo>`_
 * For forms look at `Deform
-  <http://docs.pylonsproject.org/projects/deform/dev/>`_. Checkout the `Deform
+  <http://docs.pylonsproject.org/projects/deform/en/latest/>`_. Checkout the `Deform
   demos <http://deformdemo.repoze.org/>`_
 
 Repoze.BFG to Pyramid Migration
@@ -53,7 +53,7 @@ Repoze.BFG to Pyramid Migration
 
 Pyramid was repoze.bfg in its past life and migration is built in.
 
-The `migration tutorial <http://docs.pylonsproject.org/projects/pyramid/current/tutorials/bfg/index.html>`_ is built in.
+The `migration tutorial <http://docs.pylonsproject.org/projects/pyramid/en/1.2-branch/tutorials/bfg/index.html>`_ is built in.
 
 
 Authentication and Authorization
@@ -76,7 +76,7 @@ Need caching to speed the sites up? Well tested, documented and widely known
 libaries are available and are easy to use with Pyramid.
 
 * Beaker using `pyramid_beaker
-  <http://docs.pylonsproject.org/projects/pyramid_beaker/dev/>`_ is easy to
+  <http://docs.pylonsproject.org/projects/pyramid_beaker/en/latest/>`_ is easy to
   install and use.
 * `Retools <pypi.python.org/pypi/retools>`_, is a Beaker on steroids for Redis.
 
@@ -107,20 +107,20 @@ Pyramid and Mobile
 
 Pyramid and jQuery Mobile play very nicely together.
 
-* Checkout `pyramid_jqm <http://docs.pylonsproject.org/projects/pyramid_jqm/dev/>`_
+* Checkout `pyramid_jqm <http://docs.pylonsproject.org/projects/pyramid_jqm/en/latest/>`_
 
 fav.ico and Robot.txt serving
 =============================
 
 * `Pyramid Assets <http://pypi.python.org/pypi/pyramid_assetviews>`_ package will help you do it quickly
-* `Dealing with Static Files <http://docs.pylonsproject.org/projects/pyramid_cookbook/dev/files.html>`_ if you want to understand how to do it.
+* `Dealing with Static Files <http://docs.pylonsproject.org/projects/pyramid_cookbook/en/latest/files.html>`_ if you want to understand how to do it.
 
 Jinja2 Templates with Pyramid
 =============================
 
 Like Jinja2? It is super easy to get it working with Pyramid.
 
-* Using `pyramid_jinja2 <http://docs.pylonsproject.org/projects/pyramid_jinja2/dev/>`_ is easy.
+* Using `pyramid_jinja2 <http://docs.pylonsproject.org/projects/pyramid_jinja2/en/latest/>`_ is easy.
 
 Deployment and WSGI Servers
 ===========================
