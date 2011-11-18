@@ -10,7 +10,7 @@
 	<div class="header-nav">
 		<ul>
 			<li><a href="${request.application_url}"${active_nav.get('home', '') | n}>Home</a></li>
-			<li><a href="https://docs.pylonsproject.org/">Documentation</a></li>
+			<li><a href="http://docs.pylonsproject.org/">Documentation</a></li>
 			<li>
 				<a href="${request.application_url}/about"${active_nav.get('about', '') | n}>About</a>
 				<div class="header-nav-submenu">
