@@ -14,12 +14,12 @@ Facebook/Twitter, Mobile technologies a lot of functionality is already
 available. Check it out here:
 
 * Pyramid has plenty of add-ons, be that mailers, RPC, debugging tools. Check
-  them out `right here <http://docs.pylonsproject.org/en/latest/pyramid.html#pyramid-add-on-documentation>`_
+  them out `right here <http://docs.pylonsproject.org/en/latest/docs/pyramid.html#pyramid-add-on-documentation>`_
 * Checkout `Officially Supported Pyramid Libraries
-  <http://docs.pylonsproject.org/en/latest/libraries.html>`_
+  <http://docs.pylonsproject.org/en/latest/docs/libraries.html>`_
 * PyPI is full of `Pyramid related packages <http://pypi.python.org/pypi?%3Aaction=search&term=pyramid>`_
 * `OpenComparisson Project <http://pyramid.opencomparison.org/>`_ has side by
-  side comparissons of many packages.
+  side comparisons of many packages.
 
 Pylons to Pyramid Migration
 ===========================
@@ -28,7 +28,7 @@ Wondering how to do Pylons to Pyramid migration?
 
 * `Akhet <http://sluggo.scrapping.cc/python/Akhet/>`_ will help any Pylons user
   convert their Pylons app to Pyramid. It utilizes `pyramid_handlers
-  <http://docs.pylonsproject.org/projects/pyramid_handlers/dev/>`_ for routing.
+  <http://docs.pylonsproject.org/projects/pyramid_handlers/en/latest/>`_ for routing.
 
 
 Django Users
@@ -37,23 +37,23 @@ Django Users
 Are you coming from Django to Pyramid and not sure where to start. Get started
 with the set of wonderful packages below.
 
-* Default `pyramid_routesalchemy <http://docs.pylonsproject.org/projects/pyramid/en/1.2-branch/narr/project.html#scaffolds-included-with-pyramid>`_ scaffold
+* Default `alchemy <http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/project.html#scaffolds-included-with-pyramid>`_ scaffold
 * `Jinja2 Templates <http://jinja.pocoo.org/docs/>`_ using `pyramid_jinja2
-  <http://docs.pylonsproject.org/projects/pyramid_jinja2/dev/>`_
+  <http://docs.pylonsproject.org/projects/pyramid_jinja2/en/latest/>`_
 * Beaker session using `pyramid_beaker
-  <http://docs.pylonsproject.org/projects/pyramid_beaker/dev/>`_
+  <http://docs.pylonsproject.org/projects/pyramid_beaker/en/latest/>`_
 * `FormAlchemy <http://docs.formalchemy.org/pyramid_formalchemy/>`_ for the Admin interface.
 * For authentication read the tutorial by <http://michael.merickel.org/projects/pyramid_auth_demo>`_
 * For forms look at `Deform
-  <http://docs.pylonsproject.org/projects/deform/en/latest/>`_. Checkout the `Deform
+  <http://docs.pylonsproject.org/projects/deform/en/latest/>`_. Check out the `Deform
   demos <http://deformdemo.repoze.org/>`_
 
 Repoze.BFG to Pyramid Migration
 ===============================
 
-Pyramid was repoze.bfg in its past life and migration is built in.
+Pyramid was named repoze.bfg in its past life and migration is built in.
 
-The `migration tutorial <http://docs.pylonsproject.org/projects/pyramid/en/1.2-branch/tutorials/bfg/index.html>`_ is built in.
+The `migration tutorial <http://docs.pylonsproject.org/projects/pyramid/en/latest/tutorials/bfg/index.html>`_ is built in.
 
 
 Authentication and Authorization
@@ -98,7 +98,7 @@ Form Validation and Formatting Helpers
 * Use `FormAlchemy <http://docs.formalchemy.org/pyramid_formalchemy/>`_ for the Admin interface.
 * For authentication read the tutorial by <http://michael.merickel.org/projects/pyramid_auth_demo>`_
 * For form handling look at `Deform
-  <http://docs.pylonsproject.org/projects/deform/dev/>`_. Checkout the `Deform
+  <http://docs.pylonsproject.org/projects/deform/en/latest/>`_. Checkout the `Deform
   demos <http://deformdemo.repoze.org/>`_
 
 
@@ -128,6 +128,7 @@ Deployment and WSGI Servers
 Pyramid is compatible with all of the WSGI compliant servers. For development
 purposes paste.httpserver can be run using **paster serve development.ini**
 
+* Waitress
 * paste.httpserver
 * mod_wsgi / apache
 * gunicorn

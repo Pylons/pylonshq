@@ -4,9 +4,9 @@ How to Contribute
 =================
 
 Pylons Project subprojects follow a coding style, with minimum standards:
-http://docs.pylonsproject.org/community/codestyle.html .  All substantive
-code contributions to the Pylons Project must be tested; see
-http://docs.pylonsproject.org/community/testing.html .
+http://docs.pylonsproject.org/en/latest/community/conduct.html .  All
+substantive code contributions to the Pylons Project must be tested; see
+http://docs.pylonsproject.org/en/latest/community/testing.html .
 
 For substantive contributions to its major projects, The Pylons Project
 requires the following of its contributors:

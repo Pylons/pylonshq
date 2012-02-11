@@ -4,9 +4,11 @@ About Pyramid
 Pyramid is a very general open source Python web framework. As a framework,
 its primary job is to make it easier for a developer to create an arbitrary
 web application. The type of application being created isn’t really
-important; it could be a spreadsheet, a corporate intranet, or an
-“oh-so-Web-2.0” social networking platform. Pyramid is general enough that it
-can be used in a wide variety of circumstances.
+important; it could be a spreadsheet, a corporate intranet, or a social
+networking platform. Pyramid is general enough that it can be used in a wide
+variety of circumstances.
+
+Here's a very simple example of a Pyramid application.
 
 .. code-block:: python
 
@@ -24,8 +26,6 @@ can be used in a wide variety of circumstances.
        app = config.make_wsgi_app()
        server = make_server('0.0.0.0', 8080, app)
        server.serve_forever()
-
-
 
 Tenets
 ------
