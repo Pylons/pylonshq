@@ -1,3 +1,17 @@
+Pyramid - Insane Clown T-Shirt
+=====================================
+
+`Pyramid`_ - Insane Clown T-Shirt, designed by artist `Felix Lafamme <http://www.felixlaflamme.com/>`_, 
+is now available for online purchase via 
+`the Pylons Project Store - Insane Clown page <http://pylonsproject.storenvy.com/products/283793-pyramid-insane-clown-t-shirt>`_.
+
+Pylons Project Online Store
+===========================
+
+`Pylons Project`_ online store is now available. 
+Want to buy one of our amazing T-Shirts,  
+`buy here <http://pylonsproject.storenvy.com>`_.
+
 Pyramid 1.2 released
 ====================
 
@@ -15,8 +29,8 @@ contributed to making this release possible. Read the official announcement
 Pyramid - Not Built By Aliens T-Shirt
 =====================================
 
-`Pyramid`_ - Not Built By Aliens T-Shirt limited edition is now available 
-for online purchase via `the artist store <http://laflamme.storenvy.com/products/66831-pyramid-not-built-by-aliens-t-shirt>`_.
+`Pyramid`_ - Not Built By Aliens T-Shirt is now available 
+for online purchase via `the Pylons Project Store - Not Build By Aliens page <http://pylonsproject.storenvy.com/products/241137-pyramid-not-built-by-aliens-t-shirt>`_.
 
 Pyramid - Not Built By Aliens design
 ====================================
