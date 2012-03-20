@@ -1,7 +1,7 @@
 Pyramid - Insane Clown T-Shirt
-=====================================
+==============================
 
-`Pyramid`_ - Insane Clown T-Shirt, designed by artist `Felix Lafamme <http://www.felixlaflamme.com/>`_, 
+`Pyramid`_ - Insane Clown T-Shirt, designed by artist `Felix Laflamme <http://www.felixlaflamme.com/>`_, 
 is now available for online purchase via 
 `the Pylons Project Store - Insane Clown page <http://pylonsproject.storenvy.com/products/283793-pyramid-insane-clown-t-shirt>`_.
 
@@ -36,7 +36,7 @@ Pyramid - Not Built By Aliens design
 ====================================
 
 `Pyramid`_ - `Not Built By Aliens design <http://twitpic.com/46sn2d/full>`_ 
-was done by artist `Felix Lafamme <http://www.felixlaflamme.com/>`_. Watch a 
+was done by artist `Felix Laflamme <http://www.felixlaflamme.com/>`_. Watch a 
 work in progress video on `YouTube <http://www.youtube.com/watch?v=oKFBWzeHYS4>`_!
 
 FLOSS Weekly Interview
