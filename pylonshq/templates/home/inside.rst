@@ -1,3 +1,13 @@
+Pyramid 1.3 released
+====================
+
+`Pyramid`_ 1.3 was released on March 21, 2012. The most important feature of
+this release is Python 3.2 compatibility.  Read the `What's New In Pyramid
+1.3
+<http://docs.pylonsproject.org/projects/pyramid/en/1.3-branch/whatsnew-1.3.html>`_
+document for an overview of changes.  Thanks to everyone who contributed to
+making this release possible.
+
 Pyramid - Insane Clown T-Shirt
 ==============================
 
