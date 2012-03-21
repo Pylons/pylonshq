@@ -57,9 +57,9 @@
 						<div id="home-highlights">
 							<div id="highlight-content">
 								<h2>Not Built By Aliens<br>Pyramid T-Shirt!</h2>
-								<p>Design was done by artist <a href="http://www.felixlaflamme.com/">Felix Laflamme</a>,<br> watch a work in progress video on <a href="http://www.youtube.com/watch?v=oKFBWzeHYS4">YouTube</a></p>
-								<h3>Want a T-Shirt limited edition?</h3>
-								<h2><a href="http://laflamme.storenvy.com/products/66831-pyramid-not-built-by-aliens-t-shirt">BUY HERE!</a></h2>
+								<p>Design was done by artist <a href="http://www.felixlaflamme.com/">Felix Laflamme</a>,<br> watch a work in progress video on <a href="http://www.youtube.com/watch?v=JWj3poGhZXE&list">YouTube</a></p>
+								<h3>Want a T-Shirt?</h3>
+								<h2><a href="http://pylonsproject.storenvy.com/">BUY HERE!</a></h2>
 							</div>
 						</div>
 					</div>
