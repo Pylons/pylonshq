@@ -61,14 +61,6 @@ here.
 
   - Version Control: https://github.com/Pylons/pyramid_beaker
 
-* `pyramid_chameleon_genshi </projects/pyramid_chameleon_genshi/dev/>`_:
-  template renderer for `Chameleon's Genshi implementation
-  <http://chameleon.repoze.org/docs/latest/genshi.html>`_.
-
-  - Maintained by: Chris McDonough
-
-  - Version Control: https://github.com/Pylons/pyramid_chameleon_genshi
-
 * `pyramid_handlers </projects/pyramid_handlers/dev/>`_: analogue of
   Pylons-style "controllers" for Pyramid.
 
