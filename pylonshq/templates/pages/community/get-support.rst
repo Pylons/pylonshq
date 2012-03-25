@@ -26,7 +26,7 @@ sure to try the following things (paraphrased from `Before You Ask
   code.
 
 After exhausing these avenues, it's completely appropriate to ask a
-question on the Pylons-devel maillist or #pylons IRC channel.  When you
+question on the Pylons-devel maillist or #pylons and #pyramid IRC channels.  When you
 ask your question, please describe what you've learned from the efforts
 above, as it will help the developers focus on answering your question
 quickly.  It also helps tremendously if you are able to provide a code or
