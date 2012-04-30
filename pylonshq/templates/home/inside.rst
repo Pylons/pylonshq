@@ -53,7 +53,7 @@ FLOSS Weekly Interview
 ======================
 
 `FLOSS Weekly <http://twit.tv/FLOSS>`_ interviewed Chris McDonough and 
-Mark Ramm about The Python Project on Feb 2, 2011. Get the audio and video 
+Mark Ramm about The Pylons Project on Feb 2, 2011. Get the audio and video 
 from `the show page <http://www.twit.tv/floss151>`_.
 
 Pyramid 1.0 released
