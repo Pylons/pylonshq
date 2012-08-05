@@ -192,7 +192,7 @@
 				% for project in projects:
 				<li>
 					<div class="project">
-						<a class="name" href="${project.url}">${project.name}</a>
+						<a class="name" href="${project.html_url}">${project.name}</a>
 						##<span class="downloads">
 						##	<a href="${project.url}/zipball/master">ZIP</a> <a href="${project.url}/tarball/master">TGZ</a>
 						##</span>
