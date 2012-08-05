@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 import logging
 from datetime import datetime
 from datetime import timedelta
@@ -21,13 +21,13 @@ from docutils.core import publish_parts
 
 log = logging.getLogger(__name__)
 
-        
+
 class PageHandler(base):
-    
+
     def __init__(self, request):
         base.__init__(self, request)
         self.endpath = self.request.matchdict.get('endpath', None)
-    
+
     def render_page(self, section, redirpath, values=None):
         if self.endpath is None:
             return HTTPFound(
@@ -68,11 +68,11 @@ class PageHandler(base):
     @action()
     def freenode_ver(self):
         return Response('jdf*hnm1?')
-    
+
     @action(renderer='pylonshq:templates/home/home.mako')
     def index(self):
         self.c.pagename = 'Home'
-        
+
         @cache_region('moderate_term')
         def _inside():
             content = pkg_resources.resource_string(
@@ -81,7 +81,7 @@ class PageHandler(base):
                 content,
                 writer_name='html')['html_body']
             return body
-            
+
         @cache_region('moderate_term')
         def _discussions():
             rss_urls = (
@@ -106,54 +106,65 @@ class PageHandler(base):
                 ).strftime('%b %d, %H:%M')
             ) for pos, entry in enumerate(_ordered) if _ordered and pos < 10]
             return entries
-            
+
         @cache_region('moderate_term')
         def _projects():
             github = self.request.registry.get('github')
             try:
-                all_projects = github.repos.list(
-                    self.request.registry.settings.get('github.username')
-                )
+                org = github.get_organization(
+                    self.request.registry.settings.get('github.username'))
+                all_projects = org.get_repos()
                 ordered = sorted(
-                    (project for project in all_projects if project.pushed_at is not None),
+                    (project for project in all_projects
+                        if project.pushed_at is not None),
                     key=attrgetter('pushed_at'),
                     reverse=True
-                )
+                    )
                 return [ordered[i] for i in xrange(20)]
             except:
                 return []
-            
+
         return {
             'inside': _inside(),
             'discussions': _discussions(),
             'projects': _projects()
         }
-    
+
     @action()
     def about(self):
         self.c.pagename = 'About'
         return self.render_page('about', ('pylons',))
-    
+
     @action()
     def projects(self):
         self.c.pagename = 'Projects'
         redirpath = None
         values = {}
-        
+
         @cache_region('long_term')
         def _downloads(repo):
             from pylonshq.lib.utils import natural
             github = self.request.registry.get('github')
             try:
-                all_downloads = github.repos.tags('Pylons/%s' % repo)
+                org = github.get_organization(
+                    self.request.registry.settings.get('github.username'))
+                repo = org.get_repo(repo)
+                all_downloads = repo.get_tags()
                 return [
-                    d for d in sorted(all_downloads, key=natural)
-                    if not d.startswith('0') and d.find('a') == -1
-                ]
+                    d for d in sorted(
+                        all_downloads,
+                        key=attrgetter('name'),
+                        reverse=True
+                        )
+                    if not d.name.startswith('0') \
+                        and d.name.find('a') == -1 \
+                        and d.name.find('b') == -1
+                        ]
+                return all_downloads
             except:
                 return []
-        
-        pyramid_redirpath = ('pyramid','about',)  
+
+        pyramid_redirpath = ('pyramid','about',)
         if self.endpath is not None:
             if 'pyramid' in self.endpath:
                 if len(self.endpath)==1:
@@ -175,12 +186,12 @@ class PageHandler(base):
     def community(self):
         self.c.pagename = 'Community'
         return self.render_page('community', ('how-to-participate',),)
-    
+
     @action()
     def tools(self):
         self.c.pagename = 'Tools'
         return self.render_page('tools', ('pastebins',))
-        
+
     @action(renderer='pylonshq:templates/home/test.mako', permission='edit')
     def test(self):
         self.c.pagename = 'Test'

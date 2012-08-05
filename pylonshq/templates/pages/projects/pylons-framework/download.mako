@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 <%inherit file="/page.mako"/>
 
 <%def name="pagename()">Pylons Framework : Download Pylons Framework</%def>
@@ -16,10 +16,10 @@
 		</li>
 		% for archive in downloads:
 		<li>
-			<a href="https://github.com/Pylons/pylons/tree/${archive}">pylons-${archive}</a>
+			<a href="https://github.com/Pylons/pylons/tree/${archive.name}">pylons-${archive.name}</a>
 			<span class="downloads">
-				<a href="https://github.com/Pylons/pylons/zipball/${archive}">ZIP</a>
-				<a href="https://github.com/Pylons/pylons/tarball/${archive}">TGZ</a>
+				<a href="https://github.com/Pylons/pylons/zipball/${archive.zipball_url}">ZIP</a>
+				<a href="https://github.com/Pylons/pylons/tarball/${archive.tarball_url}">TGZ</a>
 			</span>
 		</li>
 		% endfor
