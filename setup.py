@@ -20,14 +20,14 @@ requires = [
     'WebError',
     'webhelpers',
     'babel',
-    'github2',
+    'pygithub',
     'feedparser',
     'docutils',
     ]
 
 if sys.version_info[:3] < (2,5,0):
    requires.append('pysqlite')
-    
+
 entry_points = """\
     [paste.app_factory]
     main = pylonshq:main
