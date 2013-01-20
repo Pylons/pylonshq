@@ -155,7 +155,7 @@
 			new TWTR.Widget({
 			  version: 2,
 			  type: 'search',
-			  search: '#pylons #pyramid',
+			  search: '#python+pyramid',
 			  interval: 6000,
 			  title: '',
 			  subject: '',
