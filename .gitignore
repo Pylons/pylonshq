@@ -10,3 +10,4 @@ db.sqlite
 /.project
 /.pydevproject
 env26/
+pyenv/

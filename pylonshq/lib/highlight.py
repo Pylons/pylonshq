@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 from docutils.parsers import rst
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name, get_all_lexers
@@ -10,7 +10,8 @@ __all__ = ['code_highlight']
 
 langdict = {}
 for lang in get_all_lexers():
-    langdict[lang[1][0]] = lang[0]
+    if lang[1]:
+        langdict[lang[1][0]] = lang[0]
 
 formatter = HtmlFormatter(linenos=True, cssclass="syntax", encoding='utf-8')
 
@@ -25,5 +26,5 @@ def code_highlight(code, truncate_lines=None):
             source.append('...')
             source = ''.join(source)
     lexer = get_lexer_by_name(code.language, stripall=True)
-    
+
     return highlight(source, lexer, formatter).decode('utf-8')
