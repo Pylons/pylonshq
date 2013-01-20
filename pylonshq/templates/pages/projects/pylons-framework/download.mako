@@ -18,8 +18,8 @@
 		<li>
 			<a href="https://github.com/Pylons/pylons/tree/${archive.name}">pylons-${archive.name}</a>
 			<span class="downloads">
-				<a href="https://github.com/Pylons/pylons/zipball/${archive.zipball_url}">ZIP</a>
-				<a href="https://github.com/Pylons/pylons/tarball/${archive.tarball_url}">TGZ</a>
+				<a href="${archive.zipball_url}">ZIP</a>
+				<a href="${archive.tarball_url}">TGZ</a>
 			</span>
 		</li>
 		% endfor
