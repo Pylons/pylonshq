@@ -43,7 +43,7 @@ with the set of wonderful packages below.
 * Beaker session using `pyramid_beaker
   <http://docs.pylonsproject.org/projects/pyramid_beaker/en/latest/>`_
 * `FormAlchemy <http://docs.formalchemy.org/pyramid_formalchemy/>`_ for the Admin interface.
-* For authentication read the tutorial by <http://michael.merickel.org/projects/pyramid_auth_demo>`_
+* For authentication read the `tutorial by Michael Merickel <http://michael.merickel.org/projects/pyramid_auth_demo>`_
 * For forms look at `Deform
   <http://docs.pylonsproject.org/projects/deform/en/latest/>`_. Check out the `Deform
   demos <http://deformdemo.repoze.org/>`_
@@ -88,7 +88,7 @@ Like MongoDB? Want get it going on Pyramid?
 
 * Try `pyramid_mongodb <http://pypi.python.org/pypi/pyramid_mongodb>`_
   scaffold.
-* Traversal and MongoDB
+* `Traversal and MongoDB
   <http://kusut.web.id/2011/03/27/pyramid-traversal-and-mongodb/>`_
 
 
@@ -96,7 +96,6 @@ Form Validation and Formatting Helpers
 ======================================
 
 * Use `FormAlchemy <http://docs.formalchemy.org/pyramid_formalchemy/>`_ for the Admin interface.
-* For authentication read the tutorial by <http://michael.merickel.org/projects/pyramid_auth_demo>`_
 * For form handling look at `Deform
   <http://docs.pylonsproject.org/projects/deform/en/latest/>`_. Checkout the `Deform
   demos <http://deformdemo.repoze.org/>`_
