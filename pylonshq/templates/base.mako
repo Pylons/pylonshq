@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*- 
-<!doctype html>  
+# -*- coding: utf-8 -*-
+<!doctype html>
 
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -10,7 +10,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!--[if IE]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
-	
+
 	<title>Pylons Project : ${self.pagename()}</title>
 	<meta name="description" content="">
 	<meta name="author" content="The Pylons Project and contributors">
@@ -19,8 +19,8 @@
 	<link rel="shortcut icon" href="${request.static_url('pylonshq:static/favicon.ico')}">
 	<link rel="apple-touch-icon" href="${request.static_url('pylonshq:static/apple-touch-icon.png')}">
 
-	<link rel="stylesheet" href="https://static.pylonsproject.org/fonts/nobile/stylesheet.css" media="screen">
-	<link rel="stylesheet" href="https://static.pylonsproject.org/fonts/neuton/stylesheet.css" media="screen">
+	<link rel="stylesheet" href="http://static.pylonsproject.org/fonts/nobile/stylesheet.css" media="screen">
+	<link rel="stylesheet" href="http://static.pylonsproject.org/fonts/neuton/stylesheet.css" media="screen">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/screen.css')}?v=${rid}" media="screen, projection">
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/print.css')}?v=${rid}" media="print">
 	<!--[if IE]><link rel="stylesheet" href="${request.static_url('pylonshq:static/css/ie.css')}?v=${rid}" media="screen, projection"><![endif]-->
@@ -40,9 +40,9 @@
 			</div>
 		</div>
     </header>
-	
+
 	${next.body()}
-    
+
 	<footer>
 		<div class="footer">
 			<div id="footer">
@@ -54,14 +54,14 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="${request.static_url('pylonshq:static/js/libs/jquery-1.4.4.min.js')}"%3E%3C/script%3E'))</script>
-	
+
 	<script src="${request.static_url('pylonshq:static/js/libs/jquery.cycle.min.js')}"></script>
-	
+
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="${request.static_url('pylonshq:static/js/plugins.js')}?v=${rid}"></script>
 	<script src="${request.static_url('pylonshq:static/js/script.js')}?v=${rid}"></script>
 	<!-- end concatenated and minified scripts-->
-  
+
 	<!--[if lt IE 7 ]>
 	<script src="${request.static_url('pylonshq:static/js/libs/dd_belatedpng.js')}"></script>
 	<script> DD_belatedPNG.fix('img, .png_bg'); </script>
@@ -73,7 +73,7 @@
 	<!-- end profiling code -->
 
 	${self.javascripts()}
-	
+
 	<!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
 	<script>
      var _gaq = _gaq || [];
@@ -87,7 +87,7 @@
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(ga, s);
      })();
-    </script>  
+    </script>
 </body>
 </html>
 <%namespace name="nav" file="/nav.mako"/>
