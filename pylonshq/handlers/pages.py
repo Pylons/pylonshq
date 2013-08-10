@@ -85,8 +85,8 @@ class PageHandler(base):
         @cache_region('moderate_term')
         def _discussions():
             rss_urls = (
-                'http://groups.google.com/group/pylons-discuss/feed/atom_v1_0_msgs.xml',
-                'http://groups.google.com/group/pylons-devel/feed/atom_v1_0_msgs.xml'
+                'https://groups.google.com/forum/feed/pylons-discuss/msgs/atom.xml?num=50',
+                'https://groups.google.com/forum/feed/pylons-devel/msgs/atom.xml?num=50'
             )
             feeds = [feedparser.parse(rss_url) for rss_url in rss_urls]
             _entries = []
