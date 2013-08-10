@@ -21,7 +21,7 @@
 							<div id="highlight-download">
 								<div class="download png_bg">
 									<h3>Download</h3>
-									<div class="version">version 1.4</div>
+									<div class="version">version 1.4.3</div>
 									<div class="license">
 										Open source, <a href="${request.application_url}/about/license">BSD-like license</a>
 									</div>
