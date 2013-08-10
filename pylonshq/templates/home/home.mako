@@ -150,40 +150,9 @@
 			% endif
 			<br>
 			<h2>Latest tweets</h2>
-			<script src="${request.static_url('pylonshq:static/js/libs/twimg-widget.js')}"></script>
-			<script>
-			new TWTR.Widget({
-			  version: 2,
-			  type: 'search',
-			  search: '#python+pyramid',
-			  interval: 6000,
-			  title: '',
-			  subject: '',
-			  width: 310,
-			  height: 310,
-			  theme: {
-			    shell: {
-			      background: '#dddddd',
-			      color: '#222222'
-			    },
-			    tweets: {
-			      background: '#ffffff',
-			      color: '#333333',
-			      links: '#1b5fd6'
-			    }
-			  },
-			  features: {
-			    scrollbar: true,
-			    loop: true,
-			    live: true,
-			    hashtags: true,
-			    timestamp: true,
-			    avatars: true,
-			    toptweets: true,
-			    behavior: 'default'
-			  }
-			}).render().start();
-			</script>
+			<a class="twitter-timeline" href="https://twitter.com/search?q=pyramid%2Cpylons" data-widget-id="366242367298211841">Tweets about "pyramid,pylons"</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 		</div>
 		<div id="latest-projects" class="span-8 last">
 			<h2>Latest project activities</h2>
