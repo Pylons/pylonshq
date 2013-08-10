@@ -30,7 +30,7 @@
 									##Install Pyramid
 									<ul>
 										<li class="package">
-											<a href="http://pypi.python.org/packages/source/p/pyramid/pyramid-1.4.tar.gz#md5=d72b664cf3852570faa44a81eb0e448b">pyramid-1.4.tar.gz</a>
+											<a href="https://pypi.python.org/packages/source/p/pyramid/pyramid-1.4.3.tar.gz#md5=28fabf42cf585ecec7a57b5acc1174e3">pyramid-1.4.3.tar.gz</a>
 										</li>
 										<li class="command">
 											$ easy_install -U pyramid
