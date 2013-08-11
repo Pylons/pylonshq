@@ -28,7 +28,6 @@
 	<link rel="stylesheet" href="${request.static_url('pylonshq:static/css/pygments.css')}?v=${rid}" media="screen, projection">
 	${self.stylesheets()}
 	<script src="${request.static_url('pylonshq:static/js/libs/modernizr-1.7pre.js')}"></script>
-
 </head>
 
 <body class="bp">
