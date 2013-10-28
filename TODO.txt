@@ -1,7 +1,6 @@
 PylonsHQ TODOS
 ==============
 
-
 Complete major text sections
 ----------------------------
 
