@@ -14,5 +14,4 @@ The Pylons web framework 1.x line will continue to be maintained alongside
 Pyramid as a subproject of the Pylons Project, though not enhanced. We will 
 provide a package that allows Pylons 1.x applications and Pyramid applications 
 to run in the same interpreter. The future of Pylon-style web application 
-development is Pyramid
-
+development is Pyramid.
