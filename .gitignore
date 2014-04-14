@@ -2,6 +2,7 @@
 *.egg
 *.egg-info
 .DS_Store
+.idea
 .sass-cache
 data
 Data.fs*
@@ -10,4 +11,5 @@ db.sqlite
 /.project
 /.pydevproject
 env26/
+env27/
 pyenv/
