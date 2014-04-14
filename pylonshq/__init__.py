@@ -49,6 +49,9 @@ def main(global_config, **settings):
                           'pyramid.events.ContextFound')
     config.add_static_view('static', 'pylonshq:static')
 
+    # add mako templating
+    config.include('pyramid_mako')
+
     # set up handlers
     config.include(add_handlers)
 

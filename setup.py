@@ -12,6 +12,7 @@ requires = [
     'pyramid_sqla',
     'pyramid_handlers',
     'pyramid_simpleform',
+    'pyramid_mako',
     'SQLAlchemy',
     'transaction',
     'repoze.tm2',
