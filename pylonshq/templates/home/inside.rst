@@ -1,3 +1,12 @@
+Pyramid 1.5 released
+====================
+
+`Pyramid`_ 1.5 was released on April, 8 2014. Read the `What's New In Pyramid
+1.5 <http://docs.pylonsproject.org/projects/pyramid/en/1.5-branch/whatsnew-1.5
+.html>`_
+document for an overview of changes.  Thanks to everyone who contributed to
+making this release possible.
+
 Pyramid - Dashboard T-Shirt
 ==============================
 
@@ -8,9 +17,8 @@ is now available for online purchase via
 Pyramid 1.4 released
 ====================
 
-`Pyramid`_ 1.4 was released on Dec 18, 2012. Read the `What's New In Pyramid
-1.4
-<http://docs.pylonsproject.org/projects/pyramid/en/master/whatsnew-1.4.html>`_
+`Pyramid`_ 1.4 was released on December 18, 2012. Read the `What's New In
+Pyramid 1.4 <http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/whatsnew-1.4.html>`_
 document for an overview of changes.  Thanks to everyone who contributed to
 making this release possible.
 
