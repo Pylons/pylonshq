@@ -122,7 +122,7 @@ Deployment and WSGI Servers
 ===========================
 
 Pyramid is compatible with all of the WSGI compliant servers. For development
-purposes paste.httpserver can be run using `paster serve development.ini`.
+purposes paste.httpserver can be run using ``paster serve development.ini``.
 
 * Waitress
 * paste.httpserver
