@@ -1,7 +1,19 @@
 Get Support
 ===========
 
-Development questions related to Pylons projects can be discussed on the 
+Security Issues
+---------------
+
+To report security issues with projects under the Pylons Project, including
+Pyramid, send email to:
+
+`pylons-project-security@googlegroups.com
+<pylons-project-security@googlegroups.com>`_
+
+General Support
+---------------
+
+Development questions related to Pylons projects can be discussed on the
 `pylons-discuss mail list <http://groups.google.com/group/pylons-discuss/>`_.
 
 On IRC, Pylons developers are generally available on the ``#pylons`` and 
