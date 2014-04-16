@@ -1,3 +1,10 @@
+Pyramid - Hacker T-Shirt
+========================
+
+`Pyramid`_ - Hacker T-Shirt, designed by artist `Felix Laflamme <http://www.felixlaflamme.com/>`_,
+is now available for online purchase via
+`the Pylons Project Store - Hacker page <http://pylonsproject.storenvy.com/collections/56570-all-products/products/283795-pyramid-hacker-t-shirt>`_.
+
 Pyramid 1.5 released
 ====================
 
