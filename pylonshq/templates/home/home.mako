@@ -87,7 +87,7 @@
     	        	</ul>
     	        	<ul>
 						<li><a href="http://www.bittorrent.com/"><img src="${request.static_url('pylonshq:static/images/logos/bittorrent.jpg')}" /></a></li>
-						<li><a href="http://digg.com/"><img src="${request.static_url('pylonshq:static/images/logos/carscom.jpg')}" /></a></li>
+						<li><a href="http://www.newcars.com/"><img src="${request.static_url('pylonshq:static/images/logos/carscom.jpg')}" /></a></li>
 						<li><a href="http://digg.com/"><img src="${request.static_url('pylonshq:static/images/logos/digg.jpg')}" /></a></li>
     	        	</ul>
     	        	<ul>
