@@ -80,7 +80,7 @@
 			<div class="rightcol">
 				<h2>Who's using Pylons Project software</h2>
 				<div id="company-slideshow">
-    	        	<ul>
+                    <ul>
     	        	    <li><a href="http://www.adroll.com/"><img src="${request.static_url('pylonshq:static/images/logos/adroll.jpg')}" /></a></li>
 						<li><a href="http://getbirdseye.com/"><img src="${request.static_url('pylonshq:static/images/logos/birdseye.jpg')}" /></a></li>
     	        	    <li><a href="http://buzzumi.com/"><img src="${request.static_url('pylonshq:static/images/logos/buzzumi.jpg')}" /></a></li>
@@ -110,9 +110,10 @@
 						<li><a href="http://www.surveymonkey.com/"><img src="${request.static_url('pylonshq:static/images/logos/surveymonkey.jpg')}" /></a></li>
     	        	    <li><a href="http://www.tineye.com/"><img src="${request.static_url('pylonshq:static/images/logos/tineye.jpg')}" /></a></li>
     	        	</ul>
-    	        	    <li><a href="http://www.wetafx.co.nz/"><img src="${request.static_url('pylonshq:static/images/logos/wetadigital.jpg')}" /></a></li>
-    	        	    <li><a href="http://www.netsight.co.uk/"><img src="${request.static_url('pylonshq:static/images/logos/netsight.jpg')}" /></a></li>
     	        	<ul>
+    	        	    <li><a href="http://www.wetafx.co.nz/"><img src="${request.static_url('pylonshq:static/images/logos/wetadigital.jpg')}" /></a></li>
+    	        	    <li><a href="http://www.netsight.co.uk/"><img width='100px' src="${request.static_url('pylonshq:static/images/logos/netsight.jpg')}" /></a></li>
+                        <li><a href="http://itcase.pro/"><img width='100px' src="${request.static_url('pylonshq:static/images/logos/itcase.png')}" /></a></li>
     	        	</ul>
     	    	</div>
 			</div>
