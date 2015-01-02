@@ -17,3 +17,10 @@ and compile your SASS using this command:
 
 Any changes made directly to CSS files will be overrided by Compass
 upon the next compile.
+
+Update live site
+----------------
+
+Until the site is redone with new branding, new tools and deployment process
+unification, please notify @blaflamme when PR are merged and deployment has
+to be done.
