@@ -10,3 +10,4 @@ Weblogs of some of the personalities in the Pyramid community.
 - `Wayne Witzel III <http://pieceofpy.com/category/python/>`_
 - `Michael Merickel <http://michael.merickel.org/>`_
 - `Steve Piercy <http://www.stevepiercy.com/tag/pyramid.html>`_
+- `Jon Rosebaugh <https://metaclassical.com/>`_
