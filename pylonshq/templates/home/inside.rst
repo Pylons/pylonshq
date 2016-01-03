@@ -5,12 +5,19 @@ Pyramid - Hacker T-Shirt
 is now available for online purchase via
 `the Pylons Project Store - Hacker page <http://pylonsproject.storenvy.com/collections/56570-all-products/products/283795-pyramid-hacker-t-shirt>`_.
 
+Pyramid 1.6 released
+====================
+
+`Pyramid`_ 1.6 was released on January 3, 2016. Read the `What's New In Pyramid
+1.6 <http://docs.pylonsproject.org/projects/pyramid/en/1.6-branch/whatsnew-1.6.html>`_
+document for an overview of changes.  Thanks to everyone who contributed to
+making this release possible.
+
 Pyramid 1.5 released
 ====================
 
-`Pyramid`_ 1.5 was released on April, 8 2014. Read the `What's New In Pyramid
-1.5 <http://docs.pylonsproject.org/projects/pyramid/en/1.5-branch/whatsnew-1.5
-.html>`_
+`Pyramid`_ 1.5 was released on April 8, 2014. Read the `What's New In Pyramid
+1.5 <http://docs.pylonsproject.org/projects/pyramid/en/1.5-branch/whatsnew-1.5.html>`_
 document for an overview of changes.  Thanks to everyone who contributed to
 making this release possible.
 
