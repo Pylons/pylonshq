@@ -1,10 +1,3 @@
-Pyramid - Hacker T-Shirt
-========================
-
-`Pyramid`_ - Hacker T-Shirt, designed by artist `Felix Laflamme <http://www.felixlaflamme.com/>`_,
-is now available for online purchase via
-`the Pylons Project Store - Hacker page <http://pylonsproject.storenvy.com/collections/56570-all-products/products/283795-pyramid-hacker-t-shirt>`_.
-
 Pyramid 1.6 released
 ====================
 
@@ -12,6 +5,13 @@ Pyramid 1.6 released
 1.6 <http://docs.pylonsproject.org/projects/pyramid/en/1.6-branch/whatsnew-1.6.html>`_
 document for an overview of changes.  Thanks to everyone who contributed to
 making this release possible.
+
+Pyramid - Hacker T-Shirt
+========================
+
+`Pyramid`_ - Hacker T-Shirt, designed by artist `Felix Laflamme <http://www.felixlaflamme.com/>`_,
+is now available for online purchase via
+`the Pylons Project Store - Hacker page <http://pylonsproject.storenvy.com/collections/56570-all-products/products/283795-pyramid-hacker-t-shirt>`_.
 
 Pyramid 1.5 released
 ====================
@@ -22,7 +22,7 @@ document for an overview of changes.  Thanks to everyone who contributed to
 making this release possible.
 
 Pyramid - Dashboard T-Shirt
-==============================
+===========================
 
 `Pyramid`_ - Dashboard T-Shirt, designed by artist `Felix Laflamme <http://www.felixlaflamme.com/>`_,
 is now available for online purchase via
