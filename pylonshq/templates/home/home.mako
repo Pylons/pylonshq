@@ -21,7 +21,7 @@
 							<div id="highlight-download">
 								<div class="download png_bg">
 									<h3>Download</h3>
-									<div class="version">version 1.6</div>
+									<div class="version">version 1.6.1</div>
 									<div class="license">
 										Open source, <a href="${request.application_url}/about/license">BSD-like license</a>
 									</div>
@@ -30,7 +30,7 @@
 									##Install Pyramid
 									<ul>
 										<li class="package">
-											<a href="https://pypi.python.org/packages/source/p/pyramid/pyramid-1.6.tar.gz#md5=a8acfe532eb405b96b95d54b9a9035f5">pyramid-1.6.tar.gz</a>
+											<a href="https://pypi.python.org/packages/source/p/pyramid/pyramid-1.6.1.tar.gz#md5=b18688ff3cc33efdbb098a35b45dd122">pyramid-1.6.1.tar.gz</a>
 										</li>
 										<li class="command">
 											$ easy_install -U pyramid
