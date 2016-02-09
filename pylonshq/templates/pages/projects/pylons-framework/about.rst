@@ -1,4 +1,4 @@
-About The Pylons Framework
+About the Pylons framework
 ==========================
 
 Pylons 1.0 is a lightweight web framework emphasizing flexibility and rapid
@@ -10,8 +10,15 @@ one of the first projects to leverage the emerging WSGI standard, which
 allows extensive re-use and flexibility — but only if you need it. Out of the
 box, Pylons aims to make web development fast, flexible and easy.
 
-The Pylons web framework 1.x line will continue to be maintained alongside 
-Pyramid as a subproject of the Pylons Project, though not enhanced. We will 
-provide a package that allows Pylons 1.x applications and Pyramid applications 
-to run in the same interpreter. The future of Pylon-style web application 
-development is Pyramid.
+Maintenance-only mode
+---------------------
+
+The Pylons web framework has merged with repoze.bfg into `Pyramid
+<https://trypyramid.com/>`_, and is now in maintenance-only mode. You may
+submit a `pull request <https://github.com/Pylons/pylons/pulls>`_ or `issue
+<https://github.com/Pylons/pylons/issues>`_, then respectfully request of the
+maintainers to accept it and make a release.
+
+It's highly recommended that new projects start with the new merged web
+framework, `Pyramid <https://trypyramid.com/>`_.
+
