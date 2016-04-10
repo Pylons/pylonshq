@@ -6,8 +6,25 @@
 <h1 class="title">Download Pyramid</h1>
 
 <p>
-	These files are provided for convenience and should be installed in development mode, <b>$ python setup.py develop</b>. For supported installation use <b>$ easy_install pyramid</b> or <b>$ pip install pyramid</b> commands.
+	These files are provided for convenience and should be installed in development mode:
 </p>
+
+<code><pre># using pip
+$ pip install -e .
+
+# using setup.py
+$ python setup.py develop</pre></code>
+
+<p>For supported installation, see the
+    <a href="http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/install.html">official documentation</a>
+    or use one of the following commands:</p>
+
+<code><pre># using pip
+$ pip install pyramid
+
+# using easy_install
+$ easy_install pyramid</pre></code>
+
 <div id="downloads">
 	<ul>
 		<li>
