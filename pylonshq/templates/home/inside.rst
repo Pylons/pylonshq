@@ -1,3 +1,11 @@
+Pyramid 1.7a1 released
+======================
+`Pyramid`_ 1.7a1 was released on April 16, 2016. Read the `What's New in
+Pyramid 1.7
+<http://docs.pylonsproject.org/projects/pyramid/en/1.7-branch/whatsnew-1.7.html>`_
+document for an overview of changes.  Thanks to everyone who contributed to
+making this release possible.
+
 Pyramid 1.6 released
 ====================
 

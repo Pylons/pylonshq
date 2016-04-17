@@ -11,17 +11,11 @@
 						<div id="home-highlights">
 							<div id="highlight-content">
 								<h2>Web development<br>with style, your way!</h2>
-								##<ul>
-								##	<li class="png_bg">Simple</li>
-								##	<li class="png_bg">Fast</li>
-								##	<li class="png_bg">Documented</li>
-								##	<li class="png_bg">Tested</li>
-								##</ul>
 							</div>
 							<div id="highlight-download">
 								<div class="download png_bg">
 									<h3>Download</h3>
-									<div class="version">version 1.6.1</div>
+									<div class="version">version 1.7a1</div>
 									<div class="license">
 										Open source, <a href="${request.application_url}/about/license">BSD-like license</a>
 									</div>
@@ -30,14 +24,11 @@
 									##Install Pyramid
 									<ul>
 										<li class="package">
-											<a href="https://pypi.python.org/packages/source/p/pyramid/pyramid-1.6.1.tar.gz#md5=b18688ff3cc33efdbb098a35b45dd122">pyramid-1.6.1.tar.gz</a>
+											<a href="https://pypi.python.org/packages/source/p/pyramid/pyramid-1.7a1.tar.gz#md5=31e9d1a71f2ebf5a1f6266f9fd8b3dfb">pyramid-1.7a1.tar.gz</a>
 										</li>
 										<li class="command">
-											$ easy_install -U pyramid
+											$ pip install "pyramid==1.7a1"
 										</li>
-										##<li class="command">
-										##	$ pip install pyramid
-										##</li>
 									</ul>
 								</div>
 							</div>
