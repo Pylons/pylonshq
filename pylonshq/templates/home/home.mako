@@ -15,7 +15,7 @@
 							<div id="highlight-download">
 								<div class="download png_bg">
 									<h3>Download</h3>
-									<div class="version">version 1.7a1</div>
+									<div class="version">version 1.7</div>
 									<div class="license">
 										Open source, <a href="${request.application_url}/about/license">BSD-like license</a>
 									</div>
@@ -24,10 +24,10 @@
 									##Install Pyramid
 									<ul>
 										<li class="package">
-											<a href="https://pypi.python.org/packages/source/p/pyramid/pyramid-1.7a1.tar.gz#md5=31e9d1a71f2ebf5a1f6266f9fd8b3dfb">pyramid-1.7a1.tar.gz</a>
+											<a href="https://pypi.python.org/packages/6f/54/aa41f426335fb146a7554b2a370042b45503c9d3b4cde55a62c06a37dbb4/pyramid-1.7.tar.gz#md5=acc2c511d0c4ab3281cffe307f849618">pyramid-1.7.tar.gz</a>
 										</li>
 										<li class="command">
-											$ pip install "pyramid==1.7a1"
+											$ pip install "pyramid==1.7"
 										</li>
 									</ul>
 								</div>
