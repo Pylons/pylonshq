@@ -11,3 +11,4 @@ Weblogs of some of the personalities in the Pyramid community.
 - `Michael Merickel <http://michael.merickel.org/>`_
 - `Steve Piercy <http://www.stevepiercy.com/tag/pyramid.html>`_
 - `Jon Rosebaugh <https://metaclassical.com/>`_
+- `Carlos de la Guardia <http://blog.delaguardia.com.mx/>`_
