@@ -48,8 +48,7 @@
 						<li><a href="${request.application_url}/community/how-to-contribute">How to contribute</a></li>
 						<li><a href="${request.application_url}/community/code-of-conduct">Code of conduct</a></li>
 						<li><a href="${request.application_url}/community/get-support">Get support</a></li>
-						<li><a href="${request.application_url}/community/blogs">Blogs</a></li>
-					</ul>
+                    </ul>
 				</div>
 			</li>
 			<li class="last">
