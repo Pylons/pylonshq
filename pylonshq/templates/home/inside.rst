@@ -14,6 +14,12 @@ Pyramid 1.7
 document for an overview of changes.  Thanks to everyone who contributed to
 making this release possible.
 
+WebOb 1.6 released
+==================
+`WebOb`_ 1.6 was released on March 15, 2016. Read the `What’s New in WebOb 1.6
+<http://docs.webob.org/en/stable/whatsnew-1.6.html>`_ document for an overview
+of changes.
+
 Pyramid 1.6 released
 ====================
 
@@ -138,5 +144,6 @@ joint effort, the `Pyramid`_ web framework, and `notes on the merger
 
 .. _Pylons Project Organization: https://github.com/Pylons
 .. _Pylons Project: http://pylonsproject.org/
-.. _Pyramid: http://pylonsproject.org/projects/pyramid/about
+.. _Pyramid: https://trypyramid.com/
 .. _Pylons framework: http://pylonsproject.org/projects/pylons-framework/about
+.. _WebOb: http://webob.org/
