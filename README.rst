@@ -1,9 +1,9 @@
 PylonsHQ
 ========
 
-``pylonshq`` is the main website code that will power `pylonsproject.org <http://pylonsproject.org>`_.
+``pylonshq`` was formerly the project for generating the website `pylonsproject.org <http://pylonsproject.org>`_. It has been superseded for the most part by the project `pylonsproject.org <https://github.com/Pylons/pylonsproject.org>`_.
 
-Currently, it's mainly a place-holder for Pylons Project documentation as
+Currently it's mainly a placeholder for Pylons Project documentation as
 found here: `Pylons Project Documentation <http://docs.pylonsproject.org/>`_
 
 CSS with Compass
